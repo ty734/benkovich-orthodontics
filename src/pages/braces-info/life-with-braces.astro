@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="Life With Braces | Eating, Soreness & Care | Benkovich Ortho"
+  description="Life with braces made easy — foods to enjoy and avoid, easing soreness, handling loose brackets, playing sports & instruments, and keeping braces clean. Benkovich Orthodontics.">
+
+  <PageHero
+    eyebrow="Braces info"
+    title="Life with braces"
+    subtitle="Braces fit right into your everyday life — you just need a few simple tips. Here's how to eat, stay comfortable, and keep your smile on track."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces Info', href: '/braces-info/orthodontic-faqs/' }, { label: 'Life with Braces', href: '/braces-info/life-with-braces/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">You've got this</p>
+      <h2>Settling in with your new braces</h2>
+      <p>The first week or two with braces is all about getting used to something new — and it goes more smoothly than most people expect. With a few easy habits around eating, comfort, and cleaning, braces quickly become just a normal part of your day. Here's everything you need to feel confident.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Eating with braces</p>
+        <h2>Foods to enjoy &amp; foods to avoid</h2>
+        <p>Most of your favorites are still on the menu — you'll just want to steer clear of anything hard, sticky, or crunchy that could damage a bracket or wire.</p>
+      </div>
+      <div class="grid grid--2" style="margin-top:42px;">
+        <div class="card foods foods--yes">
+          <h3>Foods to enjoy</h3>
+          <ul>
+            <li>Soft fruits, bananas, and smoothies</li>
+            <li>Yogurt, pudding, and ice cream</li>
+            <li>Pasta, soft breads, and rice</li>
+            <li>Cooked, tender vegetables</li>
+            <li>Eggs, soft cheeses, and seafood</li>
+            <li>Soups and other soft, comforting meals</li>
+          </ul>
+        </div>
+        <div class="card foods foods--no">
+          <h3>Foods to avoid</h3>
+          <ul>
+            <li>Hard candy, nuts, and ice</li>
+            <li>Sticky treats like caramel and taffy</li>
+            <li>Chewy bagels and crusty bread</li>
+            <li>Popcorn and hard pretzels or chips</li>
+            <li>Whole apples and corn on the cob (cut them up instead)</li>
+            <li>Gum and other sticky snacks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Staying comfortable</p>
+      <h2>Soothing soreness</h2>
+      <p>It's completely normal for teeth to feel a little tender for a day or two after braces are placed or adjusted — it simply means they're moving. A few easy remedies help a lot:</p>
+      <ul class="tips">
+        <li>Stick to soft foods for the first day or two after each visit.</li>
+        <li>Rinse with warm salt water to soothe tender gums and cheeks.</li>
+        <li>Use orthodontic wax over any bracket that's rubbing the inside of your lip.</li>
+        <li>Over-the-counter pain relief can ease discomfort — use as directed.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">When something feels off</p>
+      <h2>Loose brackets &amp; poking wires</h2>
+      <p>Now and then a bracket may come loose or a wire might shift and poke — it happens, and it's rarely an emergency. Stay calm and try these steps:</p>
+      <ul class="tips">
+        <li>If a wire is poking, gently tuck it down with the eraser end of a pencil, or cover it with orthodontic wax.</li>
+        <li>If a bracket comes loose but is still attached to the wire, leave it in place and cover it with wax for comfort.</li>
+        <li>Save any pieces that come off and bring them to your next visit.</li>
+        <li>Give us a call so we can advise you and schedule a quick repair if needed.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Stay active</p>
+      <h2>Sports &amp; musical instruments</h2>
+      <p>Braces won't keep you on the sidelines or away from the band room. If you play contact sports, simply wear a mouthguard to protect your smile — we're happy to recommend one that fits comfortably over braces. Musicians may need a short adjustment period to get used to playing with braces, especially with wind and brass instruments, but it comes quickly with a little practice.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container measure">
+      <p class="eyebrow">Keep them clean</p>
+      <h2>Caring for your braces</h2>
+      <p>Clean teeth are the secret to a great result and a healthy smile. Brushing after every meal and flossing daily keeps your braces and gums in top shape throughout treatment. For a simple, step-by-step routine, see our guide to <a href="/braces-info/brush-and-floss/">brushing and flossing with braces</a>.</p>
+      <p style="margin-top:18px;">Have a question we didn't cover? Browse our <a href="/braces-info/orthodontic-faqs/">orthodontic FAQs</a> or explore <a href="/braces/">braces</a> and <a href="/invisalign/">Invisalign</a> options. Remember, your first exam is always free.</p>
+      <a href={site.booking} class="btn btn--primary btn--lg" style="margin-top:14px;">Schedule Your Free Exam</a>
+    </div>
+  </section>
+
+  <Cta heading="Questions about life with braces?" />
+</BaseLayout>
+
+<style>
+  .foods { padding: 28px 30px; }
+  .foods h3 { margin-bottom: 16px; }
+  .foods ul { margin: 0; padding: 0; list-style: none; }
+  .foods li { position: relative; padding: 7px 0 7px 30px; color: var(--slate); border-bottom: 1px solid var(--line); }
+  .foods li:last-child { border-bottom: none; }
+  .foods li::before { position: absolute; left: 0; font-weight: 800; }
+  .foods--yes h3 { color: var(--teal-700); }
+  .foods--yes li::before { content: '✓'; color: var(--teal); }
+  .foods--no h3 { color: var(--navy); }
+  .foods--no li::before { content: '✕'; color: var(--slate); }
+  .tips { list-style: none; padding: 0; margin: 18px 0 0; }
+  .tips li { position: relative; padding: 9px 0 9px 30px; color: var(--slate); border-bottom: 1px solid var(--line); }
+  .tips li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+</style>

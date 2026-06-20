@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'Are these reviews real?', a: 'Yes. Every review on this page comes from real Benkovich Orthodontics patients and families. We only ever share genuine, approved feedback — never fabricated testimonials.' },
+  { q: 'Where can I read more reviews?', a: 'You can find more patient stories on our main reviews page, as well as on our Google and Facebook profiles. We’re grateful that families across Annapolis, Chester, and beyond trust us with their smiles.' },
+  { q: 'Is Invisalign right for me?', a: 'For many teens and adults, Invisalign is a great discreet option — but the best way to know is a free exam. Dr. Benkovich will look at your smile and let you know whether Invisalign, braces, or a combination fits your goals.' },
+  { q: 'How much does Invisalign cost?', a: 'Every smile is different, so the most accurate figure comes from a free exam. We keep treatment affordable with flexible payment plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+];
+---
+<BaseLayout
+  title="Invisalign Reviews in Annapolis, MD | Benkovich Orthodontics"
+  description="Read real Invisalign reviews from Benkovich Orthodontics patients in Annapolis & Chester, MD. Caring care, plans from $184/month, and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Patient Reviews"
+    title="Invisalign Reviews in Annapolis, MD"
+    subtitle="Real words from the families we’re grateful to care for across Annapolis & Chester — backed by a free first exam and plans starting at $184/month."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Invisalign', href: '/invisalign/' }, { label: 'Reviews', href: '/invisalign/invisalign-testimonials/' }]} />
+
+  <section class="section">
+    <div class="container measure center">
+      <p class="eyebrow">Trusted by your neighbors</p>
+      <h2>What our patients say</h2>
+      <p>For over 30 years, families across Annapolis and Chester have trusted Dr. Benkovich with their smiles. Here’s what some of them have shared about their experience — in their own words.</p>
+      <p class="stars" aria-label="5 out of 5 stars" style="font-size:1.4rem;">★★★★★</p>
+    </div>
+  </section>
+
+  <section class="section section--mint" style="padding-top:0;">
+    <div class="container">
+      <div class="grid grid--2" style="margin-top:42px;">
+        {site.reviews.map((r) => (
+          <figure class="card review">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <blockquote>{r.text}</blockquote>
+            <figcaption>— {r.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <p class="center" style="margin-top:34px;">Want to read more? See our full <a href="/patient-info/testimonials/">patient reviews</a>, or learn more about <a href="/invisalign/">Invisalign</a> and how it works.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure center">
+      <p class="eyebrow">See for yourself</p>
+      <h2>Start with a free exam</h2>
+      <p>The best way to know if Invisalign is right for you is a relaxed, no-pressure visit. <a href={site.booking}>Schedule your free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office and find out what’s possible for your smile.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Reviews &amp; Invisalign, answered" />
+
+  <Cta heading="Ready to start your own success story?" />
+</BaseLayout>
+
+<style>
+  .review { padding: 28px 26px; display: flex; flex-direction: column; gap: 12px; }
+  .review .stars { font-size: 1.05rem; }
+  .review blockquote { margin: 0; color: var(--slate); font-size: 1.04rem; }
+  .review figcaption { font-family: var(--font-head); font-weight: 700; color: var(--ink); }
+</style>

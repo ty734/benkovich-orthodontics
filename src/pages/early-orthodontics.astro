@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'When should my child first see an orthodontist?', a: 'The American Association of Orthodontists recommends a first check-up by age 7. At this age Dr. Benkovich can spot how the teeth and jaw are developing — even before all the baby teeth are gone — and let you know if anything is worth watching.' },
+  { q: 'Does an early visit mean my child needs braces now?', a: 'Usually not. For most kids the visit simply confirms everything is on track, and we keep a friendly eye on things until the timing is right. Early treatment is only recommended when there’s a clear benefit to acting sooner.' },
+  { q: 'What is Phase 1 (interceptive) treatment?', a: 'Phase 1 is a shorter, focused round of treatment in younger children — typically ages 7 to 10 — designed to help guide jaw growth, create room for incoming teeth, or address habits early. Not every child needs it, and Dr. Benkovich will only suggest it when it may make later treatment simpler.' },
+  { q: 'How much does an early orthodontic exam cost?', a: 'Your child’s first exam is always free. It’s a relaxed, no-pressure visit to meet Dr. Benkovich and get honest guidance. If treatment is ever recommended, we offer flexible payment plans starting at $184/month.' },
+  { q: 'Will my child need a second phase of treatment later?', a: 'Sometimes. Many kids who have Phase 1 treatment return for braces or Invisalign as teens once their permanent teeth are in. Other kids never need a first phase at all. We’ll always explain what to expect at your free exam.' },
+];
+---
+<BaseLayout
+  title="Early Orthodontics & Phase 1 Treatment | Benkovich Orthodontics"
+  description="Early orthodontics & Phase 1 care in Annapolis & Chester, MD. Gentle age-7 first exams, honest guidance, plans from $184/month and a free first exam.">
+
+  <PageHero
+    eyebrow="Early Orthodontics"
+    title="Early Orthodontics & Phase 1 Treatment"
+    subtitle="Gentle, friendly first visits around age 7 — often there’s nothing to do yet but keep a caring eye on things. Free first exam, with care your neighbors have trusted for over 30 years."
+    image="/images/svc-early.webp"
+    imageAlt="A young child at a relaxed first orthodontic visit at Benkovich Orthodontics in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Early Orthodontics', href: '/early-orthodontics/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Why age 7?</p>
+      <h2>The right first visit, at the right time</h2>
+      <p>The American Association of Orthodontists recommends every child have an orthodontic check-up by age 7. It may sound early — and that’s exactly the point. Around this age, the first permanent molars and front teeth are coming in, which gives Dr. Benkovich a clear, early picture of how the bite and jaw are developing.</p>
+      <p>Here’s the part most parents are relieved to hear: an early visit very rarely means braces right away. More often, it’s a simple confirmation that everything looks healthy — and a chance to put your mind at ease.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">What we look for</p>
+        <h2>How an early exam helps your child</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Room to Grow</h3>
+          <p>We check whether there’s enough space for incoming permanent teeth — and whether guiding that growth early could make things simpler down the road.</p>
+        </div>
+        <div class="card feature">
+          <h3>Bite & Jaw Development</h3>
+          <p>Crossbites, crowding, and the way the jaws meet are easier to monitor when caught early, so the right plan can be made at the right time.</p>
+        </div>
+        <div class="card feature">
+          <h3>Habits & Comfort</h3>
+          <p>Thumb-sucking and other habits can affect how teeth come in. An early visit lets us gently flag anything worth addressing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Phase 1 explained</p>
+      <h2>What “interceptive” (Phase 1) treatment really means</h2>
+      <p>You may hear the term “Phase 1” or “interceptive” treatment. This is a shorter, focused round of early care — usually between ages 7 and 10 — designed to help guide jaw growth, create space, or correct a developing issue while a child is still growing. It’s not a full set of braces, and it’s not for everyone.</p>
+      <p>The truth is, most children don’t need Phase 1 treatment at all. Dr. Benkovich only recommends it when acting early may genuinely make later treatment shorter or simpler — never just to start something sooner. If your child does benefit, many return later as teens for braces or <a href="/invisalign-for-kids/">Invisalign for kids</a> once their permanent teeth are in.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your child’s first visit, step by step</h2>
+      <ol class="steps">
+        <li><strong>A warm welcome.</strong> Our team makes kids feel at ease from the moment they walk in — no scary tools, no pressure.</li>
+        <li><strong>A gentle exam.</strong> Dr. Benkovich takes a careful look at how the teeth and jaw are developing.</li>
+        <li><strong>Honest guidance.</strong> We’ll tell you plainly whether there’s anything to do yet — and most of the time, there isn’t.</li>
+        <li><strong>A friendly plan to monitor.</strong> If it’s simply too early, we keep an eye on things at no cost until the timing is right.</li>
+        <li><strong>Clear next steps if needed.</strong> If treatment will help, we explain the options and costs upfront, including flexible payment plans.</li>
+      </ol>
+      <p style="margin-top:22px;">Ready for the teen years? Explore <a href="/braces-for-kids/">braces for kids</a> or learn how to <a href="/orthodontist-for-kids/">choose an orthodontist for kids</a> in Annapolis.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Early orthodontics questions, answered" />
+
+  <Cta heading="Curious where your child stands?" text="Your child’s first exam is on us — a relaxed, no-pressure visit for honest guidance from Dr. Benkovich." />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

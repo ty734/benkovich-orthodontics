@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+<BaseLayout
+  title="Orthodontist in Annapolis & Chester, MD | Benkovich Orthodontics"
+  description="Affordable braces & Invisalign for the whole family in Annapolis & Chester, MD. Payments from $184/month, 9,000+ happy patients, and a free first exam.">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <span class="pill">★ {site.rating} · {site.reviewCount} 5-star reviews</span>
+        <h1>Confident smiles for every family in <span class="u-teal">Annapolis &amp; Chester</span></h1>
+        <p class="lead">Affordable braces and Invisalign, starting at <strong>{site.offer.price}{site.offer.priceUnit}</strong>. Gentle, friendly care your neighbors have trusted for over 30 years.</p>
+        <div class="hero__cta">
+          <a href={site.booking} class="btn btn--primary btn--lg">Schedule Your Free Exam</a>
+          <a href={site.locations[0].phoneHref} class="btn btn--ghost btn--lg">Call {site.locations[0].phone}</a>
+        </div>
+        <ul class="hero__points">
+          <li>✓ Free first exam — no pressure</li>
+          <li>✓ {site.offer.promo}</li>
+          <li>✓ Most insurance accepted</li>
+        </ul>
+      </div>
+
+      <div class="hero__media">
+        <img src="/images/team-hero.webp" alt="Dr. Benkovich and the Benkovich Orthodontics team in Annapolis, MD" width="600" height="400" fetchpriority="high" />
+        <div class="hero__badge">
+          <span class="hero__badge-num">{site.patients}</span>
+          <span class="hero__badge-label">happy patients<br/>since {site.established}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="trustbar">
+    <div class="container trustbar__row">
+      <div><strong>{site.patients}</strong><span>Patients treated</span></div>
+      <div><strong>{site.reviewCount}</strong><span>5-star reviews</span></div>
+      <div><strong>30+ yrs</strong><span>Caring for smiles</span></div>
+      <div><strong>2</strong><span>Convenient locations</span></div>
+    </div>
+  </section>
+
+  <!-- ============ VALUE PROPS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why families choose us</p>
+        <h2>Finding the right orthodontist shouldn’t be stressful</h2>
+        <p class="lead">For more than two decades, families across Annapolis and Chester have trusted us with their smiles — kids, teens, parents, and grandparents alike.</p>
+      </div>
+      <div class="grid grid--4" style="margin-top:48px;">
+        <article class="vp">
+          <div class="vp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+          <h3>Truly Affordable</h3>
+          <p>Flexible payments from {site.offer.price}/month, transparent pricing, and we work with most insurance.</p>
+        </article>
+        <article class="vp">
+          <div class="vp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Experienced &amp; Trusted</h3>
+          <p>A specialty-trained orthodontist caring for our community since {site.established}, with {site.patients} happy patients.</p>
+        </article>
+        <article class="vp">
+          <div class="vp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+          <h3>Caring &amp; Comfortable</h3>
+          <p>A friendly team that takes the time to explain everything and puts even nervous kids at ease.</p>
+        </article>
+        <article class="vp">
+          <div class="vp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Close to Home</h3>
+          <p>Two welcoming offices in Annapolis and Chester, with on-time visits that respect your schedule.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TREATMENTS ============ -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Your treatment options</p>
+        <h2>Expert care for every age and stage</h2>
+      </div>
+      <div class="grid grid--3 treatments" style="margin-top:48px;">
+        {site.treatments.map((t) => (
+          <a href={t.slug} class="tcard">
+            <div class="tcard__img"><img src={t.img} alt={t.title} width="380" height="240" loading="lazy" /></div>
+            <div class="tcard__body">
+              <h3>{t.title}</h3>
+              <p>{t.blurb}</p>
+              <span class="tcard__link">Learn more →</span>
+            </div>
+          </a>
+        ))}
+        <a href={site.booking} class="tcard tcard--cta">
+          <div class="tcard__body">
+            <h3>Not sure where to start?</h3>
+            <p>Book a free, no-pressure exam and we’ll walk you through every option.</p>
+            <span class="btn btn--primary">Schedule Free Exam</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEET DR. BENKOVICH ============ -->
+  <section class="section">
+    <div class="container doc">
+      <div class="doc__media">
+        <img src="/images/dr-benkovich.jpg" alt="Dr. John A. Benkovich, orthodontist in Annapolis & Chester, MD" width="460" height="560" loading="lazy" />
+      </div>
+      <div class="doc__copy">
+        <p class="eyebrow">Meet your orthodontist</p>
+        <h2>Dr. John A. Benkovich</h2>
+        <p>For over 30 years, Dr. Benkovich has helped families across Annapolis and Chester smile with confidence. Since {site.established}, his approach has stayed refreshingly simple: treat every patient like a neighbor, explain everything in plain language, and make each visit personal and genuinely enjoyable.</p>
+        <ul class="doc__creds">
+          <li>Magna cum laude, University of Maryland Dental School</li>
+          <li>Orthodontic residency &amp; master’s in oral biology, University of Louisville</li>
+          <li>Advisor to the Triple Crown Seattle Study Club</li>
+          <li>Ongoing continuing education, every year</li>
+        </ul>
+        <a href="/about/meet-dr-benkovich/" class="btn btn--ghost">More about Dr. Benkovich</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">{site.rating} ★ on Google · {site.reviewCount} reviews</p>
+        <h2>What Annapolis &amp; Chester families are saying</h2>
+      </div>
+      <div class="grid grid--3 reviews" style="margin-top:46px;">
+        {site.reviews.slice(0, 6).map((r) => (
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>{r.text}</blockquote>
+            <figcaption>— {r.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="center" style="margin-top:36px;">
+        <a href="/patient-info/testimonials/" class="btn btn--ghost">Read more reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AFFORDABILITY ============ -->
+  <section class="section--teal section">
+    <div class="container afford">
+      <div class="afford__copy">
+        <p class="eyebrow">Affordable, transparent pricing</p>
+        <h2>A confident smile that fits your family’s budget</h2>
+        <p class="lead" style="color:#cfe2f3;">A healthier smile shouldn’t mean stretching your budget to the breaking point — and here, it never has to.</p>
+        <ul class="afford__list">
+          <li><strong>Payments from {site.offer.price}/month</strong> — flexible plans for braces &amp; Invisalign</li>
+          <li><strong>We work with your insurance</strong> — we help you maximize your benefits</li>
+          <li><strong>Clear, upfront costs</strong> — you always know what to expect</li>
+          <li><strong>Your initial exam is free</strong> — a relaxed, no-pressure visit</li>
+        </ul>
+        <a href={site.booking} class="btn btn--primary btn--lg">Schedule Your Free Exam</a>
+      </div>
+      <div class="afford__price">
+        <span class="afford__from">Starting at</span>
+        <span class="afford__amt">{site.offer.price}<small>{site.offer.priceUnit}</small></span>
+        <span class="afford__promo">{site.offer.promo}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCATIONS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Find us</p>
+        <h2>Two welcoming offices, close to home</h2>
+      </div>
+      <div class="grid grid--2 locs" style="margin-top:46px;">
+        {site.locations.map((l) => (
+          <div class="loc card">
+            <h3>{l.name}</h3>
+            <p class="loc__addr">{l.address.join(', ')}</p>
+            <p class="loc__hours">{l.hours}</p>
+            <a href={l.phoneHref} class="loc__phone">{l.phone}</a>
+            <div class="loc__cta">
+              <a href={l.slug} class="btn btn--ghost">Office details</a>
+              <a href={l.mapUrl} target="_blank" rel="noopener" class="loc__map">Get directions →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="finalcta">
+    <div class="container finalcta__inner">
+      <h2>Ready to start your family’s smile journey?</h2>
+      <p>Your initial exam is on us. Come see why so many Annapolis &amp; Chester families have trusted Benkovich Orthodontics for over 30 years.</p>
+      <div class="finalcta__btns">
+        <a href={site.booking} class="btn btn--primary btn--lg">Schedule Your Free Exam</a>
+        <a href={site.locations[0].phoneHref} class="btn btn--white btn--lg">Call {site.locations[0].phone}</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .u-teal { color: var(--teal); }
+
+  /* Hero */
+  .hero { background: radial-gradient(120% 120% at 80% 0%, var(--mint) 0%, #fff 55%); padding: clamp(40px, 6vw, 80px) 0; }
+  .hero__grid { display: grid; gap: 48px; align-items: center; }
+  @media (min-width: 940px) { .hero__grid { grid-template-columns: 1.05fr .95fr; } }
+  .hero__copy h1 { margin-top: 16px; }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin: 26px 0 22px; }
+  .hero__points { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--slate); font-weight: 600; font-size: .98rem; }
+  .hero__media { position: relative; }
+  .hero__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); object-fit: cover; aspect-ratio: 6/4.2; }
+  .hero__badge { position: absolute; left: -18px; bottom: -22px; background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 16px 22px; display: flex; flex-direction: column; }
+  .hero__badge-num { font-family: var(--font-head); font-weight: 800; font-size: 1.9rem; color: var(--teal); line-height: 1; }
+  .hero__badge-label { font-size: .82rem; color: var(--slate); font-weight: 600; margin-top: 4px; }
+  @media (max-width: 520px) { .hero__badge { left: 10px; padding: 12px 16px; } }
+
+  /* Trust bar */
+  .trustbar { background: var(--navy); color: #fff; }
+  .trustbar__row { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 22px 8px; padding: 26px 24px; text-align: center; }
+  .trustbar__row > div { flex: 1 1 150px; display: flex; flex-direction: column; }
+  .trustbar strong { font-family: var(--font-head); font-size: 1.7rem; font-weight: 800; }
+  .trustbar span { color: #a8c8e6; font-size: .9rem; }
+
+  /* Value props */
+  .vp { padding: 30px 26px; border-radius: var(--radius); background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-sm); transition: .2s; }
+  .vp:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .vp__icon { width: 54px; height: 54px; border-radius: 14px; background: var(--mint); color: var(--teal); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .vp__icon svg { width: 26px; height: 26px; }
+  .vp h3 { margin-bottom: 8px; }
+  .vp p { color: var(--slate); font-size: .98rem; margin: 0; }
+
+  /* Treatments */
+  .tcard { display: flex; flex-direction: column; background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-sm); color: var(--ink); transition: .2s; }
+  .tcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+  .tcard__img { aspect-ratio: 16/10; overflow: hidden; }
+  .tcard__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .tcard:hover .tcard__img img { transform: scale(1.05); }
+  .tcard__body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .tcard__body p { color: var(--slate); font-size: .96rem; flex: 1; }
+  .tcard__link { font-family: var(--font-head); font-weight: 700; color: var(--teal); }
+  .tcard--cta { background: linear-gradient(160deg, var(--teal), var(--teal-700)); color: #fff; justify-content: center; }
+  .tcard--cta h3, .tcard--cta p { color: #fff; }
+  .tcard--cta .tcard__body { gap: 14px; }
+
+  /* Doctor */
+  .doc { display: grid; gap: 44px; align-items: center; }
+  @media (min-width: 900px) { .doc { grid-template-columns: .85fr 1.15fr; } }
+  .doc__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; }
+  .doc__creds { list-style: none; padding: 0; margin: 18px 0 26px; }
+  .doc__creds li { padding: 8px 0 8px 30px; position: relative; color: var(--slate); border-bottom: 1px solid var(--line); }
+  .doc__creds li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+
+  /* Reviews */
+  .review { background: #fff; border-radius: var(--radius); padding: 28px 26px; margin: 0; box-shadow: var(--shadow-sm); border: 1px solid var(--line); display: flex; flex-direction: column; }
+  .review blockquote { margin: 12px 0 16px; font-size: .98rem; color: var(--ink); line-height: 1.6; }
+  .review figcaption { font-family: var(--font-head); font-weight: 700; color: var(--teal-700); margin-top: auto; }
+
+  /* Affordability */
+  .afford { display: grid; gap: 44px; align-items: center; }
+  @media (min-width: 900px) { .afford { grid-template-columns: 1.4fr .6fr; } }
+  .afford__list { list-style: none; padding: 0; margin: 22px 0 28px; }
+  .afford__list li { padding: 11px 0 11px 32px; position: relative; color: #cfe2f3; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .afford__list li::before { content: '✓'; position: absolute; left: 0; color: var(--sky); font-weight: 800; }
+  .afford__list strong { color: #fff; }
+  .afford__price { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius-lg); padding: 38px 26px; text-align: center; display: flex; flex-direction: column; gap: 6px; }
+  .afford__from { color: #a8c8e6; font-weight: 600; }
+  .afford__amt { font-family: var(--font-head); font-weight: 800; font-size: 3.4rem; color: #fff; line-height: 1; }
+  .afford__amt small { font-size: 1.1rem; font-weight: 700; color: #cfe2f3; }
+  .afford__promo { margin-top: 10px; color: #8fd0ff; font-weight: 700; }
+
+  /* Locations */
+  .loc { padding: 30px 30px 26px; }
+  .loc__addr { color: var(--slate); margin: 4px 0; }
+  .loc__hours { color: var(--slate); font-size: .95rem; }
+  .loc__phone { display: inline-block; font-family: var(--font-head); font-weight: 800; font-size: 1.4rem; color: var(--teal); margin: 6px 0 16px; }
+  .loc__cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .loc__map { font-weight: 700; }
+
+  /* Final CTA */
+  .finalcta { background: linear-gradient(155deg, var(--navy), var(--navy-900)); color: #fff; padding: clamp(56px, 8vw, 96px) 0; text-align: center; }
+  .finalcta__inner { max-width: 720px; margin-inline: auto; }
+  .finalcta h2 { color: #fff; }
+  .finalcta p { color: #cfe2f3; font-size: 1.12rem; margin-bottom: 26px; }
+  .finalcta__btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+</style>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'What is Invisalign First for kids?', a: 'Invisalign First is a version of Invisalign designed for younger children who still have a mix of baby and adult teeth. The clear aligners are made to fit growing smiles and can help guide jaw development and make room for incoming teeth.' },
+  { q: 'How old should my child be for Invisalign?', a: 'It depends on your child’s growth and which teeth have come in, not just their age. The American Association of Orthodontists recommends a first check-up around age 7 — at your free exam, Dr. Benkovich will let you know whether Invisalign First is a good fit yet.' },
+  { q: 'Will my child actually keep the aligners in?', a: 'Many kids do well with aligners, especially with a little parent encouragement. They typically work best worn 20–22 hours a day. We’ll coach your child on the routine and cheer them on at every visit.' },
+  { q: 'Are braces a better choice for my child?', a: 'Sometimes braces are the right call, and sometimes clear aligners fit better — it depends on your child’s smile. We’ll give you an honest recommendation at the free exam. You can also explore our braces for kids option.' },
+  { q: 'How much does Invisalign for kids cost?', a: 'Every child’s treatment is different, so the most accurate figure comes from a free exam. We keep things affordable with flexible payment plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+];
+---
+<BaseLayout
+  title="Invisalign for Kids in Annapolis & Chester, MD | Benkovich Ortho"
+  description="Invisalign First for kids in Annapolis & Chester, MD — clear, gentle aligners for growing smiles. Plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Invisalign for Kids"
+    title="Invisalign for Kids in Annapolis & Chester, MD"
+    subtitle="Invisalign First offers a clear, comfortable way to guide your child’s growing smile — starting at $184/month, with a free first exam."
+    image="/images/svc-early.webp"
+    imageAlt="A young child smiling at the orthodontist, a candidate for Invisalign First in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Invisalign', href: '/invisalign/' }, { label: 'For Kids', href: '/invisalign-for-kids/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">A gentle first step</p>
+      <h2>Clear aligners made for growing smiles</h2>
+      <p>Invisalign First is designed especially for younger children who still have a mix of baby and adult teeth. The custom, clear aligners can gently guide jaw growth, create space for incoming teeth, and help correct early concerns — all without metal brackets or wires.</p>
+      <p>It’s a comfortable, removable option that lets kids keep eating their favorite foods and brushing normally. And because <strong>your child’s first exam is free</strong>, there’s no pressure to find out whether the timing is right.</p>
+      <p>Curious whether traditional braces might fit better? Compare with our <a href="/braces-for-kids/">braces for kids</a> page.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why parents choose it</p>
+        <h2>The benefits of Invisalign First</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Comfortable &amp; Removable</h3>
+          <p>No brackets or wires to irritate little mouths — and aligners come out for meals, brushing, and sports.</p>
+        </div>
+        <div class="card feature">
+          <h3>Guides Growth</h3>
+          <p>Designed to help create room for adult teeth and support healthy jaw development at the right time.</p>
+        </div>
+        <div class="card feature">
+          <h3>Easy to Clean</h3>
+          <p>Kids brush and floss normally, which can make oral hygiene simpler during treatment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">When to start</p>
+      <h2>Timing is everything with early care</h2>
+      <p>Around age 7, your child’s smile has usually developed enough for Dr. Benkovich to spot how things are growing. Often there’s nothing to do yet but keep a friendly eye on things — and when treatment <em>is</em> helpful, starting at the right moment can make it gentler and more effective. Learn more about <a href="/early-orthodontics/">early orthodontics</a>.</p>
+      <p>When your child is a little older, a <a href="/invisalign/invisalign-for-teens/">teen-friendly version of Invisalign</a> is available too. Ready to begin? <a href={site.booking}>Schedule a free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Invisalign for kids, answered" />
+
+  <Cta heading="Wondering if it’s time for your child’s first visit?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+</style>

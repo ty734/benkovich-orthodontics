@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="Brushing & Flossing With Braces | Benkovich Orthodontics"
+  description="Practical tips for brushing and flossing with braces — a simple daily routine to keep teeth and gums healthy throughout treatment. Benkovich Orthodontics, Annapolis & Chester, MD.">
+
+  <PageHero
+    eyebrow="Braces info"
+    title="Brushing &amp; flossing with braces"
+    subtitle="Healthy habits make for a healthy smile. Keeping teeth clean around braces is easy once you know the routine — here's how to do it well."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces Info', href: '/braces-info/orthodontic-faqs/' }, { label: 'Brushing & Flossing', href: '/braces-info/brush-and-floss/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">The foundation of a great result</p>
+      <h2>Why clean teeth matter with braces</h2>
+      <p>Braces create lots of little nooks where food and plaque love to hide. Keeping everything clean protects your teeth and gums, helps avoid staining around brackets, and sets you up for the bright, healthy smile you're working toward. The good news: a few minutes of care, twice a day, makes all the difference.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container measure">
+      <p class="eyebrow">Step by step</p>
+      <h2>How to brush with braces</h2>
+      <ol class="steps">
+        <li><strong>Rinse first.</strong> Swish with water to loosen any food caught around your brackets and wires.</li>
+        <li><strong>Angle your brush.</strong> Hold a soft-bristled toothbrush at a 45-degree angle and gently clean above and below each bracket.</li>
+        <li><strong>Take your time.</strong> Brush every tooth — front, back, and chewing surfaces — for a full two minutes.</li>
+        <li><strong>Brush after meals.</strong> When you can, brush after eating to keep food from sitting on your braces.</li>
+        <li><strong>Check your smile.</strong> Finish with a quick look in the mirror to make sure brackets and gumlines are clean.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Don't skip it</p>
+      <h2>How to floss with braces</h2>
+      <p>Flossing with braces takes a little extra patience, but it's well worth it for healthy gums. Aim to floss once a day:</p>
+      <ul class="tips">
+        <li>Use a floss threader or orthodontic floss to guide floss under the main wire.</li>
+        <li>Gently slide the floss between each pair of teeth, hugging the side of each tooth.</li>
+        <li>A water flosser can be a great addition for reaching around brackets quickly.</li>
+        <li>Interdental brushes are handy for cleaning the small spaces between brackets and wires.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">Build the habit</p>
+      <h2>Everyday hygiene tips</h2>
+      <ul class="tips">
+        <li>Carry a travel toothbrush so you can clean up after lunch or snacks.</li>
+        <li>Use a fluoride toothpaste and ask us if a fluoride rinse is right for you.</li>
+        <li>Replace your toothbrush every few months — braces wear bristles down faster.</li>
+        <li>Keep up with regular cleanings at your family dentist throughout treatment.</li>
+      </ul>
+      <p style="margin-top:20px;">For more on day-to-day care, see our guide to <a href="/braces-info/life-with-braces/">life with braces</a>. And when your braces come off, a custom <a href="/retainers/">retainer</a> keeps your new smile looking its best.</p>
+      <a href={site.booking} class="btn btn--primary btn--lg" style="margin-top:14px;">Schedule Your Free Exam</a>
+    </div>
+  </section>
+
+  <Cta heading="Ready to start a healthy new smile?" />
+</BaseLayout>
+
+<style>
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+  .tips { list-style: none; padding: 0; margin: 18px 0 0; }
+  .tips li { position: relative; padding: 9px 0 9px 30px; color: var(--slate); border-bottom: 1px solid var(--line); }
+  .tips li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+</style>

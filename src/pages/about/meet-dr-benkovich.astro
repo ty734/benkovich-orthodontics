@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="Meet Dr. Benkovich | Orthodontist in Annapolis & Chester, MD"
+  description="Meet Dr. John A. Benkovich — a specialty-trained orthodontist serving Annapolis & Chester, MD since 1993. Warm, personal care and a free first exam. Learn more.">
+
+  <PageHero
+    eyebrow="Meet your orthodontist"
+    title="Meet Dr. John A. Benkovich"
+    subtitle="A specialty-trained orthodontist who treats every patient like a neighbor — caring for Annapolis & Chester smiles since 1993."
+    image="/images/dr-benkovich.jpg"
+    imageAlt="Dr. John A. Benkovich, orthodontist in Annapolis & Chester, MD, with his dog"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about/meet-dr-benkovich/' }, { label: 'Meet Dr. Benkovich', href: '/about/meet-dr-benkovich/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">A familiar, friendly face</p>
+      <h2>Care that feels personal</h2>
+      <p>For over 30 years, Dr. Benkovich has helped families across Annapolis and Chester smile with confidence. Since {site.established}, his approach has stayed refreshingly simple: treat every patient like a neighbor, explain everything in plain language, and make each visit personal and genuinely enjoyable.</p>
+      <p>Patients of every age — kids, teens, parents, and grandparents alike — appreciate how thoroughly he explains their options, using x-rays, photos, and models so everyone understands the plan. There’s never any pressure, and your first exam is always free.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container measure">
+      <p class="eyebrow">His philosophy</p>
+      <h2>Treat every patient like family</h2>
+      <p>Dr. Benkovich believes a great orthodontic experience starts with trust. He takes the time to listen, to answer every question, and to make even nervous kids feel completely at ease. The goal is always a smile you’re proud of — created in a warm, welcoming environment where you feel cared for from the moment you walk in.</p>
+      <p>He’s also committed to keeping care genuinely affordable, with transparent pricing and flexible plans <strong>starting at {site.offer.price}/month</strong> so a confident smile fits your family’s budget.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Education &amp; credentials</p>
+      <h2>Specialty-trained, always learning</h2>
+      <ul class="creds">
+        <li>Bachelor of Science, The Pennsylvania State University</li>
+        <li>Graduated <strong>magna cum laude</strong>, University of Maryland Dental School</li>
+        <li>Orthodontic residency &amp; master’s degree in oral biology, University of Louisville</li>
+        <li>Advisor to the Triple Crown Seattle Study Club</li>
+        <li>Ongoing continuing education, every year, to bring patients the most comfortable, modern care</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">Away from the office</p>
+      <h2>A little more about Dr. B</h2>
+      <p>When he’s not creating confident smiles, Dr. Benkovich is an avid U.S. Masters swimmer who trains at the United States Naval Academy. He and his wife, Maureen, are proud members of the Annapolis and Chester communities — the same neighborhoods his patients call home.</p>
+      <p>Want to put a few more faces to the practice? <a href="/about/meet-the-team-dental/">Meet the team →</a> or discover <a href="/about/what-sets-us-apart/">what sets us apart →</a></p>
+    </div>
+  </section>
+
+  <Cta heading="Come meet Dr. Benkovich" />
+</BaseLayout>
+
+<style>
+  .creds { list-style: none; padding: 0; margin: 18px 0 0; }
+  .creds li { padding: 12px 0 12px 32px; position: relative; color: var(--slate); border-bottom: 1px solid var(--line); }
+  .creds li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+  .creds strong { color: var(--ink); }
+</style>

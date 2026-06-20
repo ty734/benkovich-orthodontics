@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'Am I too old for braces or Invisalign?', a: 'It’s never too late. Healthy teeth can be moved at almost any age, and a growing share of our patients are adults. The best way to know your options is a free exam with Dr. Benkovich.' },
+  { q: 'What are the most discreet options for adults?', a: 'Many adults choose Invisalign’s clear, removable aligners or tooth-colored clear braces so treatment stays subtle. Dr. Benkovich will help you weigh the look, lifestyle, and budget of each.' },
+  { q: 'How long does adult orthodontic treatment take?', a: 'It depends on what you’re correcting, but many adults are in treatment somewhere between 12 and 24 months. You’ll get a personalized estimate at your free exam.' },
+  { q: 'Will treatment fit around my work and life?', a: 'Yes. We design adult treatment around real schedules with efficient check-ups and discreet options. Invisalign in particular is removable for meals and meetings.' },
+  { q: 'How much does adult orthodontics cost?', a: 'Every smile is different, so we give you an honest figure at your free exam. We keep treatment affordable with flexible plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+];
+---
+<BaseLayout
+  title="Adult Orthodontics in Annapolis & Chester, MD | Benkovich Ortho"
+  description="Adult orthodontics in Annapolis & Chester, MD. Discreet braces & Invisalign for grown-ups, flexible plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Adult Orthodontics"
+    title="Adult Orthodontics in Annapolis & Chester, MD"
+    subtitle="It’s never too late for a confident smile. Discreet braces and Invisalign designed for a busy adult life — starting at $184/month, with a free first exam."
+    image="/images/svc-adult.jpg"
+    imageAlt="A smiling adult woman, a happy adult orthodontics patient at Benkovich Orthodontics in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Adult Orthodontics', href: '/adult-orthodontics/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">It’s never too late</p>
+      <h2>A confident smile, at any age</h2>
+      <p>If you’ve spent years wishing you’d straightened your teeth, you’re in good company — and you have more options than ever. More adults are choosing orthodontics today than at any point in the past, whether to fix a long-standing concern, undo shifting after old treatment, or simply feel better in every photo.</p>
+      <p>At Benkovich Orthodontics, Dr. Benkovich treats adult smiles with the same gentle, personalized care that’s earned the trust of families here for over 30 years — and with options designed to be discreet. We keep it honest and affordable with plans <strong>starting at {site.offer.price}/month</strong> and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Your options</p>
+        <h2>Discreet ways to straighten your smile</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <a href="/invisalign/invisalign-for-adults/" class="card feature feature--link">
+          <h3>Invisalign for Adults →</h3>
+          <p>Clear, removable aligners that are virtually invisible — a favorite for professionals who want treatment to stay subtle.</p>
+        </a>
+        <a href="/braces-for-adults/" class="card feature feature--link">
+          <h3>Braces for Adults →</h3>
+          <p>Today’s braces are smaller and more comfortable than ever, including tooth-colored clear braces that blend right in.</p>
+        </a>
+        <a href="/orthodontist-for-adults/" class="card feature feature--link">
+          <h3>Why Choose Dr. Benkovich →</h3>
+          <p>Adult-focused care, flexible scheduling, and honest guidance from an orthodontist your neighbors recommend.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Built around your life</p>
+      <h2>Treatment that fits the way you live</h2>
+      <p>We know adults aren’t looking for a treatment that takes over their calendar. That’s why we design adult care around efficient, on-time check-ups and options that keep you looking and feeling like yourself. With Invisalign, your aligners come out for meals, meetings, and special occasions — then go right back to work.</p>
+      <p>Whatever you choose, Dr. Benkovich will walk you through the look, the timeline, and the cost clearly and upfront, so there are no surprises — just a plan that fits.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your adult smile journey, step by step</h2>
+      <ol class="steps">
+        <li><strong>Free exam.</strong> Dr. Benkovich reviews your smile and explains your options — no pressure, no obligation.</li>
+        <li><strong>Personalized plan.</strong> We compare braces and Invisalign and lay out the timeline and costs clearly and upfront.</li>
+        <li><strong>An easy start.</strong> A comfortable visit to begin treatment and answer every question you have.</li>
+        <li><strong>Efficient check-ups.</strong> On-time visits designed to fit a busy adult schedule.</li>
+        <li><strong>Your new smile — protected.</strong> When treatment wraps, a custom <a href="/retainers/">retainer</a> keeps your results looking great.</li>
+      </ol>
+      <p style="margin-top:22px;">Want to plan ahead? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a> or compare <a href="/braces/">braces</a> and <a href="/invisalign/">Invisalign</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Adult orthodontics questions, answered" />
+
+  <Cta heading="Ready to invest in your smile?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

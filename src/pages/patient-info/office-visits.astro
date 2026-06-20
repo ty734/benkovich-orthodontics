@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="Your First Orthodontist Visit in Annapolis, MD | Benkovich"
+  description="Wondering what to expect at your first orthodontist visit in Annapolis & Chester, MD? Here's how the free first exam and regular check-ups work at Benkovich Orthodontics.">
+
+  <PageHero
+    eyebrow="Office visits"
+    title="What to expect at your first orthodontist visit"
+    subtitle="New to orthodontics? Relax — we've made every visit warm, simple, and pressure-free. Here's exactly what happens at your free first exam and beyond."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Patient Info', href: '/patient-info/financial-information/' }, { label: 'Office Visits', href: '/patient-info/office-visits/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">A relaxed welcome</p>
+      <h2>Your free first exam, step by step</h2>
+      <p>Your very first appointment is a complimentary, no-pressure visit designed to answer your questions and put you at ease. There's nothing to prepare and nothing to worry about — just a friendly conversation about your smile. Here's how it usually goes:</p>
+      <ol class="steps">
+        <li><strong>A warm welcome.</strong> Our team greets you, gets to know you, and makes sure you're comfortable from the moment you walk in.</li>
+        <li><strong>A gentle exam.</strong> Dr. Benkovich examines your teeth and bite — often using photos, x-rays, and models to show you exactly what he sees.</li>
+        <li><strong>Your options, explained.</strong> We walk through whether treatment makes sense now, and which options — like <a href="/braces/">braces</a> or <a href="/invisalign/">Invisalign</a> — could be a good fit.</li>
+        <li><strong>Clear, upfront costs.</strong> We review pricing and flexible payment plans starting at {site.offer.price}/month, and help you understand your insurance benefits.</li>
+        <li><strong>No pressure to decide.</strong> Take your time. When you're ready to move forward, we'll be right here to help you take the next step.</li>
+      </ol>
+      <p style="margin-top:22px;"><a href={site.booking}>Request your free first exam →</a></p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">During treatment</p>
+      <h2>What regular check-ups look like</h2>
+      <p>Once your treatment begins, you'll come in for quick, friendly check-ups every few weeks. These visits keep your smile on track and let Dr. Benkovich make small adjustments along the way. We respect your time — appointments are easy to schedule and we work hard to keep them running on time.</p>
+      <ol class="steps">
+        <li><strong>A quick check-in.</strong> We see how your smile is progressing and make sure everything feels comfortable.</li>
+        <li><strong>Gentle adjustments.</strong> Dr. Benkovich fine-tunes your braces or reviews your Invisalign progress to keep things moving.</li>
+        <li><strong>Tips and answers.</strong> We share simple care reminders and answer any questions about <a href="/braces-info/life-with-braces/">life with braces</a>.</li>
+        <li><strong>Your next visit.</strong> We schedule your next quick check-up around your family's busy calendar.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Find us</p>
+        <h2>Two welcoming offices, close to home</h2>
+        <p>Visit us at whichever location is most convenient for your family — we'd love to see you.</p>
+      </div>
+      <div class="grid grid--2" style="margin-top:40px;">
+        {site.locations.map((l) => (
+          <div class="card loc">
+            <h3>{l.name}</h3>
+            <p class="loc__addr">{l.address.join(', ')}</p>
+            <a href={l.phoneHref} class="loc__phone">{l.phone}</a>
+            <div class="loc__cta">
+              <a href={l.slug} class="btn btn--ghost">Office details</a>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="center" style="margin-top:36px;">
+        <a href={site.booking} class="btn btn--primary btn--lg">Request an Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <Cta heading="Ready for a relaxed first visit?" />
+</BaseLayout>
+
+<style>
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+  .loc { padding: 30px 30px 26px; }
+  .loc__addr { color: var(--slate); margin: 4px 0; }
+  .loc__phone { display: inline-block; font-family: var(--font-head); font-weight: 800; font-size: 1.4rem; color: var(--teal); margin: 6px 0 16px; }
+  .loc__cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+</style>

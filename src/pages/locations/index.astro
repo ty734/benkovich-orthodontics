@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="Our Locations | Benkovich Orthodontics — Annapolis & Chester"
+  description="Find Benkovich Orthodontics in Annapolis and Chester (Kent Island), MD. Two welcoming offices, friendly care, and braces & Invisalign starting at $184/month.">
+
+  <PageHero
+    eyebrow="Locations"
+    title="Benkovich Orthodontics Locations"
+    subtitle="Two welcoming offices serving families across the Annapolis area and Kent Island — with the same gentle, friendly care and free first exam at both."
+    image="/images/team-hero.webp"
+    imageAlt="The Benkovich Orthodontics team welcoming patients in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Close to home</p>
+      <h2>Find the office that’s right for you</h2>
+      <p>Whether you’re near downtown Annapolis or out on Kent Island, a confident smile is just down the road. Dr. Benkovich and our team care for kids, teens, and adults at both locations — with honest, transparent pricing <strong>starting at {site.offer.price}/month</strong> and a relaxed, no-pressure first exam on us.</p>
+      <p>Choose your closest office below for hours, directions, the services we offer there, and answers to common questions.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="grid grid--2 locs">
+        {site.locations.map((l) => (
+          <div class="loc card">
+            <h3>{l.name}</h3>
+            <p class="loc__addr">{l.address.join(', ')}</p>
+            <p class="loc__hours">{l.hours}</p>
+            <a href={l.phoneHref} class="loc__phone">{l.phone}</a>
+            <div class="loc__cta">
+              <a href={l.slug} class="btn btn--primary">Office details</a>
+              <a href={l.mapUrl} target="_blank" rel="noopener" class="loc__map">Get directions →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="center" style="margin-top:40px;">
+        <p>New to orthodontics? Explore our <a href="/braces/">braces</a> and <a href="/invisalign/">Invisalign®</a> options, or learn about <a href="/patient-info/financial-information/">financing &amp; insurance</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <Cta heading="Ready to visit us?" />
+</BaseLayout>
+
+<style>
+  .loc { padding: 30px 30px 26px; }
+  .loc__addr { color: var(--slate); margin: 4px 0; }
+  .loc__hours { color: var(--slate); font-size: .95rem; }
+  .loc__phone { display: inline-block; font-family: var(--font-head); font-weight: 800; font-size: 1.4rem; color: var(--teal); margin: 6px 0 16px; }
+  .loc__cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .loc__map { font-weight: 700; }
+</style>

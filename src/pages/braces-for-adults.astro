@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'Am I too old for braces?', a: 'It’s never too late for a confident smile. Healthy teeth can be straightened at almost any age, and adults make up a growing share of orthodontic patients. Dr. Benkovich will review your smile at a free exam and walk you through the options that fit your life.' },
+  { q: 'What discreet options do adults have?', a: 'Plenty. Clear (ceramic) braces use tooth-colored brackets that blend in, and Invisalign straightens with virtually invisible, removable aligners. We’ll help you choose the most subtle option for your goals and routine.' },
+  { q: 'Will braces interfere with my professional life?', a: 'For most adults, not at all. Clear braces and Invisalign are designed to be low-profile, so you can present, meet clients, and speak in public with confidence. We schedule efficient, on-time visits that respect your workday.' },
+  { q: 'How much do braces for adults cost in Annapolis & Chester?', a: 'Every smile is different, so a free exam gives you an exact figure. We keep treatment affordable with flexible monthly plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+  { q: 'How long does adult treatment take?', a: 'Most adults are in treatment somewhere between 12 and 24 months, depending on what we’re correcting. Dr. Benkovich gives you a personalized estimate at your free first exam.' },
+  { q: 'Should I choose braces or Invisalign?', a: 'Both work beautifully — the right choice depends on your smile, your lifestyle, and your preferences. We’ll compare the trade-offs together so you feel confident in your decision.' },
+];
+---
+<BaseLayout
+  title="Braces for Adults in Annapolis & Chester, MD | Benkovich Orthodontics"
+  description="Discreet braces for adults in Annapolis & Chester, MD. Clear & low-profile options for professional life, plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Braces for Adults"
+    title="Braces for Adults in Annapolis & Chester, MD"
+    subtitle="It’s never too late for the smile you’ve always wanted — discreet, comfortable options designed for adult life, starting at $184/month, with a free first exam and over 30 years of trusted local care."
+    image="/images/svc-adult.jpg"
+    imageAlt="A confident adult Benkovich Orthodontics patient smiling in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces', href: '/braces/' }, { label: 'Braces for Adults', href: '/braces-for-adults/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Never too late</p>
+      <h2>A confident smile, on your timeline</h2>
+      <p>More adults than ever are straightening their smiles — and for good reason. Whether you missed the chance as a teen or your teeth have shifted over the years, Dr. Benkovich offers discreet, comfortable <a href="/braces/">braces</a> and clear aligner options designed to fit a professional, on-the-go life.</p>
+      <p>Today’s treatments are lighter, lower-profile, and easier to live with than the braces you may remember. And a beautiful smile shouldn’t strain your budget: we keep things affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Your discreet options</p>
+        <h2>Subtle ways to straighten your smile</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Clear (ceramic) braces</h3>
+          <p>Tooth-colored brackets that blend right in for a low-profile look — proven, dependable, and far less noticeable than metal. <a href="/clear-braces-vs-metal/">Compare clear vs. metal →</a></p>
+        </div>
+        <div class="card feature">
+          <h3>Invisalign</h3>
+          <p>Virtually invisible, removable aligners you can take out for meals and meetings. A favorite among busy professionals. <a href="/invisalign/invisalign-for-adults/">Explore Invisalign for adults →</a></p>
+        </div>
+        <div class="card feature">
+          <h3>Modern metal braces</h3>
+          <p>Smaller and more comfortable than ever, and the most economical, dependable option when you want efficient, reliable results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Explore more</p>
+        <h2>Adult orthodontics at Benkovich</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <a href="/adult-orthodontics/" class="card feature feature--link"><h3>Adult Orthodontics →</h3><p>Discreet braces and Invisalign that fit a busy adult life.</p></a>
+        <a href="/invisalign/invisalign-for-adults/" class="card feature feature--link"><h3>Invisalign for Adults →</h3><p>A virtually invisible, removable way to straighten your smile.</p></a>
+        <a href="/clear-braces-vs-metal/" class="card feature feature--link"><h3>Clear vs. Metal Braces →</h3><p>A side-by-side comparison to help you choose with confidence.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your adult treatment journey, step by step</h2>
+      <ol class="steps">
+        <li><strong>Free first exam.</strong> Dr. Benkovich reviews your smile and explains your options — no pressure, no obligation.</li>
+        <li><strong>A clear plan.</strong> We walk you through treatment and costs upfront, including flexible payment options.</li>
+        <li><strong>Starting treatment.</strong> A comfortable visit to begin with the discreet option that fits your life.</li>
+        <li><strong>Efficient check-ups.</strong> On-time visits that respect your workday and keep your smile on track.</li>
+        <li><strong>Your new smile — protected.</strong> When treatment wraps up, a custom <a href="/retainers/">retainer</a> keeps your results looking great.</li>
+      </ol>
+      <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>, or visit us in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Braces for adults, answered" />
+
+  <Cta heading="Ready for the smile you’ve always wanted?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

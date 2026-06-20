@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'What should I look for in an orthodontist for my child?', a: 'Look for a specialist who is gentle and patient with kids, explains things clearly to parents, has long-standing experience, and offers a free first exam so you can make an informed choice without pressure. A welcoming, kid-friendly office goes a long way, too.' },
+  { q: 'When should my child first see an orthodontist?', a: 'The American Association of Orthodontists recommends a first check-up by age 7. Most kids won’t need treatment that early — it’s simply the best time for Dr. Benkovich to see how things are developing. Learn more on our early orthodontics page.' },
+  { q: 'Is the first visit really free?', a: 'Yes. Your child’s first exam is always on us — a relaxed, no-pressure visit to meet Dr. Benkovich, ask questions, and get honest guidance. If treatment is recommended, we offer flexible plans starting at $184/month.' },
+  { q: 'How do you help nervous kids feel comfortable?', a: 'Our team is known for warmth and patience. We take time to explain each step in kid-friendly language, never rush, and create a calm, friendly environment — many kids leave actually looking forward to their next visit.' },
+  { q: 'What treatments do you offer for children?', a: 'Depending on your child’s needs, options include early (Phase 1) care, braces for kids, and Invisalign for kids. Dr. Benkovich will recommend only what genuinely benefits your child, and explain everything clearly.' },
+];
+---
+<BaseLayout
+  title="Orthodontist for Kids in Annapolis, MD | Benkovich Orthodontics"
+  description="Gentle orthodontist for kids in Annapolis & Chester, MD. Caring, kid-friendly care since 1993, plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Orthodontist for Kids"
+    title="A Gentle Orthodontist for Kids in Annapolis, MD"
+    subtitle="Warm, patient, kid-friendly care that makes a great first orthodontic experience — trusted by Annapolis & Chester families since 1993, with a free first exam."
+    image="/images/patient-hero.webp"
+    imageAlt="A happy young child at Benkovich Orthodontics, a gentle orthodontist for kids in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Orthodontist for Kids', href: '/orthodontist-for-kids/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Choosing with confidence</p>
+      <h2>How to choose the right orthodontist for your child</h2>
+      <p>Your child’s first orthodontic experience can shape how they feel about dental care for years. So beyond credentials, the right orthodontist should be genuinely gentle and patient with kids, explain things clearly to parents, and create a calm, welcoming place where a nervous child can relax.</p>
+      <p>A few things worth looking for: a specialist with long-standing local experience, honest guidance that never pushes treatment a child doesn’t need, transparent pricing, and a free first exam so you can decide without pressure. At Benkovich Orthodontics, that’s exactly the experience we’ve built — with plans <strong>starting at {site.offer.price}/month</strong>.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why families choose us</p>
+        <h2>Why Annapolis parents trust Dr. Benkovich</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Gentle, Kid-Friendly Care</h3>
+          <p>Our team is known for patience and warmth. We explain every step in friendly language so kids feel at ease — and parents feel informed.</p>
+        </div>
+        <div class="card feature">
+          <h3>Trusted Since 1993</h3>
+          <p>Dr. Benkovich has cared for thousands of local smiles for over 30 years. That experience means honest, dependable guidance you can rely on.</p>
+        </div>
+        <div class="card feature">
+          <h3>Free First Exam</h3>
+          <p>Your child’s first visit is on us — no pressure, no obligation. Just a relaxed chance to meet us and get clear answers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Care for every stage</p>
+        <h2>Children’s orthodontic options</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <a href="/early-orthodontics/" class="card feature feature--link"><h3>Early Orthodontics →</h3><p>Gentle age-7 first visits — often there’s nothing to do yet but keep a friendly eye on things.</p></a>
+        <a href="/braces-for-kids/" class="card feature feature--link"><h3>Braces for Kids →</h3><p>Comfortable braces with fun colors kids love, in a warm, friendly setting.</p></a>
+        <a href="/invisalign-for-kids/" class="card feature feature--link"><h3>Invisalign for Kids →</h3><p>A clear, removable option for the right young smiles.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your child’s visit, step by step</h2>
+      <ol class="steps">
+        <li><strong>A warm welcome.</strong> Our team helps kids feel comfortable from the moment they walk in.</li>
+        <li><strong>A gentle exam.</strong> Dr. Benkovich takes a careful, friendly look at how your child’s smile is developing.</li>
+        <li><strong>Clear answers.</strong> We explain what we see in plain language — to your child and to you.</li>
+        <li><strong>Honest guidance.</strong> If it’s too early for treatment, we simply keep an eye on things at no cost.</li>
+        <li><strong>A plan that fits.</strong> If treatment will help, we lay out the options and flexible costs upfront.</li>
+      </ol>
+      <p style="margin-top:22px;">Serving families across <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> and <a href="/locations/orthodontist-chester-md/">Chester / Kent Island</a>. See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Questions from parents, answered" />
+
+  <Cta heading="Ready to meet a kids’ orthodontist you’ll love?" text="Your child’s first exam is on us — a relaxed, no-pressure visit to meet Dr. Benkovich and get honest guidance." />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

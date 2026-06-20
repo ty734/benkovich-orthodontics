@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'What is orthodontics?', a: 'Orthodontics is the area of dentistry focused on aligning teeth and correcting bites. An orthodontist like Dr. Benkovich completes years of specialty training beyond dental school to gently guide teeth into healthier, more confident positions using braces, Invisalign, and other appliances.' },
+  { q: 'At what age should my child first see an orthodontist?', a: 'The American Association of Orthodontists recommends a first check-up around age 7. At that age many kids aren\'t ready for treatment yet — we simply keep a friendly eye on how their smile is developing so we can step in at exactly the right time.' },
+  { q: 'Should I choose braces or Invisalign?', a: 'Both straighten teeth beautifully — the best choice depends on your smile, your lifestyle, and your preferences. Braces are dependable for nearly any case, while Invisalign offers a virtually invisible, removable option many teens and adults love. Dr. Benkovich will help you decide at your free exam.' },
+  { q: 'How much does orthodontic treatment cost?', a: 'Every smile is different, so an exact figure comes from a free exam. To keep care affordable, we offer flexible monthly payment plans starting at $184/month, transparent upfront pricing, and we work with most insurance.' },
+  { q: 'How long does treatment take?', a: 'Most patients are in treatment somewhere between 12 and 24 months, depending on what we\'re correcting. Dr. Benkovich will give you a personalized estimate at your free exam.' },
+  { q: 'Do braces hurt?', a: 'Braces are more comfortable than ever. You may feel mild pressure for a day or two after they\'re placed or adjusted — that\'s completely normal and usually eased with soft foods and over-the-counter relief.' },
+  { q: 'Do you accept insurance?', a: 'Yes. We work with most major insurance plans and will help you understand and maximize your orthodontic benefits. See our financial information page for more details.' },
+  { q: 'Do I need a referral from my dentist?', a: 'No referral is needed. You\'re welcome to schedule a free first exam with us directly. We\'re always happy to work alongside your family dentist throughout your care.' },
+  { q: 'What should I do in an orthodontic emergency?', a: 'True orthodontic emergencies are rare. Most issues — like a loose bracket or a poking wire — can wait until normal hours and are easy to manage at home. If you\'re ever unsure or in significant discomfort, just call us and we\'ll help right away.' },
+  { q: 'Can adults get braces or Invisalign?', a: 'Absolutely — it\'s never too late for a confident smile. We offer discreet options for adults, including clear braces and Invisalign, that fit comfortably into a busy adult life.' },
+  { q: 'How do I take care of my teeth during treatment?', a: 'Keeping your teeth and braces clean is key to a great result. Brushing after meals and flossing daily makes a big difference — see our guides on life with braces and brushing and flossing for simple, practical tips.' },
+  { q: 'How often will I have appointments?', a: 'During active treatment, most patients come in for a quick check-up every few weeks. These visits are easy to schedule, run on time, and keep your smile progressing right on track.' },
+];
+---
+<BaseLayout
+  title="Orthodontic FAQs | Benkovich Orthodontics, Annapolis MD"
+  description="Common orthodontic FAQs answered — braces vs. Invisalign, age 7 check-ups, cost from $184/month, treatment time, insurance and more. Benkovich Orthodontics, Annapolis & Chester.">
+
+  <PageHero
+    eyebrow="Orthodontic FAQs"
+    title="Your orthodontic questions, answered"
+    subtitle="From your child's first visit to braces, Invisalign, cost, and care — here are clear, friendly answers to the questions we hear most."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces Info', href: '/braces-info/orthodontic-faqs/' }, { label: 'Orthodontic FAQs', href: '/braces-info/orthodontic-faqs/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Here to help</p>
+      <h2>No question is too small</h2>
+      <p>Starting orthodontic care comes with plenty of questions — and that's a good thing. Below you'll find honest, plain-language answers to the things families ask us most. Still curious? Your <strong>free first exam</strong> is the perfect time to ask Dr. Benkovich anything, with no pressure and no obligation. You can also explore our <a href="/braces/">braces</a> and <a href="/invisalign/">Invisalign</a> options anytime.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Frequently asked orthodontic questions" />
+
+  <section class="section">
+    <div class="container measure center">
+      <p class="eyebrow">Keep exploring</p>
+      <h2>Helpful next steps</h2>
+      <p>Learn more about <a href="/braces-info/life-with-braces/">life with braces</a>, get our tips for <a href="/braces-info/brush-and-floss/">brushing and flossing with braces</a>, or review your <a href="/patient-info/financial-information/">financial and insurance options</a>.</p>
+      <a href={site.booking} class="btn btn--primary btn--lg" style="margin-top:14px;">Schedule Your Free Exam</a>
+    </div>
+  </section>
+
+  <Cta heading="Still have questions? Let's talk." />
+</BaseLayout>

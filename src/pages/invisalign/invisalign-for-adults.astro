@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'Is Invisalign good for adults?', a: 'For many adults, yes — it’s one of the most popular ways to straighten teeth discreetly. The clear aligners fit professional and social settings well. At a free exam, Dr. Benkovich will let you know whether Invisalign is the right fit for your goals.' },
+  { q: 'Will people notice I’m wearing Invisalign?', a: 'The aligners are clear and custom-fit, so they’re hard to notice in meetings, presentations, and photos. Most adults find they can straighten their smile without it being obvious.' },
+  { q: 'Am I too old for Invisalign?', a: 'It’s never too late for a confident smile. As long as your teeth and gums are healthy, adults of nearly any age can be candidates. We’ll confirm what’s right for you at your free exam.' },
+  { q: 'How long does Invisalign take for adults?', a: 'Most adults are in treatment somewhere between 12 and 18 months, depending on what we’re correcting and how consistently the aligners are worn. You’ll get a personalized estimate at your free exam.' },
+  { q: 'How much does Invisalign for adults cost?', a: 'Every smile is unique, so the most accurate figure comes from a free exam. We keep treatment affordable with flexible payment plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+];
+---
+<BaseLayout
+  title="Invisalign for Adults in Annapolis & Chester, MD | Benkovich Ortho"
+  description="Discreet Invisalign for adults in Annapolis & Chester, MD — clear aligners that fit busy professional life. Plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Invisalign for Adults"
+    title="Invisalign for Adults in Annapolis & Chester, MD"
+    subtitle="A discreet, comfortable way to straighten your smile that fits a busy professional life — starting at $184/month, with a free first exam."
+    image="/images/svc-adult.jpg"
+    imageAlt="A confident adult woman smiling, a candidate for Invisalign for adults in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Invisalign', href: '/invisalign/' }, { label: 'For Adults', href: '/invisalign/invisalign-for-adults/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">It’s never too late</p>
+      <h2>A straighter smile that fits your life</h2>
+      <p>Plenty of adults wish they’d straightened their teeth years ago — and the good news is, it’s never too late. Invisalign uses clear, custom aligners to gently move your teeth into place, so you can improve your smile without announcing it to every meeting and photo.</p>
+      <p>The aligners are removable, so you keep eating what you love and brushing as usual — a great fit for a busy professional routine. With <strong>a free first exam</strong> and flexible plans <strong>starting at {site.offer.price}/month</strong>, the smile you’ve put off may be more within reach than you think.</p>
+      <p>Want to weigh all your options? See our <a href="/adult-orthodontics/">adult orthodontics</a> overview or compare with <a href="/braces-for-adults/">braces for adults</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why professionals choose it</p>
+        <h2>The benefits of Invisalign for adults</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Discreet</h3>
+          <p>Clear aligners are hard to notice — straighten your smile confidently in meetings, presentations, and photos.</p>
+        </div>
+        <div class="card feature">
+          <h3>Fits Your Schedule</h3>
+          <p>Removable aligners and quick, on-time visits make treatment easy to work around a busy calendar.</p>
+        </div>
+        <div class="card feature">
+          <h3>Comfortable</h3>
+          <p>Smooth, custom-fit aligners with no metal brackets or wires to get in the way of your day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">A simple start</p>
+      <h2>Begin with a relaxed, free exam</h2>
+      <p>Your first visit is an easy, no-pressure conversation. Dr. Benkovich will look at your smile, talk through your goals, and let you know whether Invisalign, braces, or a combination is the best path — along with clear, upfront pricing and payment options. See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a> for details.</p>
+      <p>Read real <a href="/invisalign/invisalign-testimonials/">Invisalign reviews</a> from our patients, then <a href={site.booking}>schedule a free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Invisalign for adults, answered" />
+
+  <Cta heading="Ready for the smile you’ve been putting off?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+</style>

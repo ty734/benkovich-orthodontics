@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const gallery = [
+  { img: '/images/patient-01.jpg', alt: 'Smiling teen boy with braces, a Benkovich Orthodontics patient in Annapolis, MD' },
+  { img: '/images/patient-02.jpg', alt: 'Happy older teen girl showing off her confident smile after orthodontic care' },
+  { img: '/images/patient-03.jpg', alt: 'Adult woman smiling confidently after treatment at Benkovich Orthodontics' },
+  { img: '/images/patient-04.jpg', alt: 'Young teen girl with a bright, healthy smile' },
+  { img: '/images/patient-reward.jpg', alt: 'Dr. Benkovich celebrating with a patient and the office therapy dog' },
+];
+---
+<BaseLayout
+  title="Before and After Braces in Annapolis, MD | Benkovich Ortho"
+  description="See real smiles from Benkovich Orthodontics patients in Annapolis & Chester, MD. Browse our before-and-after braces gallery, then book a free first exam today.">
+
+  <PageHero
+    eyebrow="Smiles gallery"
+    title="Before and after braces in Annapolis"
+    subtitle="Nothing tells the story better than a happy patient. Meet some of the Annapolis & Chester smiles we've had the joy of caring for."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Patient Info', href: '/patient-info/financial-information/' }, { label: 'Before & After', href: '/patient-info/before-and-after/' }]} />
+
+  <section class="section">
+    <div class="container measure center">
+      <p class="eyebrow">Real smiles, real confidence</p>
+      <h2>The best part of our day</h2>
+      <p>There's a moment we never get tired of — when a patient sees their finished smile for the first time. Every smile below belongs to a real Benkovich Orthodontics patient who trusted us to help them shine. Results vary from person to person, and the best way to picture your own is a friendly, free first exam.</p>
+    </div>
+
+    <div class="container">
+      <div class="gallery" style="margin-top:46px;">
+        {gallery.map((g) => (
+          <figure class="gallery__item">
+            <img src={g.img} alt={g.alt} width="420" height="300" loading="lazy" />
+          </figure>
+        ))}
+        <div class="gallery__cta">
+          <h3>Your smile could be next</h3>
+          <p>Curious what's possible for you or your child? Let's talk — your first exam is on us.</p>
+          <a href={site.booking} class="btn btn--primary">Schedule Free Exam</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure center">
+      <p class="eyebrow">Find your path to a new smile</p>
+      <h2>Explore your options</h2>
+      <p>Every smile in our gallery started with a simple first step. Discover how we can help with <a href="/braces/">modern braces</a> or <a href="/invisalign/">clear Invisalign aligners</a> — both available with flexible payments starting at {site.offer.price}/month and a free first exam.</p>
+      <a href={site.booking} class="btn btn--primary btn--lg" style="margin-top:14px;">Book Your Free First Exam</a>
+    </div>
+  </section>
+
+  <Cta heading="Ready to start your own smile story?" />
+</BaseLayout>
+
+<style>
+  .gallery { display: grid; gap: 24px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .gallery { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 980px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+  .gallery__item { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); background: #fff; aspect-ratio: 4/3; }
+  .gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .gallery__item:hover img { transform: scale(1.05); }
+  .gallery__cta { border-radius: var(--radius); padding: 28px 26px; background: linear-gradient(160deg, var(--teal), var(--teal-700)); color: #fff; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+  .gallery__cta h3 { color: #fff; margin: 0; }
+  .gallery__cta p { color: #e7f1fb; margin: 0; font-size: .98rem; }
+  .gallery__cta .btn { align-self: flex-start; }
+</style>

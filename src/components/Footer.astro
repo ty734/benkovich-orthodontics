@@ -1,0 +1,77 @@
+---
+import { site } from '../data/site';
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="/images/logo.svg" alt={site.name + ' logo'} class="footer__logo" width="210" height="50" />
+        <p>{site.tagline}</p>
+        <p class="footer__stat">{site.patients} happy patients · {site.reviewCount} 5-star reviews · Since {site.established}</p>
+        <div class="footer__social">
+          <a href={site.social.facebook} aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+          <a href={site.social.instagram} aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+          <a href={site.social.youtube} aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Treatments</h4>
+        <a href="/braces/">Braces</a>
+        <a href="/invisalign/">Invisalign®</a>
+        <a href="/early-orthodontics/">Early Orthodontics</a>
+        <a href="/adult-orthodontics/">Adult Orthodontics</a>
+        <a href="/retainers/">Retainers</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Practice</h4>
+        <a href="/about/meet-dr-benkovich/">Meet Dr. Benkovich</a>
+        <a href="/about/meet-the-team-dental/">Our Team</a>
+        <a href="/patient-info/testimonials/">Reviews</a>
+        <a href="/patient-info/financial-information/">Financial &amp; Insurance</a>
+        <a href="/appointment-request/">New Patients</a>
+      </div>
+
+      <div class="footer__col footer__locations">
+        <h4>Our Offices</h4>
+        {site.locations.map((l) => (
+          <div class="footer__loc">
+            <strong>{l.name}</strong>
+            <a href={l.phoneHref}>{l.phone}</a>
+            <span>{l.address.join(', ')}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© {site.established}–2026 {site.name}. All rights reserved.</span>
+      <span class="footer__legal">
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer { background: var(--teal-900); color: #bcd4e6; padding: 64px 0 28px; font-size: .95rem; }
+  .footer__top { display: grid; gap: 36px; grid-template-columns: 1fr; }
+  .footer__brand p { color: #a3bdd4; max-width: 320px; }
+  .footer__logo { height: 46px; width: auto; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: .95; }
+  .footer__stat { font-weight: 600; color: #eaf3fb !important; }
+  .footer__social { display: flex; gap: 14px; margin-top: 12px; }
+  .footer__social a { color: #eaf3fb; font-weight: 600; }
+  .footer__col h4 { color: #fff; font-size: 1rem; margin-bottom: 14px; }
+  .footer__col a { display: block; color: #bcd4e6; padding: 5px 0; }
+  .footer__col a:hover { color: #fff; }
+  .footer__loc { margin-bottom: 14px; display: flex; flex-direction: column; }
+  .footer__loc strong { color: #fff; }
+  .footer__loc a { color: #8fd0ff; font-weight: 700; }
+  .footer__bottom { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    margin-top: 44px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); color: #93b2cb; font-size: .85rem; }
+  .footer__legal a { color: #93b2cb; margin-left: 16px; }
+  .footer__legal a:hover { color: #fff; }
+  @media (min-width: 760px) { .footer__top { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; } }
+</style>

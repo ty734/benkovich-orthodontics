@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+---
+<BaseLayout
+  title="Terms & Conditions | Benkovich Orthodontics"
+  description="The terms and conditions governing your use of the Benkovich Orthodontics website, including our informational-only disclaimer, intellectual property, and liability terms.">
+
+  <PageHero
+    eyebrow="Website terms"
+    title="Terms &amp; Conditions"
+    subtitle="These terms govern your use of our website. By using this site, you agree to the terms below. Please read them carefully."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Terms & Conditions', href: '/terms-and-conditions/' }]}
+    showCta={false} />
+
+  <section class="section">
+    <div class="container measure legal">
+      <p class="legal__updated">Last updated: June 2026</p>
+
+      <p>Welcome to the Benkovich Orthodontics website. These Terms &amp; Conditions ("Terms") govern your access to and use of this website. By accessing or using the site, you agree to be bound by these Terms. If you do not agree, please do not use the site.</p>
+
+      <h2>Use of this website</h2>
+      <p>You may use this website for lawful, personal, and informational purposes only. You agree not to use the site in any way that could damage, disable, or impair it, interfere with another party's use, or attempt to gain unauthorized access to any part of the site or its systems.</p>
+
+      <h2>No medical advice — informational only</h2>
+      <p>The content on this website is provided for general informational purposes only and is not a substitute for professional orthodontic or medical advice, diagnosis, or treatment. Reading this site does not create a doctor-patient relationship. Pricing shown is illustrative and quoted as "starting at" — your actual treatment and cost are determined only after an in-person evaluation. Always seek the advice of Dr. Benkovich or another qualified provider with any questions about your specific situation. Never disregard professional advice or delay seeking it because of something you read here.</p>
+
+      <h2>Appointment requests</h2>
+      <p>Submitting an appointment-request or contact form is a request to be contacted; it does not confirm or guarantee an appointment. We will reach out to schedule and confirm any visit. Any free-exam or promotional offer is subject to availability and may change at any time.</p>
+
+      <h2>Intellectual property</h2>
+      <p>All content on this site — including text, graphics, logos, images, and design — is owned by or licensed to Benkovich Orthodontics and is protected by applicable intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from any content without our prior written permission.</p>
+
+      <h2>Third-party links</h2>
+      <p>This website may contain links to third-party websites or services that we do not own or control, such as social media platforms or a patient portal. We provide these links for your convenience only. We are not responsible for the content, privacy practices, or availability of any third-party site, and your use of them is at your own risk and subject to their terms.</p>
+
+      <h2>Limitation of liability</h2>
+      <p>This website is provided on an "as is" and "as available" basis without warranties of any kind, whether express or implied. To the fullest extent permitted by law, Benkovich Orthodontics will not be liable for any direct, indirect, incidental, consequential, or other damages arising out of or related to your use of, or inability to use, this website or its content.</p>
+
+      <h2>Changes to these terms</h2>
+      <p>We may update these Terms from time to time. When we do, we will revise the "Last updated" date above. Your continued use of the site after changes are posted means you accept the updated Terms.</p>
+
+      <h2>Contact us</h2>
+      <p>If you have questions about these Terms, please reach out:</p>
+      <p>
+        <strong>{site.name}</strong><br />
+        {site.locations[0].name}: <a href={site.locations[0].phoneHref}>{site.locations[0].phone}</a><br />
+        {site.locations[1].name.split(' / ')[0]}: <a href={site.locations[1].phoneHref}>{site.locations[1].phone}</a><br />
+        Or visit our <a href="/contact-us/">contact page</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal__updated { color: var(--slate); font-size: .9rem; margin-bottom: 28px; }
+  .legal h2 { margin-top: 42px; }
+  .legal ul { padding-left: 22px; }
+  .legal li { margin-bottom: 10px; }
+</style>

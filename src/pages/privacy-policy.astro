@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+---
+<BaseLayout
+  title="Privacy Policy | Benkovich Orthodontics"
+  description="Read the Benkovich Orthodontics privacy policy to learn how we collect, use, and protect the information you share with us through our website.">
+
+  <PageHero
+    eyebrow="Your privacy matters"
+    title="Privacy Policy"
+    subtitle="This policy explains what information we collect through this website, how we use it, and the choices you have. Protecting your privacy is important to us."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy', href: '/privacy-policy/' }]}
+    showCta={false} />
+
+  <section class="section">
+    <div class="container measure legal">
+      <p class="legal__updated">Last updated: June 2026</p>
+
+      <p>Benkovich Orthodontics ("we," "us," or "our") respects your privacy. This Privacy Policy describes how we collect, use, and share information when you visit our website, contact us, or request an appointment. It applies to this website only. If you are a current patient, the handling of your protected health information is governed separately by our HIPAA Notice of Privacy Practices provided at our office.</p>
+
+      <h2>Information we collect</h2>
+      <p>We collect information in a few ways:</p>
+      <ul>
+        <li><strong>Information you give us.</strong> When you fill out our appointment-request or contact forms, you may provide your name, email address, phone number, preferred location, the reason for your inquiry, and any message you choose to share.</li>
+        <li><strong>Information collected automatically.</strong> Like most websites, we automatically collect certain technical information such as your IP address, browser type, device information, the pages you view, and how you arrived at our site. This is gathered through cookies and similar technologies.</li>
+        <li><strong>Marketing and advertising information.</strong> If you reach our site through an online ad, we may receive identifiers (such as click IDs and campaign parameters) that help us understand which marketing efforts brought you here.</li>
+      </ul>
+
+      <h2>How we use your information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Respond to your inquiries and schedule your appointment;</li>
+        <li>Communicate with you about your request, including by phone, email, or text message where you have consented;</li>
+        <li>Improve our website, services, and the experience we offer;</li>
+        <li>Understand how visitors use our site and measure the performance of our marketing; and</li>
+        <li>Comply with applicable laws and protect the security of our site and patients.</li>
+      </ul>
+
+      <h2>Cookies and analytics</h2>
+      <p>We use cookies and similar technologies to operate our website and understand how it is used. We may use third-party analytics and advertising services — such as Google Analytics and Meta (Facebook) tools — that set their own cookies and collect information about your activity on our site to help us measure traffic and the effectiveness of our advertising. You can usually control cookies through your browser settings, though disabling them may affect how the site functions.</p>
+
+      <h2>Text messaging (SMS) consent</h2>
+      <p>If you provide your phone number and opt in, we may send you appointment, marketing, and informational text messages. Consent to receive texts is not a condition of any purchase or of receiving care. Message and data rates may apply, and message frequency varies. You can opt out at any time by replying STOP, or reply HELP for assistance. We do not share your mobile information with third parties or affiliates for their own marketing purposes.</p>
+
+      <h2>How we share information</h2>
+      <p>We do not sell your personal information. We may share information with trusted service providers who help us operate our website, manage appointment requests, send communications, and run our marketing — and only to the extent needed to perform those services. We may also disclose information when required by law or to protect the rights, safety, and security of our patients, our practice, or others.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>You can opt out of text messages at any time by replying STOP.</li>
+        <li>You can adjust your browser settings to limit or block cookies.</li>
+        <li>You can opt out of certain advertising cookies through tools offered by Google and Meta.</li>
+        <li>You can contact us to ask about the information we hold about you.</li>
+      </ul>
+
+      <h2>Children's privacy</h2>
+      <p>Our website is intended for a general audience. Because we serve families, parents and guardians may submit information about their children when requesting an appointment. We do not knowingly collect personal information directly from children online without a parent or guardian's involvement.</p>
+
+      <h2>Data security</h2>
+      <p>We take reasonable steps to protect the information you share with us. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date above. We encourage you to review this page periodically.</p>
+
+      <h2>Contact us</h2>
+      <p>If you have questions about this Privacy Policy or how we handle your information, please reach out:</p>
+      <p>
+        <strong>{site.name}</strong><br />
+        {site.locations[0].name}: <a href={site.locations[0].phoneHref}>{site.locations[0].phone}</a><br />
+        {site.locations[1].name.split(' / ')[0]}: <a href={site.locations[1].phoneHref}>{site.locations[1].phone}</a><br />
+        Or visit our <a href="/contact-us/">contact page</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal__updated { color: var(--slate); font-size: .9rem; margin-bottom: 28px; }
+  .legal h2 { margin-top: 42px; }
+  .legal ul { padding-left: 22px; }
+  .legal li { margin-bottom: 10px; }
+</style>

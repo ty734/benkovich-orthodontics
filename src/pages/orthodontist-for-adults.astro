@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'Is it worth seeing an orthodontist as an adult?', a: 'Absolutely. Straightening your teeth can boost confidence and make day-to-day care easier — and it’s never too late. A free exam with Dr. Benkovich is the simplest way to see what’s possible for your smile.' },
+  { q: 'What should I look for in an orthodontist for adults?', a: 'Look for a specialist with experience treating grown-ups, discreet options like Invisalign and clear braces, flexible scheduling that respects your time, and honest, upfront pricing. A free first exam lets you decide with no pressure.' },
+  { q: 'Will people be able to tell I’m in treatment?', a: 'Not if you’d rather they didn’t. Many adults choose Invisalign’s clear aligners or tooth-colored clear braces so treatment stays subtle and fits naturally into work and social life.' },
+  { q: 'How does treatment fit a busy schedule?', a: 'We design adult care around efficient, on-time check-ups and discreet options. With Invisalign, aligners come out for meals and meetings, then go right back to work — so treatment fits your life, not the other way around.' },
+  { q: 'How much does adult orthodontics cost?', a: 'Every smile is different, so we give you an honest figure at your free exam. We keep it affordable with flexible plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+];
+---
+<BaseLayout
+  title="Orthodontist for Adults in Annapolis, MD | Benkovich Ortho"
+  description="Trusted orthodontist for adults in Annapolis & Chester, MD. Discreet braces & Invisalign, flexible plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Orthodontist for Adults"
+    title="A Trusted Orthodontist for Adults in Annapolis, MD"
+    subtitle="Discreet, adult-focused care that fits a busy life — with options designed to stay subtle, starting at $184/month, and a free first exam. Trusted here since 1993."
+    image="/images/svc-adult.jpg"
+    imageAlt="A confident adult woman, a happy patient of Benkovich Orthodontics, an orthodontist for adults in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Orthodontist for Adults', href: '/orthodontist-for-adults/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Care made for grown-ups</p>
+      <h2>An orthodontist who understands adult patients</h2>
+      <p>Adults come to orthodontics for all kinds of reasons — a smile they’ve always wanted to fix, teeth that have shifted over the years, or the confidence boost of a straighter grin. Whatever brings you in, you deserve an orthodontist who treats your time, your goals, and your preferences with real care.</p>
+      <p>At Benkovich Orthodontics, Dr. Benkovich has treated local smiles of every age for over 30 years. For adults, that means discreet options, efficient scheduling, and honest guidance — with plans <strong>starting at {site.offer.price}/month</strong> and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why adults choose us</p>
+        <h2>What makes Dr. Benkovich a great fit for adults</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Discreet by Design</h3>
+          <p>Clear aligners and tooth-colored braces keep treatment subtle, so you can straighten your smile without it being the headline.</p>
+        </div>
+        <div class="card feature">
+          <h3>Built Around Your Time</h3>
+          <p>Efficient, on-time check-ups and flexible options that respect a full calendar and a working life.</p>
+        </div>
+        <div class="card feature">
+          <h3>Honest, Upfront Care</h3>
+          <p>Clear pricing and straight answers from an orthodontist your neighbors recommend — no pressure, no surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Your options</p>
+        <h2>Adult treatment options</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <a href="/adult-orthodontics/" class="card feature feature--link"><h3>Adult Orthodontics →</h3><p>An overview of discreet, modern treatment designed for adult smiles.</p></a>
+        <a href="/braces-for-adults/" class="card feature feature--link"><h3>Braces for Adults →</h3><p>Comfortable metal and clear braces that fit naturally into adult life.</p></a>
+        <a href="/invisalign/invisalign-for-adults/" class="card feature feature--link"><h3>Invisalign for Adults →</h3><p>Clear, removable aligners — a favorite for professionals who want a subtle option.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your adult consultation, step by step</h2>
+      <ol class="steps">
+        <li><strong>Free exam.</strong> Dr. Benkovich reviews your smile and listens to your goals — no pressure, no obligation.</li>
+        <li><strong>Personalized plan.</strong> We compare your discreet options and lay out the timeline and costs upfront.</li>
+        <li><strong>An easy start.</strong> A comfortable visit to begin treatment and answer every question.</li>
+        <li><strong>Efficient check-ups.</strong> On-time visits designed to fit a busy adult schedule.</li>
+        <li><strong>Your new smile — protected.</strong> When treatment wraps, a custom <a href="/retainers/">retainer</a> keeps your results looking great.</li>
+      </ol>
+      <p style="margin-top:22px;">Serving <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> and <a href="/locations/orthodontist-chester-md/">Chester / Kent Island</a>. See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Adult patient questions, answered" />
+
+  <Cta heading="Ready to invest in your smile?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

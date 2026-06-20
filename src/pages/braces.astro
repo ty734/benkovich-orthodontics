@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'How much do braces cost in Annapolis & Chester?', a: 'Every smile is different, so the best way to get an exact figure is a free exam. That said, we keep braces affordable with flexible monthly payment plans starting at $184/month, transparent pricing, and we work with most insurance.' },
+  { q: 'At what age should my child get braces?', a: 'The American Association of Orthodontists recommends a first check-up around age 7. Many kids aren’t ready for braces yet — we simply keep a friendly eye on things until the timing is right. Teens and adults can start any time.' },
+  { q: 'How long will treatment take?', a: 'Most patients are in braces somewhere between 12 and 24 months, depending on what we’re correcting. Dr. Benkovich will give you a personalized estimate at your free exam.' },
+  { q: 'Do braces hurt?', a: 'Braces are more comfortable than ever. You may feel mild pressure for a day or two after they’re placed or adjusted — that’s normal and usually eased with soft foods and over-the-counter relief.' },
+  { q: 'Can adults get braces too?', a: 'Absolutely. It’s never too late for a confident smile. We offer discreet options for adults, including clear braces and Invisalign.' },
+];
+---
+<BaseLayout
+  title="Braces in Annapolis & Chester, MD | Benkovich Orthodontics"
+  description="Affordable metal & clear braces for kids, teens, and adults in Annapolis & Chester, MD. Flexible payments from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Braces"
+    title="Braces in Annapolis & Chester, MD"
+    subtitle="Comfortable, modern braces for kids, teens, and adults — starting at $184/month, with a free first exam and care your neighbors have trusted for over 30 years."
+    image="/images/svc-braces.jpg"
+    imageAlt="A happy Benkovich Orthodontics patient with braces in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces', href: '/braces/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">A trusted classic, modernized</p>
+      <h2>Reliable, effective, and surprisingly comfortable</h2>
+      <p>Braces are the most proven way to straighten teeth and correct bites — and today’s braces are lighter, smaller, and more comfortable than the ones you remember. At Benkovich Orthodontics, Dr. Benkovich uses braces to gently guide teeth into place for kids, teens, and adults alike, with results designed to last a lifetime.</p>
+      <p>Best of all, a beautiful smile shouldn’t strain your budget. We keep things honest and affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Your options</p>
+        <h2>Types of braces we offer</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Metal Braces</h3>
+          <p>Today’s metal braces are smaller and more comfortable than ever — and kids love choosing fun colors at each visit. The most economical, dependable option for all ages.</p>
+        </div>
+        <div class="card feature">
+          <h3>Clear (Ceramic) Braces</h3>
+          <p>Tooth-colored brackets that blend in for a more discreet look — a popular choice for teens and adults who want braces to be less noticeable. <a href="/clear-braces-vs-metal/">Compare clear vs. metal →</a></p>
+        </div>
+        <div class="card feature">
+          <h3>Self-Ligating Braces</h3>
+          <p>Modern brackets that can mean fewer adjustments and easier cleaning, for a smooth, efficient treatment experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">For every age</p>
+        <h2>Braces for the whole family</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <a href="/braces-for-kids/" class="card feature feature--link"><h3>Braces for Kids →</h3><p>Gentle, friendly care that makes a great first orthodontic experience.</p></a>
+        <a href="/braces-for-teens/" class="card feature feature--link"><h3>Braces for Teens →</h3><p>Effective, color-customizable braces that fit a busy teen’s life.</p></a>
+        <a href="/braces-for-adults/" class="card feature feature--link"><h3>Braces for Adults →</h3><p>Discreet options to straighten your smile at any age.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your braces journey, step by step</h2>
+      <ol class="steps">
+        <li><strong>Free exam.</strong> Dr. Benkovich reviews your smile and explains your options — no pressure, no obligation.</li>
+        <li><strong>Personalized plan.</strong> We’ll walk you through the treatment plan and the costs clearly and upfront, including flexible payment options.</li>
+        <li><strong>Placing your braces.</strong> A comfortable, straightforward visit to get your braces on and answer every question.</li>
+        <li><strong>Quick check-ups.</strong> Easy, on-time visits every few weeks to keep your smile on track.</li>
+        <li><strong>Your new smile — protected.</strong> When your braces come off, a custom <a href="/retainers/">retainer</a> keeps your results looking great.</li>
+      </ol>
+      <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a> or our <a href="/dental-braces-cost/">guide to braces cost</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Braces questions, answered" />
+
+  <Cta heading="Ready for a confident new smile?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

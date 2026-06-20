@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'How much do braces or Invisalign cost?', a: 'Every smile is different, so the most accurate figure comes from a free exam. To keep care affordable, we offer flexible monthly payment plans starting at $184/month, transparent pricing with no surprises, and we work with most insurance.' },
+  { q: 'Do you take my insurance?', a: 'We work with most major insurance plans and will help you understand and maximize your orthodontic benefits. Bring your insurance details to your free exam and we\'ll walk through your coverage together.' },
+  { q: 'Is the first exam really free?', a: 'Yes. Your initial consultation is completely free — a relaxed, no-pressure visit to meet Dr. Benkovich, review your smile, and get clear answers and a personalized plan.' },
+  { q: 'What payment methods do you accept?', a: 'We accept cash, checks, and major credit cards, and we offer in-house monthly payment plans so you can spread treatment costs over time in a way that fits your budget.' },
+];
+---
+<BaseLayout
+  title="Orthodontist Payment Plans in Annapolis, MD | Benkovich"
+  description="Affordable orthodontist payment plans in Annapolis & Chester, MD. Braces & Invisalign from $184/month, most insurance accepted, clear upfront costs, and a free first exam.">
+
+  <PageHero
+    eyebrow="Financial information"
+    title="Orthodontist payment plans in Annapolis"
+    subtitle="A confident smile shouldn't strain your budget. We keep orthodontics affordable with flexible monthly payments, most insurance accepted, and honest, upfront pricing."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Patient Info', href: '/patient-info/financial-information/' }, { label: 'Financial Information', href: '/patient-info/financial-information/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Affordable from the start</p>
+      <h2>A beautiful smile that fits your family's budget</h2>
+      <p>At Benkovich Orthodontics, we believe cost should never stand between you and a healthy, confident smile. That's why we keep everything clear and affordable — flexible plans <strong>starting at {site.offer.price}/month</strong>, most insurance accepted, and pricing you can understand from day one. And it all starts with a <strong>free first exam</strong>.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why care here is affordable</p>
+        <h2>Four ways we make treatment easy on your wallet</h2>
+      </div>
+      <div class="grid grid--4" style="margin-top:44px;">
+        <div class="card feature">
+          <h3>From {site.offer.price}/month</h3>
+          <p>Flexible, in-house monthly payment plans for braces and Invisalign — designed around your budget, not the other way around.</p>
+        </div>
+        <div class="card feature">
+          <h3>Most insurance accepted</h3>
+          <p>We work with most major plans and help you maximize every dollar of your orthodontic benefits.</p>
+        </div>
+        <div class="card feature">
+          <h3>Clear, upfront costs</h3>
+          <p>No surprises. You'll know exactly what your treatment costs — and what your plan covers — before we begin.</p>
+        </div>
+        <div class="card feature">
+          <h3>Free first exam</h3>
+          <p>Your initial consultation is on us. Get a personalized plan and a straight answer with zero pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">How it works</p>
+      <h2>Getting started is simple</h2>
+      <ol class="steps">
+        <li><strong>Come in for your free exam.</strong> Meet Dr. Benkovich, review your smile, and ask every question on your mind — no cost, no obligation.</li>
+        <li><strong>Get a clear, personalized plan.</strong> We'll explain your treatment options and the costs plainly and upfront, including monthly payment choices.</li>
+        <li><strong>Maximize your insurance.</strong> Bring your details and we'll help you make the most of your orthodontic benefits.</li>
+        <li><strong>Pick a plan that fits.</strong> Choose a flexible monthly schedule starting at {site.offer.price}/month, then start your smile journey with confidence.</li>
+      </ol>
+      <p style="margin-top:22px;">Want a deeper look at numbers? See our <a href="/dental-braces-cost/">guide to braces cost</a> and <a href="/invisalign/invisalign-costs/">Invisalign costs</a>, or compare options for <a href="/braces/">braces</a> and <a href="/invisalign/">Invisalign</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Financial questions, answered" />
+
+  <Cta heading="Let's make your smile affordable" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; color: var(--teal-700); }
+  .feature p { color: var(--slate); margin: 0; }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="What Sets Us Apart | Orthodontist in Annapolis, MD"
+  description="What sets Benkovich Orthodontics apart in Annapolis & Chester, MD: specialty-trained since 1993, 9,000+ patients, transparent $184/month pricing & a free first exam.">
+
+  <PageHero
+    eyebrow="Why families choose us"
+    title="What Sets Benkovich Orthodontics Apart"
+    subtitle="Specialty-trained care, honest pricing, and a genuinely friendly experience — the reasons Annapolis & Chester families have trusted us for over 30 years."
+    image="/images/team-group.jpg"
+    imageAlt="The Benkovich Orthodontics team in Annapolis & Chester, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about/meet-dr-benkovich/' }, { label: 'What Sets Us Apart', href: '/about/what-sets-us-apart/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">The difference is in the details</p>
+      <h2>Expert care that still feels personal</h2>
+      <p>There are plenty of places to straighten your teeth. What keeps families coming back to Benkovich Orthodontics — and driving in from across the region — is the combination of specialty training, honest pricing, and a team that treats you like a neighbor. Here’s what makes us different.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="grid grid--3" style="margin-top:0;">
+        <div class="card feature">
+          <h3>Specialty-Trained Since 1993</h3>
+          <p>Dr. Benkovich is a specialty-trained orthodontist who has cared for our community for over 30 years — experience you can feel at every visit.</p>
+        </div>
+        <div class="card feature">
+          <h3>{site.patients} Patients Treated</h3>
+          <p>Thousands of local families have trusted us with their smiles. That’s a lot of confident grins across Annapolis and Kent Island.</p>
+        </div>
+        <div class="card feature">
+          <h3>{site.reviewCount} 5-Star Reviews</h3>
+          <p>A {site.rating} rating built on kindness, clear communication, and results — see for yourself on our <a href="/patient-info/testimonials/">reviews page</a>.</p>
+        </div>
+        <div class="card feature">
+          <h3>Transparent {site.offer.price}/Month Pricing</h3>
+          <p>Flexible plans <strong>starting at {site.offer.price}/month</strong>, clear upfront costs, and most insurance accepted. No surprises, ever.</p>
+        </div>
+        <div class="card feature">
+          <h3>Two Convenient Locations</h3>
+          <p>Welcoming offices in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> and <a href="/locations/orthodontist-chester-md/">Chester / Kent Island</a> — quality care close to home.</p>
+        </div>
+        <div class="card feature">
+          <h3>A Free First Exam</h3>
+          <p>Your initial visit is on us — a relaxed, no-pressure chat with Dr. Benkovich to explore your options.</p>
+        </div>
+        <div class="card feature">
+          <h3>A Comfortable, Caring Experience</h3>
+          <p>A friendly team that takes the time to explain everything and puts even nervous kids completely at ease.</p>
+        </div>
+        <div class="card feature">
+          <h3>Care for Every Age</h3>
+          <p>From a child’s first check-up to discreet adult treatment, we offer <a href="/braces/">braces</a> and <a href="/invisalign/">Invisalign®</a> for the whole family.</p>
+        </div>
+        <a href={site.booking} class="card feature feature--link">
+          <h3>See It for Yourself →</h3>
+          <p>Book your free exam and experience the Benkovich difference firsthand.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure center">
+      <p class="eyebrow">Get to know us</p>
+      <h2>Meet the people behind the smiles</h2>
+      <p>Learn more about <a href="/about/meet-dr-benkovich/">Dr. Benkovich</a> and <a href="/about/meet-the-team-dental/">our team</a>, or explore our <a href="/locations/">locations</a> to find the office closest to you.</p>
+    </div>
+  </section>
+
+  <Cta heading="Experience the difference" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+</style>

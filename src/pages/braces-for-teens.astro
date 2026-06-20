@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'Can my teen still play sports with braces?', a: 'Absolutely. Plenty of our teen patients play contact and team sports throughout treatment — we’ll fit them with a comfortable mouthguard designed for braces so they can stay in the game with confidence.' },
+  { q: 'Can my teen play a wind or brass instrument with braces?', a: 'Yes. There’s usually a short adjustment period as lips get used to the brackets, but most band and orchestra students adapt within a week or two. A little orthodontic wax makes it even smoother.' },
+  { q: 'Can teens choose their braces colors?', a: 'Definitely — it’s one of the best parts. Teens pick new band colors at every visit, from school spirit colors to seasonal looks. It’s an easy way to make braces feel like their own.' },
+  { q: 'How much do braces for teens cost in Annapolis & Chester?', a: 'Every smile is different, so a free exam gives you an exact figure. We keep braces affordable with flexible monthly plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+  { q: 'How long do teens wear braces?', a: 'Most teens are in braces somewhere between 12 and 24 months, depending on what we’re correcting. Dr. Benkovich gives you a personalized estimate at the free first exam.' },
+  { q: 'Would Invisalign be a better fit for my teen?', a: 'For some teens, clear aligners are a great option — especially the responsible, self-motivated ones. We’ll talk through the trade-offs at your visit. Learn more about Invisalign for teens to compare.' },
+];
+---
+<BaseLayout
+  title="Braces for Teens in Annapolis & Chester, MD | Benkovich Orthodontics"
+  description="Color-customizable braces for teens in Annapolis & Chester, MD that fit sports, music & school. Plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Braces for Teens"
+    title="Braces for Teens in Annapolis & Chester, MD"
+    subtitle="Effective, color-customizable braces that fit a busy teen’s life — sports, instruments, and all — starting at $184/month, with a free first exam and care families have trusted for over 30 years."
+    image="/images/patient-02.jpg"
+    imageAlt="A smiling teen Benkovich Orthodontics patient with braces in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces', href: '/braces/' }, { label: 'Braces for Teens', href: '/braces-for-teens/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Built for teen life</p>
+      <h2>Braces that keep up with everything they do</h2>
+      <p>The teen years are busy — practices, performances, friends, and a full school schedule. Dr. Benkovich designs <a href="/braces/">braces</a> treatment to fit right into that life, not interrupt it. Today’s braces are smaller and more comfortable than ever, and quick, on-time check-ups keep your teen moving without missing a beat.</p>
+      <p>And because confidence matters at this age, teens get to make their braces their own with custom colors at every visit. A great smile shouldn’t strain your budget either: we keep things affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why teens choose us</p>
+        <h2>Braces that fit a full schedule</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Make it their own</h3>
+          <p>Custom band colors at every visit — school spirit, seasonal, or subtle. An easy way for teens to feel confident in their smile.</p>
+        </div>
+        <div class="card feature">
+          <h3>Fits sports &amp; instruments</h3>
+          <p>From the soccer field to the marching band, braces are designed to keep up. We’ll fit a sports mouthguard so your teen can play with confidence.</p>
+        </div>
+        <div class="card feature">
+          <h3>Quick, on-time visits</h3>
+          <p>Easy check-ups every few weeks that respect your teen’s schedule — in and out without falling behind on school or practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Compare your options</p>
+        <h2>Braces or clear aligners?</h2>
+      </div>
+      <div class="grid grid--2" style="margin-top:42px;">
+        <a href="/braces/" class="card feature feature--link"><h3>Teen Braces →</h3><p>Dependable, color-customizable, and ideal for a wide range of smiles. The proven choice that works for almost every teen.</p></a>
+        <a href="/invisalign/invisalign-for-teens/" class="card feature feature--link"><h3>Invisalign for Teens →</h3><p>A virtually invisible, removable option for responsible, self-motivated teens. See if clear aligners are the right fit.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your teen’s braces journey, step by step</h2>
+      <ol class="steps">
+        <li><strong>Free first exam.</strong> Dr. Benkovich reviews your teen’s smile and explains the options — no pressure, no obligation.</li>
+        <li><strong>A clear plan.</strong> We walk you through treatment and costs upfront, including flexible payment options.</li>
+        <li><strong>Placing the braces.</strong> A comfortable visit — and your teen picks their first set of colors.</li>
+        <li><strong>Quick check-ups.</strong> Easy, on-time visits every few weeks that fit around school and activities.</li>
+        <li><strong>A confident new smile.</strong> When the braces come off, a custom <a href="/retainers/">retainer</a> keeps those results looking great.</li>
+      </ol>
+      <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>, or visit us in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Braces for teens, answered" />
+
+  <Cta heading="Ready to start your teen’s smile journey?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

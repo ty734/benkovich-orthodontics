@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'What’s the main difference between clear and metal braces?', a: 'They work the same way — both gently guide teeth into place — but clear (ceramic) braces use tooth-colored brackets that blend in, while metal braces use small stainless-steel brackets. The biggest difference is appearance; the right choice depends on your goals and budget.' },
+  { q: 'Are clear braces more expensive than metal?', a: 'Clear braces typically cost a bit more than metal because of the materials, but the difference is modest. We keep both options affordable with flexible plans starting at $184/month and transparent pricing — your exact figure comes from a free exam.' },
+  { q: 'Do clear braces stain?', a: 'The ceramic brackets themselves resist staining, but the clear elastic ties can pick up color from foods like coffee, curry, or red wine between visits. They’re replaced at every adjustment, so any discoloration is temporary. We’ll share easy tips to keep them looking their best.' },
+  { q: 'Are clear braces as effective as metal?', a: 'Yes — both are highly effective at straightening teeth and correcting bites. For most everyday corrections they perform comparably. Dr. Benkovich will recommend the best fit for your specific smile at your free exam.' },
+  { q: 'Which is better for kids and teens?', a: 'Metal braces are often the practical favorite for kids and teens — they’re durable, economical, and come with fun, customizable colors. Clear braces tend to appeal to image-conscious older teens and adults who prefer a subtle look.' },
+  { q: 'How do I decide which is right for me?', a: 'The easiest way is a free first exam. We’ll look at your smile, talk through appearance, cost, and lifestyle, and help you choose with confidence — no pressure, no obligation.' },
+];
+---
+<BaseLayout
+  title="Clear Braces vs Metal Braces in Annapolis & Chester, MD | Benkovich"
+  description="Clear braces vs metal braces compared: appearance, cost, durability & care. Find your best fit in Annapolis & Chester, MD — from $184/month, free first exam.">
+
+  <PageHero
+    eyebrow="Clear vs. Metal Braces"
+    title="Clear Braces vs. Metal Braces in Annapolis & Chester, MD"
+    subtitle="Both straighten beautifully — the right choice comes down to appearance, cost, and lifestyle. Here’s an honest, side-by-side comparison to help you decide, with care starting at $184/month and a free first exam."
+    image="/images/svc-braces.jpg"
+    imageAlt="Close-up of a Benkovich Orthodontics patient comparing clear and metal braces in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces', href: '/braces/' }, { label: 'Clear vs. Metal Braces', href: '/clear-braces-vs-metal/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">The short version</p>
+      <h2>Same goal, two great paths</h2>
+      <p>Clear (ceramic) braces and traditional metal <a href="/braces/">braces</a> both gently guide your teeth into place using brackets and wires — and both deliver excellent, lasting results. The real difference is how they look, what they cost, and how they fit your daily life. Below, we break it down honestly so you can choose with confidence.</p>
+      <p>Whichever you choose, we keep things affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Side by side</p>
+        <h2>Clear vs. metal at a glance</h2>
+      </div>
+      <div class="compare-wrap">
+        <table class="compare">
+          <thead>
+            <tr><th scope="col">What matters</th><th scope="col">Clear (ceramic) braces</th><th scope="col">Metal braces</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Appearance</th><td>Tooth-colored brackets that blend in for a subtle look</td><td>Small, shiny stainless-steel brackets — more visible</td></tr>
+            <tr><th scope="row">Cost</th><td>Typically a little more, due to materials</td><td>The most economical, budget-friendly option</td></tr>
+            <tr><th scope="row">Durability</th><td>Strong, though brackets can be more delicate</td><td>Highly durable — a great fit for active lifestyles</td></tr>
+            <tr><th scope="row">Care</th><td>Clear ties may pick up color between visits; replaced each adjustment</td><td>Low-maintenance and resistant to staining</td></tr>
+            <tr><th scope="row">Fun factor</th><td>Designed to be discreet</td><td>Customizable colors kids and teens love</td></tr>
+            <tr><th scope="row">Best suited to</th><td>Adults and image-conscious older teens</td><td>Kids, teens, and anyone wanting maximum value</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="center" style="margin-top:24px;color:var(--slate);">Prefer something fully removable and virtually invisible? <a href="/invisalign/">Explore Invisalign →</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Which suits you?</p>
+        <h2>A simple way to choose</h2>
+      </div>
+      <div class="grid grid--2" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Clear braces may be for you if…</h3>
+          <p>You’re an adult or older teen who wants a subtle, low-profile look — and you’re happy with a little extra care between visits to keep them looking their best.</p>
+        </div>
+        <div class="card feature">
+          <h3>Metal braces may be for you if…</h3>
+          <p>You want the most dependable, economical option, you lead an active life, or you (or your child) love the idea of picking fun colors at every visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">Still deciding?</p>
+      <h2>We’ll help you choose at your free exam</h2>
+      <p>There’s no single right answer — only the right answer for your smile, your budget, and your life. At your free first exam, Dr. Benkovich will look at your teeth, talk through the trade-offs, and recommend the option he’d choose for his own family. No pressure, no obligation.</p>
+      <p style="margin-top:22px;">Want to dig deeper? See our <a href="/braces/">full guide to braces</a>, our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>, or visit us in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Clear vs. metal braces, answered" />
+
+  <Cta heading="Not sure which braces are right? Let’s find out." />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .compare-wrap { margin-top: 42px; overflow-x: auto; }
+  .compare { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); min-width: 640px; }
+  .compare th, .compare td { padding: 16px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .compare thead th { background: var(--navy); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 1rem; }
+  .compare tbody th { font-family: var(--font-head); color: var(--teal-700); font-weight: 700; white-space: nowrap; }
+  .compare tbody td { color: var(--slate); }
+  .compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: none; }
+  .compare tbody tr:nth-child(even) { background: var(--cream); }
+</style>

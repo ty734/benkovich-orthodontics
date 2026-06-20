@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const loc = site.locations[0];
+
+const faqs = [
+  { q: 'Is parking available at your Annapolis office?', a: 'Yes — there’s convenient, easy parking right at our Annapolis office, so getting in and out for appointments is simple for the whole family.' },
+  { q: 'Are you accepting new patients in Annapolis?', a: 'We are! We’d love to welcome you. Your first exam is free — a relaxed visit to meet Dr. Benkovich and explore your options with no pressure and no obligation.' },
+  { q: 'Do you take my insurance?', a: 'We work with most major insurance plans and will help you make the most of your benefits. We also offer flexible payment plans starting at $184/month and clear, upfront pricing so there are no surprises.' },
+  { q: 'How much is the first exam?', a: 'Your initial exam is completely free. Dr. Benkovich will review your smile, answer your questions, and walk you through your options — there’s never any pressure to start.' },
+  { q: 'What ages do you treat at the Annapolis office?', a: 'All of them. We care for kids (a first check-up around age 7 is recommended), teens, and adults. It’s never too late for a confident smile.' },
+];
+---
+<BaseLayout
+  title="Orthodontist in Annapolis, MD | Benkovich Orthodontics"
+  description="Looking for an orthodontist in Annapolis, MD? Benkovich Orthodontics offers braces & Invisalign from $184/month, a free first exam, and friendly care. Call today.">
+
+  <PageHero
+    eyebrow="Annapolis, MD"
+    title="Orthodontist in Annapolis, MD"
+    subtitle="Friendly, specialty-trained orthodontic care for kids, teens, and adults — braces and Invisalign starting at $184/month, with a free first exam."
+    image="/images/team-hero.webp"
+    imageAlt="The Benkovich Orthodontics team at their Annapolis, MD office"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations/' }, { label: 'Annapolis', href: loc.slug }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Your neighborhood orthodontist</p>
+      <h2>Confident smiles, right here in Annapolis</h2>
+      <p>For over 30 years, families across Annapolis have trusted Benkovich Orthodontics with their smiles. Our office is easy to reach whether you’re coming from downtown Annapolis and the Naval Academy, Parole, Eastport, or nearby communities like Severna Park, Edgewater, and Arnold.</p>
+      <p>Dr. Benkovich treats every patient like a neighbor — explaining everything in plain language and making each visit personal and genuinely enjoyable. Best of all, a beautiful smile shouldn’t strain your budget. We keep things honest and affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted. Your first exam is always free.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="nap-grid">
+        <div class="nap card">
+          <p class="eyebrow">Visit us</p>
+          <h2>Our Annapolis office</h2>
+          <p class="nap__line"><strong>Address:</strong> {loc.address.join(', ')}</p>
+          <p class="nap__line"><strong>Phone:</strong> <a href={loc.phoneHref} class="nap__phone">{loc.phone}</a></p>
+          <p class="nap__line"><strong>Hours:</strong> {loc.hours}</p>
+          <div class="nap__cta">
+            <a href={site.booking} class="btn btn--primary">Schedule Free Exam</a>
+            <a href={loc.mapUrl} target="_blank" rel="noopener" class="loc__map">Get directions →</a>
+          </div>
+        </div>
+        <div class="nap-map">
+          <iframe
+            title="Map to Benkovich Orthodontics in Annapolis, MD"
+            src="https://www.google.com/maps?q=Benkovich+Orthodontics+Annapolis+MD&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">What we offer</p>
+        <h2>Services at our Annapolis office</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        {site.treatments.map((t) => (
+          <a href={t.slug} class="card feature feature--link">
+            <h3>{t.title} →</h3>
+            <p>{t.blurb}</p>
+          </a>
+        ))}
+        <a href={site.booking} class="card feature feature--link">
+          <h3>Free First Exam →</h3>
+          <p>A relaxed, no-pressure visit to meet Dr. Benkovich and find out what’s right for your smile.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">{site.rating} ★ on Google · {site.reviewCount} reviews</p>
+        <h2>What Annapolis families are saying</h2>
+      </div>
+      <div class="grid grid--3 reviews" style="margin-top:46px;">
+        {site.reviews.slice(0, 3).map((r) => (
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>{r.text}</blockquote>
+            <figcaption>— {r.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="center" style="margin-top:36px;">
+        <p>Visiting from across the bay? See our <a href="/locations/orthodontist-chester-md/">Chester / Kent Island office →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Annapolis office — common questions" />
+
+  <Cta heading="Ready to visit our Annapolis office?" />
+</BaseLayout>
+
+<style>
+  .nap-grid { display: grid; gap: 36px; align-items: stretch; }
+  @media (min-width: 900px) { .nap-grid { grid-template-columns: 1fr 1fr; } }
+  .nap { padding: 34px 32px; }
+  .nap__line { color: var(--slate); margin: 6px 0; }
+  .nap__line strong { color: var(--ink); }
+  .nap__phone { font-family: var(--font-head); font-weight: 800; color: var(--teal); }
+  .nap__cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 22px; }
+  .loc__map { font-weight: 700; }
+  .nap-map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); min-height: 320px; }
+  .nap-map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; color: var(--teal-700); }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+  .review { background: #fff; border-radius: var(--radius); padding: 28px 26px; margin: 0; box-shadow: var(--shadow-sm); border: 1px solid var(--line); display: flex; flex-direction: column; }
+  .review blockquote { margin: 12px 0 16px; font-size: .98rem; color: var(--ink); line-height: 1.6; }
+  .review figcaption { font-family: var(--font-head); font-weight: 700; color: var(--teal-700); margin-top: auto; }
+</style>

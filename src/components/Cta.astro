@@ -1,0 +1,25 @@
+---
+import { site } from '../data/site';
+interface Props { heading?: string; text?: string; }
+const {
+  heading = "Ready to start your smile journey?",
+  text = "Your first exam is on us — a relaxed, no-pressure visit to meet Dr. Benkovich and find out what’s right for you.",
+} = Astro.props;
+---
+<section class="cta-band">
+  <div class="container cta-band__inner">
+    <h2>{heading}</h2>
+    <p>{text}</p>
+    <div class="cta-band__btns">
+      <a href={site.booking} class="btn btn--primary btn--lg">Schedule Your Free Exam</a>
+      <a href={site.locations[0].phoneHref} class="btn btn--white btn--lg">Call {site.locations[0].phone}</a>
+    </div>
+  </div>
+</section>
+<style>
+  .cta-band { background: linear-gradient(155deg, var(--navy), var(--navy-900)); color: #fff; padding: clamp(54px, 7vw, 90px) 0; text-align: center; }
+  .cta-band__inner { max-width: 720px; margin-inline: auto; }
+  .cta-band h2 { color: #fff; }
+  .cta-band p { color: #cfe2f3; font-size: 1.1rem; margin-bottom: 26px; }
+  .cta-band__btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+</style>

@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+---
+<BaseLayout
+  title="Contact Us | Orthodontist in Annapolis & Chester, MD | Benkovich Orthodontics"
+  description="Contact Benkovich Orthodontics in Annapolis and Chester, MD. Find our phone numbers, addresses, office hours, and directions — or request your free first exam today.">
+
+  <PageHero
+    eyebrow="Get in touch"
+    title="Contact Benkovich Orthodontics"
+    subtitle="We'd love to hear from you. Call the office nearest you, stop by, or request your free first exam online — whatever's easiest. Our friendly team is always happy to help."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us', href: '/contact-us/' }]}
+    showCta={false} />
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Two convenient locations</p>
+        <h2>Visit us in Annapolis or Chester</h2>
+        <p class="lead">Serving families across Annapolis, Chester, Kent Island, and the surrounding communities with confident smiles since {site.established}.</p>
+      </div>
+
+      <div class="grid grid--2 offices">
+        {site.locations.map((loc) => (
+          <div class="card office">
+            <h3>{loc.name}</h3>
+            <dl class="office__details">
+              <div class="office__row">
+                <dt>Phone</dt>
+                <dd><a href={loc.phoneHref}>{loc.phone}</a></dd>
+              </div>
+              <div class="office__row">
+                <dt>Address</dt>
+                <dd>{loc.address.join(', ')}</dd>
+              </div>
+              <div class="office__row">
+                <dt>Hours</dt>
+                <dd>{loc.hours}</dd>
+              </div>
+            </dl>
+            <div class="office__actions">
+              <a href={loc.phoneHref} class="btn btn--primary">Call {loc.phone}</a>
+              <a href={loc.mapUrl} class="btn btn--ghost" target="_blank" rel="noopener">Get directions</a>
+            </div>
+            <p class="office__more"><a href={loc.slug}>More about our {loc.name.split(' / ')[0]} office →</a></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="contact-cols">
+        <div class="contact-col">
+          <p class="eyebrow">Ready when you are</p>
+          <h2>Request your free first exam</h2>
+          <p>The easiest way to get started is to request an appointment online. Tell us a little about yourself and we'll reach out within one business day to find a time that works — your first exam is always on us.</p>
+          <a href={site.booking} class="btn btn--primary btn--lg">Schedule Your Free Exam</a>
+        </div>
+        <div class="contact-col">
+          <p class="eyebrow">Stay connected</p>
+          <h2>Follow along</h2>
+          <p>See smile transformations, meet our team, and catch the latest from the practice on social media.</p>
+          <ul class="social-list">
+            <li><a href={site.social.facebook} target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href={site.social.instagram} target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href={site.social.youtube} target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+          <p class="contact-portal">Already a patient? Visit the <a href={site.patientPortal} target="_blank" rel="noopener">patient portal</a> to manage your account.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Cta />
+</BaseLayout>
+
+<style>
+  .offices { margin-top: 44px; }
+  .office { padding: clamp(26px, 3.5vw, 38px); }
+  .office h3 { color: var(--teal-700); }
+  .office__details { margin: 18px 0 24px; }
+  .office__row { display: grid; grid-template-columns: 90px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .office__row:last-child { border-bottom: none; }
+  .office__details dt { font-family: var(--font-head); font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--slate); margin: 0; }
+  .office__details dd { margin: 0; color: var(--ink); }
+  .office__details dd a { font-family: var(--font-head); font-weight: 700; color: var(--teal-700); }
+  .office__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .office__more { margin: 18px 0 0; }
+  .contact-cols { display: grid; gap: 44px; }
+  @media (min-width: 820px) { .contact-cols { grid-template-columns: 1fr 1fr; } }
+  .social-list { list-style: none; padding: 0; margin: 0 0 18px; display: flex; flex-wrap: wrap; gap: 14px; }
+  .social-list a { font-family: var(--font-head); font-weight: 700; color: var(--teal-700); background: #fff; border: 1px solid var(--line); padding: 10px 20px; border-radius: 999px; display: inline-block; transition: .2s; }
+  .social-list a:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+  .contact-portal { color: var(--slate); font-size: .95rem; }
+</style>

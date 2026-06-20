@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'How much does Invisalign cost in Annapolis &amp; Chester?', a: 'Every smile is unique, so the most accurate number comes from a free exam. To keep treatment affordable, we offer flexible monthly payment plans starting at $184/month, transparent pricing, and we work with most insurance. See our Invisalign cost guide for the factors that affect your total.' },
+  { q: 'Is Invisalign as effective as braces?', a: 'For many cases, Invisalign is designed to move teeth as predictably as braces. At your free exam, Dr. Benkovich will look at your smile and let you know whether Invisalign, braces, or a combination is the best fit for your goals.' },
+  { q: 'How long does Invisalign treatment take?', a: 'Most patients are in their aligners somewhere between 12 and 18 months, though it varies with what we are correcting and how consistently you wear them. You will get a personalized estimate at your free exam.' },
+  { q: 'How many hours a day do I wear the aligners?', a: 'Aligners typically work best when worn 20 to 22 hours a day — basically all the time except when you eat, drink anything but water, brush, and floss. The more consistent you are, the smoother your progress.' },
+  { q: 'Does Invisalign hurt?', a: 'Most people feel mild pressure for a day or two when they switch to a new set of aligners — that is the gentle movement working. There are no brackets or wires, so many patients find it more comfortable than they expected.' },
+  { q: 'What is the iTero scanner?', a: 'The iTero digital scanner creates a precise 3D image of your teeth without messy impressions. It lets us plan your treatment accurately and even preview how your smile may look when you are finished.' },
+];
+---
+<BaseLayout
+  title="Invisalign in Annapolis & Chester, MD | Benkovich Orthodontics"
+  description="Clear, removable Invisalign for teens & adults in Annapolis & Chester, MD. Flexible plans from $184/month and a free first exam. iTero digital scanning. Book today.">
+
+  <PageHero
+    eyebrow="Invisalign"
+    title="Invisalign in Annapolis & Chester, MD"
+    subtitle="A clear, removable, comfortable way to straighten your smile — starting at $184/month, with a free first exam and over 30 years of trusted care."
+    image="/images/svc-invisalign.jpg"
+    imageAlt="iTero digital scanner used for Invisalign treatment at Benkovich Orthodontics in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Invisalign', href: '/invisalign/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Straighten without the metal</p>
+      <h2>A clear path to the smile you want</h2>
+      <p>Invisalign straightens your teeth using a series of clear, custom-made aligners that gently guide your smile into place — no brackets, no wires. For teens and adults who want a discreet option that fits real life, it is one of the most popular treatments at Benkovich Orthodontics.</p>
+      <p>A confident smile shouldn’t strain your budget, either. We keep things honest and affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted — and your <strong>first exam is always free</strong>.</p>
+      <p>Prefer the proven classic? Compare your options with our <a href="/braces/">braces</a> page.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why patients love it</p>
+        <h2>The benefits of Invisalign</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Virtually Invisible</h3>
+          <p>The clear aligners are hard to notice, so you can straighten your smile discreetly at school, at work, or in photos.</p>
+        </div>
+        <div class="card feature">
+          <h3>Removable</h3>
+          <p>Take them out to eat, brush, and floss — no food restrictions and easier daily hygiene than traditional braces.</p>
+        </div>
+        <div class="card feature">
+          <h3>Comfortable</h3>
+          <p>Smooth, custom-fit aligners with no metal brackets or wires to irritate your cheeks and lips.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">How it works</p>
+      <h2>Your Invisalign journey, step by step</h2>
+      <ol class="steps">
+        <li><strong>Free exam.</strong> Dr. Benkovich reviews your smile and lets you know whether Invisalign is a good fit — no pressure, no obligation.</li>
+        <li><strong>Digital scan.</strong> We use the iTero scanner to capture a precise 3D image of your teeth, so there are no messy impressions.</li>
+        <li><strong>Your custom plan.</strong> We map out your treatment and walk you through the timeline and costs clearly and upfront.</li>
+        <li><strong>Wear your aligners.</strong> Swap to a new set roughly every week or two, wearing them 20–22 hours a day for the best progress.</li>
+        <li><strong>Your new smile — protected.</strong> When you finish, a custom <a href="/retainers/">retainer</a> keeps your results looking great.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">Modern technology</p>
+      <h2>Precise planning with iTero digital scanning</h2>
+      <p>No more goopy impression trays. Our iTero digital scanner gently captures a detailed 3D model of your teeth in minutes, giving Dr. Benkovich the accuracy to design a treatment plan that’s truly tailored to you. It can even help preview how your smile may look once treatment is complete — so you can start with confidence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">For every age</p>
+        <h2>Invisalign for the whole family</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <a href="/invisalign-for-kids/" class="card feature feature--link"><h3>Invisalign for Kids →</h3><p>Invisalign First for younger children, gently guiding growing smiles.</p></a>
+        <a href="/invisalign/invisalign-for-teens/" class="card feature feature--link"><h3>Invisalign for Teens →</h3><p>A discreet, removable option that fits a busy teen’s active life.</p></a>
+        <a href="/invisalign/invisalign-for-adults/" class="card feature feature--link"><h3>Invisalign for Adults →</h3><p>Straighten your smile discreetly — perfect for busy professionals.</p></a>
+      </div>
+      <p class="center" style="margin-top:30px;">Wondering about pricing? See our <a href="/invisalign/invisalign-costs/">Invisalign cost guide</a> and our <a href="/patient-info/financial-information/">financial &amp; insurance options</a> — or read real <a href="/invisalign/invisalign-testimonials/">Invisalign reviews</a> from our patients.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container measure center">
+      <p class="eyebrow">Convenient care</p>
+      <h2>Two welcoming locations</h2>
+      <p>We make starting Invisalign easy with offices in both <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> and <a href="/locations/orthodontist-chester-md/">Chester / Kent Island</a>, MD. Whichever is closer, you’ll find the same friendly team and your free first exam waiting.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Invisalign questions, answered" />
+
+  <Cta heading="Ready for a clear path to a confident smile?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

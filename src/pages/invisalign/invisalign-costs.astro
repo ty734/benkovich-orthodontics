@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'How much does Invisalign cost in Annapolis &amp; Chester?', a: 'Every smile is different, so the most accurate figure comes from a free exam where Dr. Benkovich can see what your treatment involves. To keep it affordable, we offer flexible payment plans starting at $184/month, transparent pricing with no surprises, and we work with most insurance.' },
+  { q: 'What affects the cost of Invisalign?', a: 'The main factors are how much movement your teeth need, how long treatment is expected to take, and the number of aligners involved. Simpler cases generally cost less than more complex ones. We’ll walk you through your specific estimate at the free exam.' },
+  { q: 'Does insurance cover Invisalign?', a: 'Many dental insurance plans include orthodontic benefits that can apply to Invisalign, just as they would to braces. Our team will help you understand your coverage and make the most of any benefits you have.' },
+  { q: 'Are there payment plans for Invisalign?', a: 'Yes. We offer flexible monthly payment plans starting at $184/month so you can spread the cost over time, plus transparent pricing so you always know what to expect. We’ll find an option that fits your family’s budget.' },
+  { q: 'Is the consultation really free?', a: 'Yes — your first exam is on us. It’s a relaxed, no-pressure visit to meet Dr. Benkovich, talk through your goals, and get clear, upfront pricing before you decide anything.' },
+  { q: 'Does Invisalign cost more than braces?', a: 'It depends on your specific case — sometimes the two are comparable. The best way to compare is a free exam. You can also review our guide to braces cost to weigh your options side by side.' },
+];
+---
+<BaseLayout
+  title="Invisalign Cost in Annapolis & Chester, MD | Benkovich Ortho"
+  description="What does Invisalign cost in Annapolis & Chester, MD? Flexible plans from $184/month, insurance accepted, and a free first exam. Get a clear estimate today.">
+
+  <PageHero
+    eyebrow="Invisalign Cost"
+    title="Invisalign Cost in Annapolis & Chester, MD"
+    subtitle="Clear, honest pricing with flexible plans starting at $184/month, most insurance accepted, and a free first exam — no surprises, ever."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Invisalign', href: '/invisalign/' }, { label: 'Cost', href: '/invisalign/invisalign-costs/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Affordable, transparent pricing</p>
+      <h2>What does Invisalign cost?</h2>
+      <p>It’s the first question most people have — and the honest answer is that every smile is different. Because Invisalign cost depends on what your teeth need, the most accurate figure comes from a <strong>free exam</strong> where Dr. Benkovich can look at your smile and explain your options clearly.</p>
+      <p>What we can promise is affordability and transparency: flexible payment plans <strong>starting at {site.offer.price}/month</strong>, pricing laid out upfront with no surprises, and <strong>most insurance accepted</strong>. A confident smile shouldn’t strain your budget — and we work hard to keep it that way.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">What goes into the number</p>
+        <h2>Factors that affect Invisalign cost</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Complexity</h3>
+          <p>How much movement your teeth need. Simpler corrections generally cost less than more involved cases.</p>
+        </div>
+        <div class="card feature">
+          <h3>Treatment Length</h3>
+          <p>How long your smile is expected to be in treatment, which is tied to the number of aligners involved.</p>
+        </div>
+        <div class="card feature">
+          <h3>Your Coverage</h3>
+          <p>Whether your insurance includes orthodontic benefits, which can offset part of the cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Ways to make it work</p>
+      <h2>Flexible payments &amp; insurance</h2>
+      <p>We believe great orthodontic care should be within reach. That’s why we offer flexible monthly payment plans <strong>starting at {site.offer.price}/month</strong>, help you maximize any orthodontic insurance benefits, and keep pricing transparent from day one. For a full breakdown of your options, see our <a href="/patient-info/financial-information/">financial &amp; insurance information</a>.</p>
+      <p>Comparing treatments? Take a look at our <a href="/dental-braces-cost/">guide to braces cost</a>, or learn more about <a href="/invisalign/">Invisalign</a> and how it works.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure center">
+      <p class="eyebrow">Start with a free exam</p>
+      <h2>Get your personalized estimate</h2>
+      <p>The clearest way to know your cost is a free, no-pressure exam. Dr. Benkovich will review your smile and give you an honest plan with upfront pricing. <a href={site.booking}>Schedule your free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Invisalign cost questions, answered" />
+
+  <Cta heading="Curious what your Invisalign would cost?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+</style>

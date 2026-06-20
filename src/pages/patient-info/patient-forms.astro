@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+---
+<BaseLayout
+  title="New Patient Forms | Benkovich Orthodontics, Annapolis MD"
+  description="Save time before your visit to Benkovich Orthodontics. Access new patient forms through our secure patient portal, then request your free first exam in Annapolis or Chester, MD.">
+
+  <PageHero
+    eyebrow="Patient forms"
+    title="New patient forms"
+    subtitle="A few minutes now means more time for your smile later. Complete your new patient forms securely online before your first visit."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Patient Info', href: '/patient-info/financial-information/' }, { label: 'Patient Forms', href: '/patient-info/patient-forms/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Save time before your visit</p>
+      <h2>Get a head start on your paperwork</h2>
+      <p>We want your first visit to be about you, not forms. Completing your new patient information ahead of time means a smoother, faster check-in and more time to talk smiles with Dr. Benkovich. It only takes a few minutes, and everything is handled securely through our patient portal.</p>
+
+      <div class="forms-card card">
+        <h3>Secure patient portal</h3>
+        <p>Access and complete your new patient forms through our trusted online portal. Your information stays private and protected every step of the way.</p>
+        <a href={site.patientPortal} target="_blank" rel="noopener" class="btn btn--primary btn--lg">Open the Patient Portal</a>
+      </div>
+
+      <p style="margin-top:32px;">Haven't booked yet? <a href={site.booking}>Request your free first exam</a> and we'll guide you through the rest. Curious what to expect when you arrive? See our quick walkthrough of <a href="/patient-info/office-visits/">your first office visit</a>.</p>
+    </div>
+  </section>
+
+  <Cta heading="Almost ready — let's get you scheduled" />
+</BaseLayout>
+
+<style>
+  .forms-card { padding: 34px 30px; margin-top: 30px; text-align: center; background: var(--mint); border-color: transparent; }
+  .forms-card h3 { color: var(--teal-700); margin-bottom: 10px; }
+  .forms-card p { color: var(--slate); max-width: 520px; margin: 0 auto 22px; }
+</style>

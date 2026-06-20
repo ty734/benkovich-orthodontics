@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const team = [
+  { name: 'Nikki', img: '/images/team-nikki.jpg' },
+  { name: 'Chelsea', img: '/images/team-chelsea.jpg' },
+  { name: 'Courtney', img: '/images/team-courtney.jpg' },
+];
+---
+<BaseLayout
+  title="Meet the Team | Benkovich Orthodontics — Annapolis & Chester"
+  description="Meet the warm, friendly team behind Benkovich Orthodontics in Annapolis & Chester, MD. Caring people who make every visit comfortable. Schedule your free exam.">
+
+  <PageHero
+    eyebrow="Meet the team"
+    title="Meet the Benkovich Orthodontics Team"
+    subtitle="The warm, friendly faces who make every visit feel easy — and even put nervous first-timers right at ease."
+    image="/images/team-hero.webp"
+    imageAlt="The Benkovich Orthodontics team welcoming patients in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about/meet-dr-benkovich/' }, { label: 'Meet the Team', href: '/about/meet-the-team-dental/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">A team that cares</p>
+      <h2>Friendly faces who feel like family</h2>
+      <p>From your very first phone call to the day your braces come off, our team is here to make orthodontics feel easy and welcoming. They’re the people patients credit again and again for kind, patient, thorough care — the ones who remember your name, calm nervous kids, and explain every step clearly.</p>
+      <p>Working alongside <a href="/about/meet-dr-benkovich/">Dr. Benkovich</a>, our team brings the same goal to every visit: treat you like a neighbor and make sure you leave smiling.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Our staff</p>
+        <h2>The people you’ll see at every visit</h2>
+      </div>
+      <div class="grid grid--3 team" style="margin-top:46px;">
+        {team.map((m) => (
+          <figure class="member card">
+            <div class="member__img"><img src={m.img} alt={`${m.name}, Benkovich Orthodontics team member`} width="360" height="360" loading="lazy" /></div>
+            <figcaption>{m.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Better together</p>
+        <h2>One team, two welcoming offices</h2>
+        <p>Whether you visit us in Annapolis or Chester, you’ll find the same caring people ready to help.</p>
+      </div>
+      <div class="team-photo" style="margin-top:38px;">
+        <img src="/images/team-group.jpg" alt="The full Benkovich Orthodontics team in Annapolis & Chester, MD" width="1040" height="640" loading="lazy" />
+      </div>
+      <div class="center" style="margin-top:36px;">
+        <p>Curious what makes us different? See <a href="/about/what-sets-us-apart/">what sets us apart →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <Cta heading="Come say hello" />
+</BaseLayout>
+
+<style>
+  .member { padding: 0; overflow: hidden; text-align: center; transition: .2s; }
+  .member:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .member__img { aspect-ratio: 1/1; overflow: hidden; }
+  .member__img img { width: 100%; height: 100%; object-fit: cover; }
+  .member figcaption { font-family: var(--font-head); font-weight: 700; font-size: 1.2rem; color: var(--teal-700); padding: 18px 0 22px; }
+  .team-photo img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 16/9.6; }
+</style>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'Is Invisalign good for teens?', a: 'For many teens, yes. Invisalign offers a discreet, removable way to straighten teeth that fits sports, instruments, and busy social lives. At a free exam, Dr. Benkovich will let you know whether it’s the right fit for your teen’s smile.' },
+  { q: 'Will my teen really wear the aligners enough?', a: 'Aligners typically work best worn 20–22 hours a day. Invisalign for teens includes small wear indicators that help everyone keep track, and our team coaches and encourages teens at every visit to build a consistent routine.' },
+  { q: 'Can my teen still play sports and instruments?', a: 'Yes — and that’s one of the biggest perks. With no brackets or wires, aligners are comfortable for contact sports, and teens who play wind instruments often find them much easier than traditional braces.' },
+  { q: 'How long does Invisalign take for teens?', a: 'Most teens are in treatment somewhere between 12 and 18 months, depending on what we’re correcting and how consistently the aligners are worn. Your teen will get a personalized estimate at the free exam.' },
+  { q: 'How much does Invisalign for teens cost?', a: 'Every smile is different, so the most accurate number comes from a free exam. We keep treatment affordable with flexible payment plans starting at $184/month, transparent pricing, and most insurance accepted.' },
+];
+---
+<BaseLayout
+  title="Invisalign for Teens in Annapolis & Chester, MD | Benkovich Ortho"
+  description="Invisalign for teens in Annapolis & Chester, MD — clear, removable aligners that fit active teen life. Plans from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Invisalign for Teens"
+    title="Invisalign for Teens in Annapolis & Chester, MD"
+    subtitle="A clear, removable way to straighten your teen’s smile that fits sports, school, and social life — starting at $184/month, with a free first exam."
+    image="/images/patient-02.jpg"
+    imageAlt="A smiling teen girl who is a candidate for Invisalign for teens in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Invisalign', href: '/invisalign/' }, { label: 'For Teens', href: '/invisalign/invisalign-for-teens/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Straightening that fits teen life</p>
+      <h2>Confidence without the metal</h2>
+      <p>Teens have enough on their plate — school, sports, friends, photos. Invisalign lets them straighten their smile with clear, custom aligners that are easy to live with: take them out to eat, brush normally, and pop them back in. No food restrictions, no wires poking during a game.</p>
+      <p>Because the aligners are virtually invisible, many teens feel more confident wearing them day to day. And with <strong>a free first exam</strong> and flexible plans <strong>starting at {site.offer.price}/month</strong>, getting started is easier than you might think.</p>
+      <p>Prefer the dependable classic? Compare with our <a href="/braces-for-teens/">braces for teens</a> page.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Made for busy teens</p>
+        <h2>Why teens love Invisalign</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Discreet</h3>
+          <p>Clear aligners are hard to notice in class, in photos, and on game day — straightening that flies under the radar.</p>
+        </div>
+        <div class="card feature">
+          <h3>Sport &amp; Music Friendly</h3>
+          <p>No brackets or wires means more comfort for contact sports and wind instruments.</p>
+        </div>
+        <div class="card feature">
+          <h3>Easy Hygiene</h3>
+          <p>Aligners come out for brushing and flossing, so keeping teeth clean stays simple.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Built-in accountability</p>
+      <h2>Designed to help teens stay on track</h2>
+      <p>Invisalign for teens includes subtle wear indicators that fade with use, so it’s easy to see whether aligners are getting the hours they need. Paired with our friendly check-ins, it’s a system designed to help your teen build a consistent routine and keep their smile moving in the right direction.</p>
+      <p>When your teen grows up, <a href="/invisalign/invisalign-for-adults/">Invisalign for adults</a> is here too — or explore the full <a href="/invisalign/">Invisalign</a> overview. Ready to begin? <a href={site.booking}>Schedule a free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Invisalign for teens, answered" />
+
+  <Cta heading="Ready to give your teen a confident new smile?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+</style>

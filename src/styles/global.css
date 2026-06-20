@@ -1,0 +1,98 @@
+/* ============================================================
+   Benkovich Orthodontics — design tokens & base
+   Cool, modern, nautical palette built from the navy sailboat
+   logo: navy + confident blue + crisp white. No red.
+   (token names kept for continuity; values are now blue/navy)
+   ============================================================ */
+:root {
+  /* Brand — blue/navy from the logo */
+  --teal: #1f78c2;        /* primary brand blue (accents, links) */
+  --teal-600: #1a649f;
+  --teal-700: #134a76;    /* deep blue */
+  --teal-900: #0c3354;    /* navy — dark sections, header bar, footer */
+  --navy: #0c3354;
+  --navy-900: #082640;
+  --coral: #1e88c7;       /* CTA blue (brighter, pops) — NOT red */
+  --coral-600: #1672ad;
+  --sky: #6fb0e0;         /* light accent */
+  --gold: #e6b23c;        /* review stars only */
+
+  /* Neutrals (cool) */
+  --ink: #122c3f;
+  --slate: #56697a;
+  --line: #e1e9f1;
+  --cream: #f3f8fc;       /* soft cool off-white */
+  --mint: #e9f2fb;        /* light blue tint */
+  --white: #ffffff;
+
+  /* Type */
+  --font-head: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+
+  /* Layout */
+  --container: 1180px;
+  --radius: 16px;
+  --radius-lg: 26px;
+  --shadow-sm: 0 2px 10px rgba(12, 51, 84, .06);
+  --shadow: 0 16px 44px rgba(12, 51, 84, .12);
+  --shadow-lg: 0 34px 80px rgba(12, 51, 84, .18);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--teal-600); text-decoration: none; }
+a:hover { color: var(--teal-700); }
+
+h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 1.12; letter-spacing: -.02em; margin: 0 0 .5em; font-weight: 700; }
+h1 { font-size: clamp(2.3rem, 5vw, 3.7rem); }
+h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.45rem); }
+p { margin: 0 0 1rem; }
+.lead { font-size: 1.2rem; color: var(--slate); }
+
+/* Layout helpers */
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: 24px; }
+.section { padding: clamp(56px, 8vw, 110px) 0; }
+.section--cream { background: var(--cream); }
+.section--mint { background: var(--mint); }
+.section--teal { background: linear-gradient(160deg, var(--navy), var(--navy-900)); color: #e7f1fb; }
+.section--teal h2, .section--teal h3 { color: #fff; }
+.eyebrow { font-family: var(--font-head); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; color: var(--teal); margin-bottom: .6rem; }
+.section--teal .eyebrow { color: #8fc0ea; }
+.center { text-align: center; }
+.measure { max-width: 720px; margin-inline: auto; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: .5em; font-family: var(--font-head); font-weight: 700; font-size: 1rem;
+  padding: 15px 28px; border-radius: 999px; border: 2px solid transparent; cursor: pointer; transition: transform .15s ease, box-shadow .2s ease, background .2s ease; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--coral); color: #fff; box-shadow: 0 10px 24px rgba(30, 136, 199, .32); }
+.btn--primary:hover { background: var(--coral-600); color: #fff; box-shadow: 0 14px 30px rgba(30, 136, 199, .42); }
+.btn--ghost { background: transparent; color: var(--teal-600); border-color: var(--teal); }
+.btn--ghost:hover { background: var(--teal); color: #fff; }
+.btn--white { background: #fff; color: var(--teal-700); }
+.btn--white:hover { color: var(--navy); }
+.btn--lg { padding: 18px 36px; font-size: 1.08rem; }
+
+/* Cards */
+.card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+
+/* Stars */
+.stars { color: var(--gold); letter-spacing: 2px; }
+
+/* Utility */
+.pill { display: inline-flex; align-items: center; gap: .5em; background: var(--mint); color: var(--teal-700);
+  font-family: var(--font-head); font-weight: 700; font-size: .85rem; padding: 7px 16px; border-radius: 999px; }
+.grid { display: grid; gap: 26px; }
+@media (min-width: 720px) { .grid--2 { grid-template-columns: 1fr 1fr; } .grid--3 { grid-template-columns: repeat(3,1fr); } }
+@media (min-width: 980px) { .grid--4 { grid-template-columns: repeat(4,1fr); } .grid--5 { grid-template-columns: repeat(5,1fr); } }

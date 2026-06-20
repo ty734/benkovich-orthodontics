@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'What age should a child get braces?', a: 'The American Association of Orthodontists recommends a first check-up around age 7. Many kids aren’t ready for braces yet — Dr. Benkovich simply keeps a friendly eye on growth until the timing is right. We’ll never rush your child into treatment before they need it.' },
+  { q: 'Do braces hurt my child?', a: 'Today’s braces are gentler and smaller than ever. Your child may feel mild pressure for a day or two after braces are placed or adjusted — that’s normal and usually eased with soft foods and a little over-the-counter relief. Most kids are surprised by how quickly they forget the braces are there.' },
+  { q: 'Can my child pick their braces colors?', a: 'Yes — and it’s one of their favorite parts! Kids choose fresh band colors at each visit, from team colors to holiday themes. It turns a routine appointment into something they look forward to.' },
+  { q: 'How much do braces for kids cost in Annapolis & Chester?', a: 'Every smile is different, so a free exam gives you an exact figure. We keep braces affordable with flexible monthly plans starting at $184/month, transparent pricing, and most insurance accepted. See our financial & insurance options for details.' },
+  { q: 'How long will my child wear braces?', a: 'Most children are in braces somewhere between 12 and 24 months, depending on what we’re correcting. Dr. Benkovich will give you a personalized estimate at your free first exam.' },
+  { q: 'How do we keep braces clean?', a: 'We’ll show your child easy brushing and flossing habits at every visit, and send them home with the tools and tips to keep their teeth healthy. Good habits now protect that beautiful new smile for life.' },
+];
+---
+<BaseLayout
+  title="Braces for Kids in Annapolis & Chester, MD | Benkovich Orthodontics"
+  description="Gentle, friendly braces for kids in Annapolis & Chester, MD. Fun colors, comfortable care, plans from $184/month and a free first exam. Book your child today.">
+
+  <PageHero
+    eyebrow="Braces for Kids"
+    title="Braces for Kids in Annapolis & Chester, MD"
+    subtitle="A gentle, friendly first orthodontic experience your child will actually look forward to — starting at $184/month, with a free first exam and care families have trusted for over 30 years."
+    image="/images/patient-01.jpg"
+    imageAlt="A young Benkovich Orthodontics patient smiling with braces in Annapolis, MD"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces', href: '/braces/' }, { label: 'Braces for Kids', href: '/braces-for-kids/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">A great first experience</p>
+      <h2>Gentle braces that put kids (and parents) at ease</h2>
+      <p>A child’s first orthodontic visit shapes how they feel about their smile for years to come. That’s why Dr. Benkovich and our team go out of our way to make it warm, unhurried, and even a little fun. We explain everything in kid-friendly language, answer every parent question, and never pressure you into treatment before it’s time.</p>
+      <p>Today’s <a href="/braces/">braces</a> are smaller, lighter, and more comfortable than the ones you may remember — designed to gently guide growing smiles into place. And a beautiful smile shouldn’t strain your budget: we keep things affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Why families love us</p>
+        <h2>Care that makes braces feel easy</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>Fun colors every visit</h3>
+          <p>Kids pick their own band colors at each appointment — team colors, holiday themes, you name it. It turns check-ups into something they look forward to.</p>
+        </div>
+        <div class="card feature">
+          <h3>Gentle, comfortable care</h3>
+          <p>Smaller, lighter braces and a calm, friendly team mean less worry and more smiles. We move at your child’s pace, never rushing.</p>
+        </div>
+        <div class="card feature">
+          <h3>Reassurance for parents</h3>
+          <p>Clear explanations, upfront pricing, and honest timing. If your child isn’t ready yet, we’ll simply keep watch — no unnecessary treatment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">For every age</p>
+        <h2>Orthodontics for the whole family</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <a href="/early-orthodontics/" class="card feature feature--link"><h3>Early Orthodontics →</h3><p>Gentle first check-ups around age 7 to keep a friendly eye on growth.</p></a>
+        <a href="/braces-for-teens/" class="card feature feature--link"><h3>Braces for Teens →</h3><p>Color-customizable braces that fit a busy teen’s sports and school life.</p></a>
+        <a href="/orthodontist-for-kids/" class="card feature feature--link"><h3>Orthodontist for Kids →</h3><p>Kid-friendly, experienced care your whole family can trust.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>Your child’s braces journey, step by step</h2>
+      <ol class="steps">
+        <li><strong>Free first exam.</strong> Dr. Benkovich reviews your child’s smile and explains your options — no pressure, no obligation.</li>
+        <li><strong>Honest timing.</strong> If braces aren’t needed yet, we’ll say so and keep a friendly eye on things until the moment is right.</li>
+        <li><strong>A clear, friendly plan.</strong> We walk you through treatment and costs upfront, including flexible payment options.</li>
+        <li><strong>Placing the braces.</strong> A comfortable, gentle visit — with your child picking their first set of colors.</li>
+        <li><strong>Quick, on-time check-ups.</strong> Easy visits every few weeks to keep that smile on track, and a custom <a href="/retainers/">retainer</a> to protect the results.</li>
+      </ol>
+      <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>, or visit us in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Braces for kids, answered" />
+
+  <Cta heading="Ready to give your child a confident smile?" />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .feature--link { color: var(--ink); transition: .2s; display: block; }
+  .feature--link:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .feature--link h3 { color: var(--teal-700); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

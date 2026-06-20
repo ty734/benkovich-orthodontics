@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+
+const faqs = [
+  { q: 'How much do braces cost in Annapolis & Chester?', a: 'Every smile is different, so the most honest answer comes from a free exam. What we can promise is affordability: flexible monthly payment plans starting at $184/month, transparent pricing with no surprises, and we work with most insurance.' },
+  { q: 'What affects the cost of braces?', a: 'The main factors are how much correction your smile needs, how long treatment takes, and the type of braces you choose. Dr. Benkovich reviews all of this at your free exam and gives you a clear, personalized figure before you commit to anything.' },
+  { q: 'Does insurance cover braces?', a: 'Many dental insurance plans include an orthodontic benefit that helps with the cost. We accept most insurance and our team will help you understand and make the most of your coverage. Bring your details to your free exam.' },
+  { q: 'Do you offer payment plans?', a: 'Yes. We believe a great smile shouldn’t be out of reach, so we offer flexible in-house payment plans starting at $184/month. We’ll build a plan around your budget and explain every number clearly and upfront.' },
+  { q: 'Is the consultation really free?', a: 'Yes. Your first exam is always on us — a relaxed, no-pressure visit to meet Dr. Benkovich, understand your options, and get honest pricing before you decide anything.' },
+  { q: 'Does Invisalign cost more than braces?', a: 'Costs for braces and Invisalign are often comparable and depend on your specific needs. We’ll compare both at your free exam so you can choose what fits your smile and budget. See our Invisalign cost guide for more.' },
+];
+---
+<BaseLayout
+  title="Braces Cost in Annapolis, MD | Benkovich Orthodontics"
+  description="An honest guide to braces cost in Annapolis & Chester, MD. Flexible plans from $184/month, insurance accepted, and a free first exam. Book your visit today.">
+
+  <PageHero
+    eyebrow="Braces Cost"
+    title="Braces Cost in Annapolis & Chester, MD"
+    subtitle="An honest, no-jargon guide to what braces cost and what affects it — plus flexible plans starting at $184/month, insurance accepted, and a free first exam."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces Cost', href: '/dental-braces-cost/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Straight answers</p>
+      <h2>What braces really cost — and why it varies</h2>
+      <p>“How much do braces cost?” is one of the first questions families ask, and you deserve an honest answer. The truth is there’s no single price tag, because every smile needs something a little different. What we can tell you is this: at Benkovich Orthodontics, we keep treatment affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+      <p>Rather than quote a number that may not fit your situation, Dr. Benkovich gives you a clear, personalized figure at your <strong>free first exam</strong> — so you know exactly what to expect before you decide anything.</p>
+    </div>
+  </section>
+
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">The factors</p>
+        <h2>What affects the cost of braces</h2>
+      </div>
+      <div class="grid grid--3" style="margin-top:42px;">
+        <div class="card feature">
+          <h3>How Much Correction</h3>
+          <p>A smile that needs minor alignment is different from one correcting a more involved bite. The amount of work needed is the biggest driver of cost.</p>
+        </div>
+        <div class="card feature">
+          <h3>Length of Treatment</h3>
+          <p>Treatment time varies from patient to patient. Generally, the longer a smile needs to be guided into place, the more visits and care involved.</p>
+        </div>
+        <div class="card feature">
+          <h3>Type of Treatment</h3>
+          <p>Metal braces, clear braces, and <a href="/invisalign/">Invisalign</a> can differ in cost. We’ll compare your options so you can choose what fits your smile and budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Making it affordable</p>
+      <h2>Insurance, payment plans, and your free exam</h2>
+      <p>A beautiful smile shouldn’t strain your budget — so we work hard to make treatment accessible. Many dental insurance plans include an orthodontic benefit, and our team will help you understand and make the most of yours. We accept most insurance and handle the details so you don’t have to.</p>
+      <p>For the rest, we offer flexible in-house payment plans <strong>starting at {site.offer.price}/month</strong>, designed around what works for your family. There are no hidden fees and no pressure — just a clear plan you can feel good about. Want the full picture? Visit our <a href="/patient-info/financial-information/">financial &amp; insurance information</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">What to expect</p>
+      <h2>How we get you a clear price</h2>
+      <ol class="steps">
+        <li><strong>Free exam.</strong> Dr. Benkovich reviews your smile and explains your options — no pressure, no obligation.</li>
+        <li><strong>Personalized estimate.</strong> You get a clear, honest figure based on your actual needs, not a generic quote.</li>
+        <li><strong>Insurance review.</strong> Our team checks your benefits and explains what your plan may cover.</li>
+        <li><strong>A plan that fits.</strong> We build a flexible monthly payment plan around your budget.</li>
+        <li><strong>Transparent every step.</strong> No hidden fees and no surprises — just clear pricing you can trust.</li>
+      </ol>
+      <p style="margin-top:22px;">Compare your options: <a href="/braces/">braces</a>, <a href="/invisalign/">Invisalign</a>, or our <a href="/invisalign/invisalign-costs/">Invisalign cost guide</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Braces cost questions, answered" />
+
+  <Cta heading="Want an honest price for your smile?" text="Your first exam is on us — meet Dr. Benkovich, review your options, and get clear, personalized pricing with no pressure." />
+</BaseLayout>
+
+<style>
+  .feature { padding: 28px 26px; }
+  .feature h3 { margin-bottom: 10px; }
+  .feature p { color: var(--slate); margin: 0; }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 22px 0 0; }
+  .steps li { position: relative; padding: 0 0 22px 52px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: -2px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+  .steps li:last-child { border-left-color: transparent; }
+</style>

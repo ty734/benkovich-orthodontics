@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Cta from '../../../components/Cta.astro';
+
+const posts = (await getCollection('blog')).sort((a, b) => {
+  const da = a.data.pubDate?.getTime() ?? 0;
+  const db = b.data.pubDate?.getTime() ?? 0;
+  return db - da;
+});
+---
+<BaseLayout
+  title="Orthodontics Blog | Benkovich Orthodontics, Annapolis & Chester"
+  description="Helpful tips on braces, Invisalign, costs, and caring for your smile from Benkovich Orthodontics in Annapolis & Chester, MD. Free first exam, payments from $184/month.">
+
+  <PageHero
+    eyebrow="Blog"
+    title="Smile tips & orthodontic insights"
+    subtitle="Friendly, straightforward answers about braces, Invisalign, costs, and caring for your smile — from the Benkovich Orthodontics team."
+    showCta={false} />
+
+  <section class="section">
+    <div class="container">
+      {posts.length === 0 ? (
+        <p class="center measure">New articles are on the way — check back soon.</p>
+      ) : (
+        <div class="grid grid--3 bloglist">
+          {posts.map((post) => (
+            <a href={`/about/blog/${post.id}/`} class="bcard">
+              <div class="bcard__body">
+                {post.data.pubDate && <span class="bcard__date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>}
+                <h2>{post.data.title}</h2>
+                <p>{post.data.description}</p>
+                <span class="bcard__link">Read more →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <Cta />
+</BaseLayout>
+
+<style>
+  .bcard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow-sm); color: var(--ink); transition: .2s; overflow: hidden; }
+  .bcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+  .bcard__body { padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .bcard__date { color: var(--teal); font-family: var(--font-head); font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+  .bcard h2 { font-size: 1.25rem; margin: 0; }
+  .bcard p { color: var(--slate); font-size: .96rem; flex: 1; margin: 0; }
+  .bcard__link { font-family: var(--font-head); font-weight: 700; color: var(--teal); }
+</style>

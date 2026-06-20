@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+---
+<BaseLayout
+  title="Schedule a Free Exam | Appointment Request | Benkovich Orthodontics"
+  description="Request your free first exam at Benkovich Orthodontics in Annapolis or Chester, MD. A relaxed, no-pressure visit with Dr. Benkovich — plans starting at $184/month.">
+
+  <PageHero
+    eyebrow="Free First Exam"
+    title="Schedule Your Free Exam"
+    subtitle="Take the first step toward a confident new smile. Tell us a little about yourself and our team will reach out to find a time that works — no pressure, no obligation, and your first exam is on us."
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Appointment Request', href: '/appointment-request/' }]}
+    showCta={false} />
+
+  <section class="section">
+    <div class="container form-wrap">
+      <div class="form-intro measure">
+        <p class="eyebrow">Request an appointment</p>
+        <h2>We can't wait to meet you</h2>
+        <p>Your free exam is a relaxed visit to meet Dr. Benkovich, get your questions answered, and learn what's right for your smile — whether that's <a href="/braces/">braces</a>, <a href="/invisalign/">Invisalign®</a>, or simply keeping a friendly eye on things. Fill out the form below and we'll be in touch within one business day. Prefer to talk now? Give either office a call.</p>
+      </div>
+
+      <!--
+        OrthoBoost → GoHighLevel lead form.
+        The hidden attribution fields + the inline script below match the standard
+        OrthoBoost field set (utm_source/medium/campaign/term/content, gclid, fbclid, offer, page).
+        On submit the script POSTs a JSON body to the GHL inbound webhook, then redirects
+        to /appointment-request-confirmation/ (the Google Ads conversion page).
+        >>> REPLACE the data-webhook value below with the client's real GHL inbound webhook URL. <<<
+      -->
+      <form
+        id="appointment-form"
+        class="ob-form card"
+        method="POST"
+        action="#"
+        data-webhook="REPLACE_WITH_GHL_WEBHOOK"
+        data-confirm="/appointment-request-confirmation/"
+        novalidate>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="firstName">First name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="lastName">Last name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="location">Preferred location</label>
+            <select id="location" name="location">
+              <option value="Annapolis">Annapolis, MD</option>
+              <option value="Chester">Chester / Kent Island, MD</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="reason">I'm interested in</label>
+            <select id="reason" name="reason">
+              <option value="Braces">Braces</option>
+              <option value="Invisalign">Invisalign®</option>
+              <option value="Other">Other / Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Anything you'd like us to know? <span class="opt">(optional)</span></label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about what you're hoping for, or any questions you have."></textarea>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" id="smsConsent" name="smsConsent" value="yes" />
+          <label for="smsConsent">By checking this box, I consent to receive appointment, marketing, and informational text messages from Benkovich Orthodontics at the number provided. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.</label>
+        </div>
+
+        <!-- Hidden attribution fields — populated from the URL on load by the script below. -->
+        <input type="hidden" name="utm_source" value="" />
+        <input type="hidden" name="utm_medium" value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="utm_term" value="" />
+        <input type="hidden" name="utm_content" value="" />
+        <input type="hidden" name="gclid" value="" />
+        <input type="hidden" name="fbclid" value="" />
+        <input type="hidden" name="offer" value="" />
+        <input type="hidden" name="page" value="" />
+
+        <button type="submit" class="btn btn--primary btn--lg">Request My Free Exam</button>
+        <p class="form-note">We respect your privacy and will never share your information. Your first exam is always free.</p>
+      </form>
+
+      <div class="form-alt measure">
+        <p>Rather call? We'd love to hear from you.</p>
+        <p class="form-alt__phones">
+          <a href={site.locations[0].phoneHref}>{site.locations[0].name}: {site.locations[0].phone}</a>
+          <span class="form-alt__sep" aria-hidden="true">·</span>
+          <a href={site.locations[1].phoneHref}>{site.locations[1].name.split(' / ')[0]}: {site.locations[1].phone}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Cta heading="Questions before you book?" text="Give us a call or send your request — our friendly team is happy to walk you through everything, from treatment options to flexible payment plans starting at $184/month." />
+</BaseLayout>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById('appointment-form');
+    if (!form) return;
+
+    // --- Capture URL attribution params into the hidden fields on load. ---
+    var params = new URLSearchParams(window.location.search);
+    var fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'offer'];
+    fields.forEach(function (key) {
+      var val = params.get(key);
+      if (val) {
+        var el = form.querySelector('input[name="' + key + '"]');
+        if (el) el.value = val;
+      }
+    });
+    var pageEl = form.querySelector('input[name="page"]');
+    if (pageEl) pageEl.value = window.location.pathname;
+
+    // --- Submit: POST JSON to the GHL webhook, then redirect to the confirmation page. ---
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+
+      var first = (document.getElementById('firstName').value || '').trim();
+      var last = (document.getElementById('lastName').value || '').trim();
+      var email = (document.getElementById('email').value || '').trim();
+      var phone = (document.getElementById('phone').value || '').trim();
+
+      // Lightweight required-field check (focus the first empty field).
+      if (!first) { document.getElementById('firstName').focus(); return; }
+      if (!last) { document.getElementById('lastName').focus(); return; }
+      if (!email) { document.getElementById('email').focus(); return; }
+      if (!phone) { document.getElementById('phone').focus(); return; }
+
+      // Standard OrthoBoost / GHL payload (keys are case- and space-sensitive).
+      var data = {
+        'Full Name': (first + ' ' + last).trim(),
+        'Email': email,
+        'Phone': phone,
+        'Location': (document.getElementById('location') || {}).value || '',
+        'Reason': (document.getElementById('reason') || {}).value || '',
+        'Message': (document.getElementById('message') || {}).value || '',
+        'SMS Consent': document.getElementById('smsConsent').checked ? 'yes' : 'no'
+      };
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'offer', 'page'].forEach(function (key) {
+        var el = form.querySelector('input[name="' + key + '"]');
+        // 'offer' maps to the capitalized GHL merge field 'Offer'.
+        var payloadKey = key === 'offer' ? 'Offer' : key;
+        data[payloadKey] = el ? el.value : '';
+      });
+
+      var webhook = form.getAttribute('data-webhook');
+      var confirm = form.getAttribute('data-confirm') || '/appointment-request-confirmation/';
+      var btn = form.querySelector('button[type=submit]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+      function done() { window.location.href = confirm; }
+
+      // GHL requires application/json to parse the body. Don't block the redirect on the webhook.
+      if (webhook && webhook !== 'REPLACE_WITH_GHL_WEBHOOK') {
+        fetch(webhook, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+          keepalive: true
+        }).then(done).catch(done);
+      } else {
+        // Webhook not configured yet — still redirect so the flow can be tested.
+        done();
+      }
+    });
+  })();
+</script>
+
+<style>
+  .form-wrap { display: flex; flex-direction: column; align-items: center; }
+  .form-intro { text-align: center; margin-bottom: 36px; }
+  .ob-form { width: 100%; max-width: 720px; padding: clamp(26px, 4vw, 44px); }
+  .field-row { display: grid; gap: 20px; margin-bottom: 20px; }
+  @media (min-width: 640px) { .field-row { grid-template-columns: 1fr 1fr; } }
+  .field { display: flex; flex-direction: column; margin-bottom: 20px; }
+  .field-row .field { margin-bottom: 0; }
+  .ob-form label { font-family: var(--font-head); font-weight: 600; font-size: .92rem; color: var(--ink); margin-bottom: 8px; }
+  .req { color: var(--coral); }
+  .opt { font-weight: 400; color: var(--slate); }
+  .ob-form input,
+  .ob-form select,
+  .ob-form textarea {
+    width: 100%; font-family: var(--font-body); font-size: 1rem; color: var(--ink);
+    padding: 13px 15px; border: 1px solid var(--line); border-radius: 12px; background: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .ob-form textarea { resize: vertical; }
+  .ob-form input:focus,
+  .ob-form select:focus,
+  .ob-form textarea:focus {
+    outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(31, 120, 194, .18);
+  }
+  .consent { display: flex; gap: 12px; align-items: flex-start; margin: 4px 0 26px; }
+  .consent input { width: 20px; height: 20px; flex: none; margin-top: 3px; accent-color: var(--teal); }
+  .consent label { font-family: var(--font-body); font-weight: 400; font-size: .85rem; color: var(--slate); line-height: 1.55; margin: 0; }
+  .ob-form .btn { width: 100%; justify-content: center; }
+  .form-note { font-size: .85rem; color: var(--slate); text-align: center; margin: 16px 0 0; }
+  .form-alt { text-align: center; margin-top: 32px; }
+  .form-alt p { color: var(--slate); margin: 0 0 6px; }
+  .form-alt__phones { font-family: var(--font-head); font-weight: 700; }
+  .form-alt__phones a { color: var(--teal-700); }
+  .form-alt__sep { margin: 0 10px; color: var(--line); }
+</style>
