@@ -87,7 +87,7 @@ import { site } from '../data/site';
       <div class="grid grid--3 treatments" style="margin-top:48px;">
         {site.treatments.map((t) => (
           <a href={t.slug} class="tcard">
-            <div class="tcard__img"><img src={t.img} alt={t.title} width="380" height="240" loading="lazy" /></div>
+            <div class="tcard__img"><img src={t.img} alt={t.alt} width="380" height="240" loading="lazy" /></div>
             <div class="tcard__body">
               <h3>{t.title}</h3>
               <p>{t.blurb}</p>
@@ -110,7 +110,7 @@ import { site } from '../data/site';
   <section class="section">
     <div class="container doc">
       <div class="doc__media">
-        <img src="/images/dr-benkovich.jpg" alt="Dr. John A. Benkovich, orthodontist in Annapolis & Chester, MD" width="460" height="560" loading="lazy" />
+        <img src="/images/dr-benkovich.webp" alt="Dr. John A. Benkovich, orthodontist in Annapolis & Chester, MD" width="460" height="560" loading="lazy" />
       </div>
       <div class="doc__copy">
         <p class="eyebrow">Meet your orthodontist</p>
