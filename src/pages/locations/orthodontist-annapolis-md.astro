@@ -117,7 +117,37 @@ const faqs = [
     </div>
   </section>
 
+  <!-- About Dr. Benkovich -->
+  <section class="section">
+    <div class="container">
+      <div class="docbox card">
+        <div class="docbox__media">
+          <img src="/images/dr-benkovich.webp" alt="Dr. John A. Benkovich, orthodontist in Annapolis & Chester, MD" width="320" height="400" loading="lazy" />
+        </div>
+        <div class="docbox__copy">
+          <p class="eyebrow">About your orthodontist</p>
+          <h2>Meet Dr. John A. Benkovich</h2>
+          <p>For over 30 years, Dr. Benkovich has helped families across Annapolis and Chester smile with confidence. Since {site.established}, his approach has stayed refreshingly simple: treat every patient like a neighbor, explain everything in plain language, and make each visit personal and genuinely enjoyable.</p>
+          <a href="/about/meet-dr-benkovich/" class="btn btn--ghost">More about Dr. Benkovich</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <FaqBlock items={faqs} heading="Annapolis office — common questions" />
+
+  <!-- Office map -->
+  <section class="section section--mint">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Find us</p>
+        <h2>Our Annapolis office on the map</h2>
+      </div>
+      <div class="locmap card" style="margin-top:32px;">
+        <iframe title="Map to Benkovich Orthodontics in Annapolis, MD" src="https://www.google.com/maps?q=Benkovich+Orthodontics+Annapolis+MD&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
   <Cta heading="Ready to visit our Annapolis office?" />
 </BaseLayout>
@@ -137,6 +167,16 @@ const faqs = [
   .zigzag { display: grid; gap: 36px; align-items: center; }
   @media (min-width: 900px) { .zigzag { grid-template-columns: 0.9fr 1.1fr; gap: 56px; } }
   .zigzag__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; }
+
+  .docbox { display: grid; align-items: stretch; overflow: hidden; padding: 0; }
+  .docbox__media img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; object-position: center 18%; display: block; }
+  .docbox__copy { padding: 34px 36px; }
+  .docbox__copy h2 { margin-bottom: 14px; }
+  .docbox__copy p { color: var(--slate); margin-bottom: 22px; }
+  @media (min-width: 760px) { .docbox { grid-template-columns: 320px 1fr; } }
+  @media (max-width: 759px) { .docbox__media img { aspect-ratio: 3/2; min-height: 0; } }
+  .locmap { overflow: hidden; padding: 0; }
+  .locmap iframe { width: 100%; height: 420px; border: 0; display: block; }
 
   .svc-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; color: var(--ink); transition: .2s; }
   .svc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
