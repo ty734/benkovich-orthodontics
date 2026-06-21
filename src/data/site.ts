@@ -16,7 +16,7 @@ export const site = {
     price: '$184',
     priceUnit: '/month',
     freeExam: 'Free first exam',
-    promo: 'Up to $750 off full treatment',
+    promo: 'Up to $750 off full treatment', // NON-INDEXED ad landing pages ONLY — never render on indexable pages
   },
   // Booking = the existing appointment-request form. Its confirmation/thank-you page
   // (kept on its current slug) is what fires the Google Ads conversion goal — do not change.
