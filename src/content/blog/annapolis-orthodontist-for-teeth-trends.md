@@ -48,7 +48,7 @@ We feel that financial constraints should not stand in the way of having a gorge
 
 Choosing the appropriate **orthodontist Annapolis MD** is essential for maximum success. Here's why our patients place their trust in us with their smiles:
 
-- **Experience:** More than 20 years of experience and over 9,000 satisfied patients prove that Dr. Benkovich has a successful history of delivering excellent orthodontic services.
+- **Experience:** More than 20 years of experience and over 10,000 satisfied patients prove that Dr. Benkovich has a successful history of delivering excellent orthodontic services.
 - **Advanced Technology:** We utilize the most advanced technologies in orthodontics to achieve seamless, pain-free, and successful treatments.
 - **Patient-Centered Approach:** Our **Annapolis orthodontist** staff is committed to providing a warm and friendly atmosphere, so your orthodontic experience is a pleasant one.
 

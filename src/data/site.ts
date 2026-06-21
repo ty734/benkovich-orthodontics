@@ -8,8 +8,8 @@ export const site = {
   domain: 'https://drbenkovich.com',
   tagline: 'Confident smiles for the whole family in Annapolis & Chester, MD.',
   established: 1993,
-  patients: '9,000+',
-  reviewCount: '175+',
+  patients: '10,000+',
+  reviewCount: '200+',
   rating: '5.0',
   // Headline offer — the differentiator no local competitor advertises.
   offer: {

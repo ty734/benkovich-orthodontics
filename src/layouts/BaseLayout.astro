@@ -47,7 +47,7 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, site.domain).href;
     image: `${site.domain}/images/team-hero.webp`,
     founder: site.doctor,
     priceRange: '$$',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: site.rating, reviewCount: '175' },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: site.rating, reviewCount: '200' },
     address: site.locations.map(l => ({ '@type': 'PostalAddress', addressLocality: l.name, addressRegion: 'MD', addressCountry: 'US' })),
   })} />
 </head>
