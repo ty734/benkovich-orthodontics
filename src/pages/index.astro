@@ -196,6 +196,34 @@ import { site } from '../data/site';
     </div>
   </section>
 
+  <!-- ============ MAP ============ -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="center measure">
+        <p class="eyebrow">Visit us</p>
+        <h2>Find us on the map</h2>
+      </div>
+      <div class="grid grid--2 maps" style="margin-top:42px;">
+        {site.locations.map((l) => {
+          const city = l.name.split(' / ')[0];
+          return (
+            <div class="mapcard card">
+              <iframe
+                title={`Map to Benkovich Orthodontics in ${city}, MD`}
+                src={`https://www.google.com/maps?q=${encodeURIComponent('Benkovich Orthodontics ' + city + ', MD')}&z=14&output=embed`}
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="mapcard__foot">
+                <strong>{l.name}</strong>
+                <a href={l.mapUrl} target="_blank" rel="noopener">Get directions →</a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FINAL CTA ============ -->
   <section class="finalcta">
     <div class="container finalcta__inner">
@@ -288,6 +316,14 @@ import { site } from '../data/site';
   .loc__phone { display: inline-block; font-family: var(--font-head); font-weight: 800; font-size: 1.4rem; color: var(--teal); margin: 6px 0 16px; }
   .loc__cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
   .loc__map { font-weight: 700; }
+
+  /* Map */
+  .maps { gap: 26px; }
+  .mapcard { padding: 0; overflow: hidden; }
+  .mapcard iframe { width: 100%; height: 330px; border: 0; display: block; }
+  .mapcard__foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 22px; }
+  .mapcard__foot strong { font-family: var(--font-head); font-size: 1.1rem; color: var(--ink); }
+  .mapcard__foot a { font-family: var(--font-head); font-weight: 700; color: var(--teal); white-space: nowrap; }
 
   /* Final CTA */
   .finalcta { background: linear-gradient(155deg, var(--navy), var(--navy-900)); color: #fff; padding: clamp(56px, 8vw, 96px) 0; text-align: center; }
