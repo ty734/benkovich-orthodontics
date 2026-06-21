@@ -12,25 +12,35 @@ import { site } from '../../data/site';
     eyebrow="Meet your orthodontist"
     title="Meet Dr. John A. Benkovich"
     subtitle="A specialty-trained orthodontist who treats every patient like a neighbor — caring for Annapolis & Chester smiles since 1993."
-    image="/images/dr-benkovich.webp"
-    imageAlt="Dr. John A. Benkovich, orthodontist in Annapolis & Chester, MD, with his dog"
+    image="/images/drb-hero.webp"
+    imageAlt="Dr. John A. Benkovich with a happy young patient at Benkovich Orthodontics in Annapolis, MD"
     crumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about/meet-dr-benkovich/' }, { label: 'Meet Dr. Benkovich', href: '/about/meet-dr-benkovich/' }]} />
 
   <section class="section">
-    <div class="container measure">
-      <p class="eyebrow">A familiar, friendly face</p>
-      <h2>Care that feels personal</h2>
-      <p>For over 30 years, Dr. Benkovich has helped families across Annapolis and Chester smile with confidence. Since {site.established}, his approach has stayed refreshingly simple: treat every patient like a neighbor, explain everything in plain language, and make each visit personal and genuinely enjoyable.</p>
-      <p>Patients of every age — kids, teens, parents, and grandparents alike — appreciate how thoroughly he explains their options, using x-rays, photos, and models so everyone understands the plan. There’s never any pressure, and your first exam is always free.</p>
+    <div class="container">
+      <div class="zz">
+        <div class="zz__media"><img src="/images/drb-chairside.webp" alt="Dr. Benkovich with a young patient in the treatment room at Benkovich Orthodontics" width="520" height="650" loading="lazy" /></div>
+        <div class="zz__copy">
+          <p class="eyebrow">A familiar, friendly face</p>
+          <h2>Care that feels personal</h2>
+          <p>For over 30 years, Dr. Benkovich has helped families across Annapolis and Chester smile with confidence. Since {site.established}, his approach has stayed refreshingly simple: treat every patient like a neighbor, explain everything in plain language, and make each visit personal and genuinely enjoyable.</p>
+          <p>Patients of every age — kids, teens, parents, and grandparents alike — appreciate how thoroughly he explains their options, using x-rays, photos, and models so everyone understands the plan. There’s never any pressure, and your first exam is always free.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section section--mint">
-    <div class="container measure">
-      <p class="eyebrow">His philosophy</p>
-      <h2>Treat every patient like family</h2>
-      <p>Dr. Benkovich believes a great orthodontic experience starts with trust. He takes the time to listen, to answer every question, and to make even nervous kids feel completely at ease. The goal is always a smile you’re proud of — created in a warm, welcoming environment where you feel cared for from the moment you walk in.</p>
-      <p>He’s also committed to keeping care genuinely affordable, with transparent pricing and flexible plans <strong>starting at {site.offer.price}/month</strong> so a confident smile fits your family’s budget.</p>
+    <div class="container">
+      <div class="zz zz--rev">
+        <div class="zz__media"><img src="/images/drb-celebrate.webp" alt="Dr. Benkovich celebrating with a happy patient at Benkovich Orthodontics" width="520" height="650" loading="lazy" /></div>
+        <div class="zz__copy">
+          <p class="eyebrow">His philosophy</p>
+          <h2>Treat every patient like family</h2>
+          <p>Dr. Benkovich believes a great orthodontic experience starts with trust. He takes the time to listen, to answer every question, and to make even nervous kids feel completely at ease. The goal is always a smile you’re proud of — created in a warm, welcoming environment where you feel cared for from the moment you walk in.</p>
+          <p>He’s also committed to keeping care genuinely affordable, with transparent pricing and flexible plans <strong>starting at {site.offer.price}/month</strong> so a confident smile fits your family’s budget.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -61,6 +71,9 @@ import { site } from '../../data/site';
 </BaseLayout>
 
 <style>
+  .zz { display: grid; gap: 38px; align-items: center; }
+  @media (min-width: 900px) { .zz { grid-template-columns: 0.9fr 1.1fr; gap: 54px; } .zz--rev .zz__media { order: 2; } }
+  .zz__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; }
   .creds { list-style: none; padding: 0; margin: 18px 0 0; }
   .creds li { padding: 12px 0 12px 32px; position: relative; color: var(--slate); border-bottom: 1px solid var(--line); }
   .creds li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
