@@ -6,10 +6,11 @@ interface Props {
   subtitle?: string;
   image?: string;
   imageAlt?: string;
+  imagePos?: string;
   crumbs?: { label: string; href: string }[];
   showCta?: boolean;
 }
-const { eyebrow, title, subtitle, image, imageAlt, crumbs, showCta = true } = Astro.props;
+const { eyebrow, title, subtitle, image, imageAlt, imagePos, crumbs, showCta = true } = Astro.props;
 ---
 <section class:list={["page-hero", { "page-hero--split": image }]}>
   <div class="container">
@@ -34,7 +35,7 @@ const { eyebrow, title, subtitle, image, imageAlt, crumbs, showCta = true } = As
       </div>
       {image && (
         <div class="page-hero__media">
-          <img src={image} alt={imageAlt ?? title} width="520" height="380" fetchpriority="high" />
+          <img src={image} alt={imageAlt ?? title} width="520" height="380" fetchpriority="high" style={imagePos ? `object-position:${imagePos}` : undefined} />
         </div>
       )}
     </div>
