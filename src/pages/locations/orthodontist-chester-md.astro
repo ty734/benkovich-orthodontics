@@ -29,11 +29,18 @@ const faqs = [
     crumbs={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations/' }, { label: 'Chester / Kent Island', href: loc.slug }]} />
 
   <section class="section">
-    <div class="container measure">
-      <p class="eyebrow">Your neighborhood orthodontist</p>
-      <h2>Confident smiles, close to home on Kent Island</h2>
-      <p>No need to cross the Bay Bridge for expert orthodontic care. Benkovich Orthodontics serves families right here in Chester and across Kent Island — including Stevensville, Queenstown, Grasonville, and Centreville. We’re an easy drive off Route 50, so quality care is always close to home.</p>
-      <p>Dr. Benkovich treats every patient like a neighbor — explaining everything in plain language and making each visit personal and genuinely enjoyable. Best of all, a beautiful smile shouldn’t strain your budget. We keep things honest and affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted. Your first exam is always free.</p>
+    <div class="container">
+      <div class="zigzag">
+        <div class="zigzag__media">
+          <img src="/images/chester-staff-patient.webp" alt="A Benkovich Orthodontics team member celebrating with a happy patient at the Chester / Kent Island office" width="560" height="700" loading="lazy" />
+        </div>
+        <div class="zigzag__copy">
+          <p class="eyebrow">Your neighborhood orthodontist</p>
+          <h2>Confident smiles, close to home on Kent Island</h2>
+          <p>No need to cross the Bay Bridge for expert orthodontic care. Benkovich Orthodontics serves families right here in Chester and across Kent Island — including Stevensville, Queenstown, Grasonville, and Centreville. We’re an easy drive off Route 50, so quality care is always close to home.</p>
+          <p>Dr. Benkovich treats every patient like a neighbor — explaining everything in plain language and making each visit personal and genuinely enjoyable. Best of all, a beautiful smile shouldn’t strain your budget. We keep things honest and affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted. Your first exam is always free.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -127,6 +134,10 @@ const faqs = [
   .loc__map { font-weight: 700; }
   .nap-map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); min-height: 320px; }
   .nap-map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+
+  .zigzag { display: grid; gap: 36px; align-items: center; }
+  @media (min-width: 900px) { .zigzag { grid-template-columns: 0.9fr 1.1fr; gap: 56px; } }
+  .zigzag__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4/5; }
 
   .svc-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; color: var(--ink); transition: .2s; }
   .svc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
