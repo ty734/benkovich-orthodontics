@@ -2,9 +2,11 @@
 title: "Why Dr Benkovich Annapolis is a Top Choice for Dental Care"
 description: "Discover why Dr. Benkovich Annapolis is a top orthodontic choice. Expert care, advanced treatments, and a trusted reputation serving Annapolis & Chester, MD."
 pubDate: 2025-06-06
+image: "/images/drb-hero.webp"
+imageAlt: "Dr. Benkovich, a top choice for trusted orthodontic care, serving patients at Benkovich Orthodontics in Annapolis, MD."
 ---
 
-Selecting a dentist is very important for your oral health. In addition to making your smile whiter, a good dentist supports your general health. People in [Annapolis](/find-a-location/orthodontist-annapolis/) often mention Dr Benkovich as the expert for excellent dental care. Being known for being trustworthy, skilled, and caring, [**Dr Benkovich Annapolis**](/about/meet-dr-benkovich/) is often selected by individuals and families for their high-quality dental care.
+Selecting a dentist is very important for your oral health. In addition to making your smile whiter, a good dentist supports your general health. People in [Annapolis](/locations/orthodontist-annapolis-md/) often mention Dr Benkovich as the expert for excellent dental care. Being known for being trustworthy, skilled, and caring, [**Dr Benkovich Annapolis**](/about/meet-dr-benkovich/) is often selected by individuals and families for their high-quality dental care.
 
 **Take a look at the following reasons to know why Dr Benkovich Annapolis is an ideal choice for dental care –**
 

@@ -1,12 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
 import Cta from '../../components/Cta.astro';
 import { site } from '../../data/site';
+
+const faqs = [
+  { q: 'What should I bring to my first visit?', a: 'Just yourself and a smile! It helps to bring a photo ID and your dental insurance card if you have coverage, plus any recent X-rays or a referral if you have them. Reviewing our new patient forms ahead of time makes check-in quick.' },
+  { q: 'How long does a first visit take?', a: 'Plan for about 45 to 60 minutes for your free first exam. That gives Dr. Benkovich time to get to know you, examine your teeth and bite, answer your questions, and walk through your options and costs without any rush.' },
+  { q: 'Do you run on time, or should I expect a long wait?', a: 'We respect your time and work hard to keep appointments running on schedule. Regular check-ups during treatment are quick and easy to fit into a busy day, and we do our best to get you in and out promptly.' },
+  { q: 'Is the first exam really free?', a: 'Yes. Your initial consultation is completely free — a relaxed, no-pressure visit to meet our team, review your smile, and get clear answers. If you decide to move forward, we offer flexible payment plans starting at $184/month.' },
+];
 ---
 <BaseLayout
   title="Your First Orthodontist Visit in Annapolis, MD | Benkovich"
-  description="Wondering what to expect at your first orthodontist visit in Annapolis & Chester, MD? Here's how the free first exam and regular check-ups work at Benkovich Orthodontics.">
+  description="Wondering what to expect at your first orthodontist visit in Annapolis, MD? See how the free first exam and check-ups work at Benkovich Orthodontics.">
 
   <PageHero
     eyebrow="Office visits"
@@ -18,7 +26,7 @@ import { site } from '../../data/site';
     <div class="container measure">
       <p class="eyebrow">A relaxed welcome</p>
       <h2>Your free first exam, step by step</h2>
-      <p>Your very first appointment is a complimentary, no-pressure visit designed to answer your questions and put you at ease. There's nothing to prepare and nothing to worry about — just a friendly conversation about your smile. Here's how it usually goes:</p>
+      <p>Your very first appointment is a complimentary, no-pressure visit designed to answer your questions and put you at ease. There's nothing to prepare and nothing to worry about — though you can review our <a href="/patient-info/patient-forms/">new patient forms</a> ahead of time to make check-in quick. Here's how it usually goes:</p>
       <ol class="steps">
         <li><strong>A warm welcome.</strong> Our team greets you, gets to know you, and makes sure you're comfortable from the moment you walk in.</li>
         <li><strong>A gentle exam.</strong> Dr. Benkovich examines your teeth and bite — often using photos, x-rays, and models to show you exactly what he sees.</li>
@@ -68,6 +76,8 @@ import { site } from '../../data/site';
       </div>
     </div>
   </section>
+
+  <FaqBlock items={faqs} heading="First visit questions, answered" />
 
   <Cta heading="Ready for a relaxed first visit?" />
 </BaseLayout>

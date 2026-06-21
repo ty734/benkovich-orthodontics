@@ -2,6 +2,8 @@
 title: "Orthodontic Technology: Advancing Smiles at Benkovich Orthodontics"
 description: "Discover how orthodontic technology at Benkovich Orthodontics improves care with advanced tools like 3D imaging, clear aligners, and lasers."
 pubDate: 2025-01-09
+image: "/images/itero-scan.webp"
+imageAlt: "Advanced orthodontic technology like 3D digital scanning improving smiles at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 When it comes to creating beautiful, healthy smiles, modern tools and techniques have revolutionized orthodontics. At Benkovich Orthodontics, we are proud to provide patients with state-of-the-art care that focuses on precision, efficiency, and comfort. Thanks to orthodontic technology, treatments are now faster, more effective, and customized to suit every patient's unique needs. From clear aligners and 3D scanning to advanced braces, let's explore how today's innovations are shaping the future of orthodontic care.

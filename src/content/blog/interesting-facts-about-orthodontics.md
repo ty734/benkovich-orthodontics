@@ -2,6 +2,8 @@
 title: "Discover the Most Interesting Facts About Orthodontics"
 description: "Explore surprising and interesting facts about orthodontics, from ancient braces to mental health benefits. Discover how orthodontics improves lives today."
 pubDate: 2025-05-02
+image: "/images/braces-for-teens.webp"
+imageAlt: "Surprising and interesting facts about orthodontics and the evolution of braces at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 When you hear the word "orthodontics," you probably think of braces, retainers, and a perfect smile. But orthodontics is so much more than that. It's a specialized branch of dentistry that involves correcting misaligned teeth and jaws to improve function and appearance. Whether you're already familiar with the basics of orthodontics or just starting, you may be surprised to learn some of the most interesting facts about orthodontics you never knew.
@@ -10,7 +12,7 @@ When you hear the word "orthodontics," you probably think of braces, retainers, 
 
 #### Orthodontics Dates Back to Ancient Times
 
-One of the most [**interesting facts about orthodontics**](/braces-info/about-orthodontics/) is that it's been around for thousands of years. Ancient Egyptians were among the first to experiment with dental treatments. Archaeologists have found mummies with metal bands wrapped around their teeth, possibly to align them. The ancient Romans also used primitive methods to straighten teeth, using gold wire to apply pressure. These early attempts at orthodontics show that humans have always wanted a better smile, even without the fancy tools we have today.
+One of the most [**interesting facts about orthodontics**](/braces/) is that it's been around for thousands of years. Ancient Egyptians were among the first to experiment with dental treatments. Archaeologists have found mummies with metal bands wrapped around their teeth, possibly to align them. The ancient Romans also used primitive methods to straighten teeth, using gold wire to apply pressure. These early attempts at orthodontics show that humans have always wanted a better smile, even without the fancy tools we have today.
 
 #### Orthodontics Is More Than Just Straightening Teeth
 
@@ -22,7 +24,7 @@ In the early days of modern orthodontics, braces were made of gold, one of the m
 
 #### Orthodontics isn't just for teens
 
-One of the [**interesting facts about orthodontics**](/braces-info/about-orthodontics/) is that treatment isn't just for kids and teens. One in four orthodontic patients is an adult. With modern treatments like clear aligners, adult orthodontics has become more popular and accessible. Many adults get braces or clear aligners to improve their smile or correct issues that were never addressed in childhood. Whether it's to boost self-confidence or long-term dental health, orthodontic treatment is common for all.
+One of the [**interesting facts about orthodontics**](/braces/) is that treatment isn't just for kids and teens. One in four orthodontic patients is an adult. With modern treatments like clear aligners, adult orthodontics has become more popular and accessible. Many adults get braces or clear aligners to improve their smile or correct issues that were never addressed in childhood. Whether it's to boost self-confidence or long-term dental health, orthodontic treatment is common for all.
 
 #### Orthodontic Treatment Can Boost Your Mental Health
 

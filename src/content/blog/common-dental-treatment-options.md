@@ -2,6 +2,8 @@
 title: "Exploring the Most Common Dental Treatment Options"
 description: "Explore the most popular dental treatment options to maintain your oral health, enhance your smile, and find the best care for your needs."
 pubDate: 2025-05-15
+image: "/images/itero-scan.webp"
+imageAlt: "Exploring common dental and orthodontic treatment options using modern technology at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 Taking care of your smile involves much more than brushing and flossing. Sooner or later, just about everyone will require some type of professional dental treatment options, whether it is preventive, restorative, or cosmetic. Thankfully, modern dentistry provides numerous answers to make sure your smile remains healthy, comfortable, and attractive.
@@ -93,7 +95,7 @@ We offer you one of the most requested cosmetic dental treatment options, teeth 
 
 ## Braces or orthodontic treatment
 
-With orthodontics, you can straighten teeth that are not in line. With traditional braces, brackets, and wires work together to straighten teeth, and in the case of adults and teens, that sometimes comes in the form of clear aligners, such as Invisalign.
+With orthodontics, you can straighten teeth that are not in line. With traditional [braces](/braces/), brackets, and wires work together to straighten teeth, and in the case of adults and teens, that sometimes comes in the form of clear aligners, such as [Invisalign](/invisalign/).
 
 **Benefits:**
 

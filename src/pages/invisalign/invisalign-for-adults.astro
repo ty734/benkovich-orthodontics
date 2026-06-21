@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import FaqBlock from '../../components/FaqBlock.astro';
 import Cta from '../../components/Cta.astro';
+import PhotoFeature from '../../components/PhotoFeature.astro';
 import { site } from '../../data/site';
 
 const faqs = [
@@ -66,6 +67,15 @@ const faqs = [
       <p>Read real <a href="/invisalign/invisalign-testimonials/">Invisalign reviews</a> from our patients, then <a href={site.booking}>schedule a free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/itero-scan.webp"
+    alt="An adult patient previewing their future smile with a 3D iTero scan at Benkovich Orthodontics in Annapolis, MD"
+    eyebrow="See it before you start"
+    heading="Preview your new smile in 3D"
+    body="With a quick 3D iTero scan — no messy impressions — you can see a digital preview of where your smile is headed before you ever begin. It's an easy, reassuring way to picture your results."
+    tone="mint"
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Invisalign for adults, answered" />
 

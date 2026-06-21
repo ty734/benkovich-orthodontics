@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -15,7 +16,7 @@ const faqs = [
 ];
 ---
 <BaseLayout
-  title="Braces for Adults in Annapolis & Chester, MD | Benkovich Orthodontics"
+  title="Braces for Adults in Annapolis & Chester, MD | Benkovich Ortho"
   description="Discreet braces for adults in Annapolis & Chester, MD. Clear & low-profile options for professional life, plans from $184/month and a free first exam. Book today.">
 
   <PageHero
@@ -31,7 +32,7 @@ const faqs = [
       <p class="eyebrow">Never too late</p>
       <h2>A confident smile, on your timeline</h2>
       <p>More adults than ever are straightening their smiles — and for good reason. Whether you missed the chance as a teen or your teeth have shifted over the years, Dr. Benkovich offers discreet, comfortable <a href="/braces/">braces</a> and clear aligner options designed to fit a professional, on-the-go life.</p>
-      <p>Today’s treatments are lighter, lower-profile, and easier to live with than the braces you may remember. And a beautiful smile shouldn’t strain your budget: we keep things affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+      <p>Today’s treatments are lighter, lower-profile, and easier to live with than the braces you may remember. And we set up in-house payment plans ourselves — no third-party financing — with flexible options <strong>starting at {site.offer.price}/month</strong> and most insurance accepted.</p>
     </div>
   </section>
 
@@ -86,6 +87,16 @@ const faqs = [
       <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>, or visit us in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a>.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/itero-scan.webp"
+    alt="An adult patient receiving a comfortable 3D iTero digital scan at Benkovich Orthodontics in Annapolis, MD"
+    eyebrow="Modern, precise planning"
+    heading="Your treatment, mapped in 3D"
+    body="No goopy, messy impressions here. Our 3D iTero scanner captures a precise digital model of your smile in minutes, so Dr. Benkovich can plan your treatment with real accuracy — and you can see where it's headed."
+    tone="mint"
+    reverse={true}
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Braces for adults, answered" />
 

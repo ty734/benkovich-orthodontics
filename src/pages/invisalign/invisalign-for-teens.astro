@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import FaqBlock from '../../components/FaqBlock.astro';
 import Cta from '../../components/Cta.astro';
+import PhotoFeature from '../../components/PhotoFeature.astro';
 import { site } from '../../data/site';
 
 const faqs = [
@@ -66,6 +67,15 @@ const faqs = [
       <p>When your teen grows up, <a href="/invisalign/invisalign-for-adults/">Invisalign for adults</a> is here too — or explore the full <a href="/invisalign/">Invisalign</a> overview. Ready to begin? <a href={site.booking}>Schedule a free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/teen-celebrate.webp"
+    alt="A happy teen Benkovich Orthodontics patient showing off a confident smile after Invisalign treatment in Chester, MD"
+    eyebrow="Real teen smiles"
+    heading="Confident smiles, the discreet way"
+    body="Our teen patients love watching their smile come together without anyone really noticing the aligners. From first scan to finished result, it's a path that fits right into a full, active teen life."
+    tone="cream"
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Invisalign for teens, answered" />
 

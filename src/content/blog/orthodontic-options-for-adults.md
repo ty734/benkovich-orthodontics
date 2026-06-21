@@ -2,6 +2,8 @@
 title: "Orthodontic Options for Adults: The Path to a Straighter, Healthier Smile"
 description: "Thinking about braces or aligners? Discover orthodontic options for adults and explore treatments to achieve your best smile with Benkovich Orthodontics."
 pubDate: 2024-12-30
+image: "/images/braces-for-adults.webp"
+imageAlt: "An adult patient exploring orthodontic options like braces and clear aligners at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 Are you an adult considering orthodontic treatment? If so, you're not alone! Every year, millions of adults turn to orthodontic care to improve their smiles and oral health. Whether it's crooked teeth, gaps, or bite alignment issues, orthodontic options for adults offer more solutions, comfort, and discretion than ever before.

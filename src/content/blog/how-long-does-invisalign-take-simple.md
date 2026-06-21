@@ -2,6 +2,8 @@
 title: "How Long Does Invisalign Take? A Simple Timeline"
 description: "How long does Invisalign take? For most, treatment lasts 12-18 months. Learn factors that influence Invisalign timelines and how to keep on track."
 pubDate: 2024-10-21
+image: "/images/invisalign-for-adults.webp"
+imageAlt: "Clear Invisalign aligners that typically straighten teeth in 12 to 18 months at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 When deciding to straighten your teeth using Invisalign, one key question comes to mind for almost everyone: how long does Invisalign take? If you're hoping to achieve a beautiful smile without the hassle of traditional braces, Invisalign offers an effective, convenient solution. But how long will you have to commit to wearing these clear aligners? In this blog, we'll explore the average timeline for Invisalign treatment and discuss what factors can influence the duration of your plan.
@@ -47,7 +49,7 @@ Invisalign works great for both teens and adults alike. However, teeth tend to m
 While some factors, like the complexity of your dental issues or age, are outside your control, there are certainly steps you can take to ensure your Invisalign treatment proceeds as quickly as possible. Want to speed up how long does Invisalign take? Here are a few tips to stay on track:
 
 1. **Wear Your Aligners as Recommended:** The most important way to expedite your treatment is to wear your aligners for the required 22 hours per day. You should only remove them when eating, drinking (anything besides water), and for oral hygiene. Wearing them for fewer hours means less progress!
-2. **Stick to Your Aligner-Swap Schedule:** Be diligent about switching to the next set of aligners on time. [Aligners](/invisalign-info/invisalign-for-adults/) are generally changed every one to two weeks as your teeth shift according to plan. Delayed swaps equal delayed progress.
+2. **Stick to Your Aligner-Swap Schedule:** Be diligent about switching to the next set of aligners on time. [Aligners](/invisalign/invisalign-for-adults/) are generally changed every one to two weeks as your teeth shift according to plan. Delayed swaps equal delayed progress.
 3. **Attend Checkups:** Regular check-ins with your orthodontist are critical for staying on course. Missing appointments could mean that your orthodontist doesn't catch potential problems early on, which could ultimately affect your progress.
 4. **Keep Your Aligners Clean:** Dirty or damaged aligners can affect their fit, and poorly fitting aligners slow down tooth movement. Make sure to clean your aligners regularly and follow your orthodontist's care instructions.
 5. **Consider Using Aligner Chewies:** Aligner chewies are small, soft devices you chew on to ensure your aligners fit snugly against your teeth. By using them a few times a day, you can help seat your aligners more effectively, which ensures your teeth are being moved as expected.

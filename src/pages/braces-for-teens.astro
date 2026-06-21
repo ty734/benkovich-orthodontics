@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -15,7 +16,7 @@ const faqs = [
 ];
 ---
 <BaseLayout
-  title="Braces for Teens in Annapolis & Chester, MD | Benkovich Orthodontics"
+  title="Braces for Teens in Annapolis & Chester, MD | Benkovich Ortho"
   description="Color-customizable braces for teens in Annapolis & Chester, MD that fit sports, music & school. Plans from $184/month and a free first exam. Book today.">
 
   <PageHero
@@ -31,7 +32,7 @@ const faqs = [
       <p class="eyebrow">Built for teen life</p>
       <h2>Braces that keep up with everything they do</h2>
       <p>The teen years are busy — practices, performances, friends, and a full school schedule. Dr. Benkovich designs <a href="/braces/">braces</a> treatment to fit right into that life, not interrupt it. Today’s braces are smaller and more comfortable than ever, and quick, on-time check-ups keep your teen moving without missing a beat.</p>
-      <p>And because confidence matters at this age, teens get to make their braces their own with custom colors at every visit. A great smile shouldn’t strain your budget either: we keep things affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+      <p>And because confidence matters at this age, teens get to make their braces their own with custom colors at every visit. And the cost is clear upfront — most patients start the same day as their free exam, with flexible plans <strong>starting at {site.offer.price}/month</strong> and most insurance accepted.</p>
     </div>
   </section>
 
@@ -85,6 +86,15 @@ const faqs = [
       <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>, or visit us in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a>.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/teen-celebrate.webp"
+    alt="A happy teen Benkovich Orthodontics patient celebrating a confident new smile in Chester, MD"
+    eyebrow="Smiles worth showing off"
+    heading="The confident smile they've been waiting for"
+    body="There's nothing like the moment the braces come off and a teen sees their finished smile. We love being part of that — and helping them carry that confidence into every photo, performance, and game."
+    tone="cream"
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Braces for teens, answered" />
 

@@ -2,11 +2,13 @@
 title: "iTero Digital Scanner – Revolutionizing Modern Dental Care"
 description: "Discover how iTero digital scanner enhances accuracy & comfort in dental treatments. Visit Benkovich Orthodontics to explore its impact on modern dental care."
 pubDate: 2025-03-26
+image: "/images/itero-scan.webp"
+imageAlt: "The iTero digital scanner capturing precise 3D impressions for modern dental care at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 Dental patients' experiences are evolving in this rapidly changing world of dentistry with advanced and cutting-edge technology. The **iTero digital scanner** is an advanced technology that provides top-notch precision and comfort.
 
-We at Benkovich Orthodontics ensure top-notch dental care for every dental patient by leveraging this advanced technology. In this blog, let's gain insights on what this new [**iTero Digital Scanner**](/treatment-options/itero-digital-impression-system/) is, why to choose it, how it helps, and more.
+We at Benkovich Orthodontics ensure top-notch dental care for every dental patient by leveraging this advanced technology. In this blog, let's gain insights on what this new [**iTero Digital Scanner**](/invisalign/) is, why to choose it, how it helps, and more.
 
 ## What is the iTero Digital Scanner?
 
@@ -34,7 +36,7 @@ Using the iTero digital dental scanner is simple and patient-friendly. Here's ho
 
 ## Benefits of Using the iTero Digital Impression Scanner
 
-The [**iTero digital impression scanner**](/treatment-options/itero-digital-impression-system/) offers various benefits, which is why dental patients and professional dentists prefer this advanced technology:
+The [**iTero digital impression scanner**](/invisalign/) offers various benefits, which is why dental patients and professional dentists prefer this advanced technology:
 
 - **Precision:** This **digital impression scanner** provides precision and highly accurate scans.
 - **Patient Satisfaction:** This new technology provides patient satisfaction and reduces longer wait times.

@@ -10,9 +10,23 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const { title, description, pubDate } = post.data;
+const { title, description, pubDate, image, imageAlt } = post.data;
 ---
 <BaseLayout title={`${title} | Benkovich Orthodontics`} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: description,
+    datePublished: pubDate ? pubDate.toISOString() : undefined,
+    image: image ? new URL(image, 'https://drbenkovich.com').href : undefined,
+    author: { '@type': 'Person', name: 'Dr. John A. Benkovich' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Benkovich Orthodontics',
+      logo: { '@type': 'ImageObject', url: 'https://drbenkovich.com/images/logo.svg' }
+    }
+  })} />
   <article class="post">
     <div class="container post__inner">
       <nav class="crumbs" aria-label="Breadcrumb">
@@ -20,6 +34,7 @@ const { title, description, pubDate } = post.data;
       </nav>
       <h1>{title}</h1>
       {pubDate && <p class="post__date">{pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>}
+      {image && <img class="post__hero" src={image} alt={imageAlt ?? title} width="760" height="428" loading="eager" />}
       <div class="prose">
         <Content />
       </div>
@@ -38,6 +53,7 @@ const { title, description, pubDate } = post.data;
   .crumbs__sep { margin: 0 8px; opacity: .5; }
   .post h1 { margin-bottom: 10px; }
   .post__date { color: var(--slate); font-size: .92rem; margin-bottom: 28px; }
+  .post__hero { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin: 0 0 32px; display: block; }
   .post__back { margin-top: 36px; font-family: var(--font-head); font-weight: 700; }
 
   .prose { font-size: 1.08rem; line-height: 1.75; color: var(--ink); }

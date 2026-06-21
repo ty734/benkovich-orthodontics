@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -29,7 +30,7 @@ const faqs = [
     <div class="container measure">
       <p class="eyebrow">It’s never too late</p>
       <h2>A confident smile, at any age</h2>
-      <p>If you’ve spent years wishing you’d straightened your teeth, you’re in good company — and you have more options than ever. More adults are choosing orthodontics today than at any point in the past, whether to fix a long-standing concern, undo shifting after old treatment, or simply feel better in every photo.</p>
+      <p>If you’ve spent years wishing you’d straightened your teeth, you’re in good company. Adults make up a growing share of the 10,000+ patients Dr. Benkovich has treated since 1993 — and as a true orthodontic specialist, he’ll tell you honestly whether clear braces, Invisalign, or <a href="/lingual-braces/">discreet lingual braces</a> is the right fit for your face and your schedule.</p>
       <p>At Benkovich Orthodontics, Dr. Benkovich treats adult smiles with the same gentle, personalized care that’s earned the trust of families here for over 30 years — and with options designed to be discreet. We keep it honest and affordable with plans <strong>starting at {site.offer.price}/month</strong> and most insurance accepted.</p>
     </div>
   </section>
@@ -80,6 +81,16 @@ const faqs = [
       <p style="margin-top:22px;">Want to plan ahead? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a> or compare <a href="/braces/">braces</a> and <a href="/invisalign/">Invisalign</a>.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/itero-scan.webp"
+    alt="A 3D iTero digital scan of an adult patient's teeth at Benkovich Orthodontics in Annapolis, MD"
+    eyebrow="Modern, comfortable care"
+    heading="No goop, no guesswork"
+    body="Digital 3D scans — no messy impressions — let Dr. Benkovich plan adult treatment precisely, so you know exactly what to expect before you begin."
+    ratio="3/4"
+    tone="cream"
+    reverse />
 
   <FaqBlock items={faqs} heading="Adult orthodontics questions, answered" />
 

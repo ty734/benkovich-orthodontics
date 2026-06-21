@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -15,7 +16,7 @@ const faqs = [
 ];
 ---
 <BaseLayout
-  title="Braces for Kids in Annapolis & Chester, MD | Benkovich Orthodontics"
+  title="Braces for Kids in Annapolis & Chester, MD | Benkovich Ortho"
   description="Gentle, friendly braces for kids in Annapolis & Chester, MD. Fun colors, comfortable care, plans from $184/month and a free first exam. Book your child today.">
 
   <PageHero
@@ -31,7 +32,7 @@ const faqs = [
       <p class="eyebrow">A great first experience</p>
       <h2>Gentle braces that put kids (and parents) at ease</h2>
       <p>A child’s first orthodontic visit shapes how they feel about their smile for years to come. That’s why Dr. Benkovich and our team go out of our way to make it warm, unhurried, and even a little fun. We explain everything in kid-friendly language, answer every parent question, and never pressure you into treatment before it’s time.</p>
-      <p>Today’s <a href="/braces/">braces</a> are smaller, lighter, and more comfortable than the ones you may remember — designed to gently guide growing smiles into place. And a beautiful smile shouldn’t strain your budget: we keep things affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
+      <p>Today’s <a href="/braces/">braces</a> are smaller, lighter, and more comfortable than the ones you may remember — designed to gently guide growing smiles into place. And families get the same transparent {site.offer.price}/month pricing that's earned 200+ five-star reviews: flexible plans, clear costs, and most insurance accepted.</p>
     </div>
   </section>
 
@@ -86,6 +87,16 @@ const faqs = [
       <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>, or visit us in <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a>.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/kids-prize.webp"
+    alt="A young Benkovich Orthodontics patient choosing a reward from the prize jar after a friendly first visit in Annapolis, MD"
+    eyebrow="A visit kids love"
+    heading="A first visit they'll actually look forward to"
+    body="From the prize-jar game to a team who explains everything in kid-friendly language, we turn that first appointment into something to smile about. When kids feel at ease, the whole journey gets easier."
+    tone="mint"
+    reverse={true}
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Braces for kids, answered" />
 

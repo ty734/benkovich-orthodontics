@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -80,6 +81,16 @@ const faqs = [
       <p style="margin-top:22px;">Ready for the teen years? Explore <a href="/braces-for-kids/">braces for kids</a> or learn how to <a href="/orthodontist-for-kids/">choose an orthodontist for kids</a> in Annapolis.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/family-care.webp"
+    alt="A parent and young child enjoying a relaxed, caring first orthodontic visit at Benkovich Orthodontics in Annapolis, MD"
+    eyebrow="Caring first visits"
+    heading="Where families feel right at home"
+    body="An early visit should feel reassuring, not nerve-wracking. Our team takes the time to put kids at ease and answer every parent question — so your family leaves with honest guidance and genuine peace of mind."
+    tone="mint"
+    reverse={true}
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Early orthodontics questions, answered" />
 

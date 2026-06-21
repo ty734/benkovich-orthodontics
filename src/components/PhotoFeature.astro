@@ -1,0 +1,52 @@
+---
+// Reusable real-photo section. Two modes:
+//  - With heading/body  -> zigzag (image + copy), optionally reversed.
+//  - Image only         -> centered photo band with optional caption.
+interface Props {
+  image: string;
+  alt: string;
+  eyebrow?: string;
+  heading?: string;
+  body?: string;        // HTML allowed (rendered via set:html)
+  caption?: string;     // used in image-only band mode
+  reverse?: boolean;    // image on the right
+  tone?: 'plain' | 'mint' | 'cream';
+  ratio?: string;       // CSS aspect-ratio, e.g. '4/5', '4/3', '16/10'
+}
+const { image, alt, eyebrow, heading, body, caption, reverse = false, tone = 'plain', ratio = '4/3' } = Astro.props;
+const sectionClass = tone === 'mint' ? 'section section--mint' : tone === 'cream' ? 'section section--cream' : 'section';
+const hasText = Boolean(heading || body || eyebrow);
+---
+{hasText ? (
+  <section class={sectionClass}>
+    <div class="container">
+      <div class={`pf ${reverse ? 'pf--rev' : ''}`}>
+        <div class="pf__media"><img src={image} alt={alt} width="640" height="480" loading="lazy" style={`aspect-ratio:${ratio}`} /></div>
+        <div class="pf__copy">
+          {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+          {heading && <h2>{heading}</h2>}
+          {body && <p set:html={body}></p>}
+        </div>
+      </div>
+    </div>
+  </section>
+) : (
+  <section class={sectionClass}>
+    <div class="container">
+      <figure class="pf-band">
+        <img src={image} alt={alt} width="1100" height="620" loading="lazy" style={`aspect-ratio:${ratio}`} />
+        {caption && <figcaption>{caption}</figcaption>}
+      </figure>
+    </div>
+  </section>
+)}
+<style>
+  .pf { display: grid; gap: 36px; align-items: center; }
+  @media (min-width: 900px) { .pf { grid-template-columns: 1fr 1fr; gap: 56px; } .pf--rev .pf__media { order: 2; } }
+  .pf__media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); object-fit: cover; display: block; }
+  .pf__copy h2 { margin-bottom: 14px; }
+  .pf__copy p { color: var(--slate); margin: 0; }
+  .pf-band { margin: 0; max-width: 1000px; margin-inline: auto; }
+  .pf-band img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); object-fit: cover; display: block; }
+  .pf-band figcaption { text-align: center; color: var(--slate); font-size: .92rem; margin-top: 14px; }
+</style>

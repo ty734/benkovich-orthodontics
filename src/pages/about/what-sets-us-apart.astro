@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import Cta from '../../components/Cta.astro';
+import PhotoFeature from '../../components/PhotoFeature.astro';
 import { site } from '../../data/site';
 ---
 <BaseLayout
@@ -20,7 +21,7 @@ import { site } from '../../data/site';
     <div class="container measure">
       <p class="eyebrow">The difference is in the details</p>
       <h2>Expert care that still feels personal</h2>
-      <p>There are plenty of places to straighten your teeth. What keeps families coming back to Benkovich Orthodontics — and driving in from across the region — is the combination of specialty training, honest pricing, and a team that treats you like a neighbor. Here’s what makes us different.</p>
+      <p>There are plenty of places to straighten your teeth. So why do families drive in from Pennsylvania, Ellicott City, and across the Eastern Shore — some every 4–6 weeks? Specialty training, genuinely transparent pricing, and a doctor who treats you like a neighbor. Here’s what makes us different.</p>
     </div>
   </section>
 
@@ -28,8 +29,8 @@ import { site } from '../../data/site';
     <div class="container">
       <div class="grid grid--3" style="margin-top:0;">
         <div class="card feature">
-          <h3>Specialty-Trained Since 1993</h3>
-          <p>Dr. Benkovich is a specialty-trained orthodontist who has cared for our community for over 30 years — experience you can feel at every visit.</p>
+          <h3>A True Specialist — Not a Dentist Doing Braces</h3>
+          <p>Dr. Benkovich completed a full orthodontic residency and a master’s in oral biology at the University of Louisville, after graduating magna cum laude from Maryland’s dental school. Years of extra training focused on one thing: moving teeth.</p>
         </div>
         <div class="card feature">
           <h3>{site.patients} Patients Treated</h3>
@@ -52,8 +53,8 @@ import { site } from '../../data/site';
           <p>Your initial visit is on us — a relaxed, no-pressure chat with Dr. Benkovich to explore your options.</p>
         </div>
         <div class="card feature">
-          <h3>A Comfortable, Caring Experience</h3>
-          <p>A friendly team that takes the time to explain everything and puts even nervous kids completely at ease.</p>
+          <h3>You'll Actually Understand Your Plan</h3>
+          <p>Dr. Benkovich walks you through your own x-rays, photos, and 3D iTero scan in plain language — so you see exactly what we see. (And yes, there’s a prize game that wins over nervous kids.)</p>
         </div>
         <div class="card feature">
           <h3>Care for Every Age</h3>
@@ -74,6 +75,23 @@ import { site } from '../../data/site';
       <p>Learn more about <a href="/about/meet-dr-benkovich/">Dr. Benkovich</a> and <a href="/about/meet-the-team-dental/">our team</a>, or explore our <a href="/locations/">locations</a> to find the office closest to you.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/team-front-door.webp"
+    alt="Dr. John Benkovich and the Benkovich Orthodontics team outside their Annapolis & Chester, MD office"
+    eyebrow="The people behind your smile"
+    heading="A team you'll know by name"
+    body="The same friendly faces greet you at every visit — a close-knit team that takes the time to know your family and make each appointment feel personal." />
+
+  <PhotoFeature
+    image="/images/itero-scan.webp"
+    alt="A 3D iTero digital scan of a patient's teeth on screen at Benkovich Orthodontics"
+    eyebrow="See what we see"
+    heading="Your plan, mapped on a 3D scan"
+    body="A quick 3D iTero digital scan replaces goopy impressions entirely — making your treatment clear, comfortable, and easy to understand from day one."
+    reverse
+    ratio="3/4"
+    tone="cream" />
 
   <Cta heading="Experience the difference" />
 </BaseLayout>

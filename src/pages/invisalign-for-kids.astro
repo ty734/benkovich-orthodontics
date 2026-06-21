@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -66,6 +67,15 @@ const faqs = [
       <p>When your child is a little older, a <a href="/invisalign/invisalign-for-teens/">teen-friendly version of Invisalign</a> is available too. Ready to begin? <a href={site.booking}>Schedule a free exam</a> at our <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> or <a href="/locations/orthodontist-chester-md/">Chester</a> office.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/family-care.webp"
+    alt="A parent and young child at a gentle, welcoming Invisalign First visit at Benkovich Orthodontics in Annapolis, MD"
+    eyebrow="Gentle care for growing smiles"
+    heading="Easy, comfortable care for younger patients"
+    body="Younger kids and their parents deserve a calm, friendly experience. We coach little ones through the aligner routine, cheer them on at every visit, and keep families informed each step of the way."
+    tone="mint"
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Invisalign for kids, answered" />
 

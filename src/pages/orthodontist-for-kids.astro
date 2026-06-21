@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -85,6 +86,16 @@ const faqs = [
       <p style="margin-top:22px;">Serving families across <a href="/locations/orthodontist-annapolis-md/">Annapolis</a> and <a href="/locations/orthodontist-chester-md/">Chester / Kent Island</a>. See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a>.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/kids-prize.webp"
+    alt="A young patient picking a reward from the prize jar at Benkovich Orthodontics, a kid-friendly specialist in Annapolis, MD"
+    eyebrow="Specialist care kids enjoy"
+    heading="A specialist who's great with kids"
+    body="Experience and warmth go hand in hand here. Little touches like the prize jar, friendly explanations, and an unhurried pace turn check-ups into something kids look forward to — backed by a specialist Annapolis families have trusted since 1993."
+    tone="mint"
+    reverse={true}
+    ratio="3/4" />
 
   <FaqBlock items={faqs} heading="Questions from parents, answered" />
 

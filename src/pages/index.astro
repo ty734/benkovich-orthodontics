@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 ---
 <BaseLayout
@@ -12,7 +13,7 @@ import { site } from '../data/site';
       <div class="hero__copy">
         <span class="pill">★ {site.rating} · {site.reviewCount} 5-star reviews</span>
         <h1>Confident smiles for every family in <span class="u-teal">Annapolis &amp; Chester</span></h1>
-        <p class="lead">Affordable braces and Invisalign, starting at <strong>{site.offer.price}{site.offer.priceUnit}</strong>. Gentle, friendly care your neighbors have trusted for over 30 years.</p>
+        <p class="lead">Braces and Invisalign starting at <strong>{site.offer.price}{site.offer.priceUnit}</strong> — from a specialty-trained orthodontist (not a general dentist) who’s personally treated 10,000+ local smiles since 1993.</p>
         <div class="hero__cta">
           <a href={site.booking} class="btn btn--primary btn--lg">Schedule Your Free Exam</a>
           <a href={site.locations[0].phoneHref} class="btn btn--ghost btn--lg">Call {site.locations[0].phone}</a>
@@ -49,8 +50,8 @@ import { site } from '../data/site';
     <div class="container">
       <div class="center measure">
         <p class="eyebrow">Why families choose us</p>
-        <h2>Finding the right orthodontist shouldn’t be stressful</h2>
-        <p class="lead">For more than two decades, families across Annapolis and Chester have trusted us with their smiles — kids, teens, parents, and grandparents alike.</p>
+        <h2>One specialist. 10,000+ smiles. Every visit, personally.</h2>
+        <p class="lead">For over 30 years, Dr. Benkovich has personally treated every patient who walks in — using x-rays, photos, and 3D iTero scans to explain your plan in plain language. No rotating associates, no hard sell.</p>
       </div>
       <div class="grid grid--4" style="margin-top:48px;">
         <article class="vp">
@@ -65,13 +66,13 @@ import { site } from '../data/site';
         </article>
         <article class="vp">
           <div class="vp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
-          <h3>Caring &amp; Comfortable</h3>
-          <p>A friendly team that takes the time to explain everything and puts even nervous kids at ease.</p>
+          <h3>You See the Specialist</h3>
+          <p>Dr. Benkovich treats every patient himself — explaining your scans and options face to face, with a warmth (and a prize game) that turns nervous kids into eager ones.</p>
         </article>
         <article class="vp">
           <div class="vp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <h3>Close to Home</h3>
-          <p>Two welcoming offices in Annapolis and Chester, with on-time visits that respect your schedule.</p>
+          <h3>No Bay Bridge Required</h3>
+          <p>Offices in Annapolis and on Kent Island, so Eastern Shore families get specialist care without crossing the bridge — on-time visits that respect your schedule.</p>
         </article>
       </div>
     </div>
@@ -160,7 +161,7 @@ import { site } from '../data/site';
           <li><strong>Payments from {site.offer.price}/month</strong> — flexible plans for braces &amp; Invisalign</li>
           <li><strong>We work with your insurance</strong> — we help you maximize your benefits</li>
           <li><strong>Clear, upfront costs</strong> — you always know what to expect</li>
-          <li><strong>Your initial exam is free</strong> — a relaxed, no-pressure visit</li>
+          <li><strong>Your first exam is free</strong> — exam and digital X-ray (about a $99 value), and many patients start the same day</li>
         </ul>
         <a href={site.booking} class="btn btn--primary btn--lg">Schedule Your Free Exam</a>
       </div>
@@ -223,6 +224,15 @@ import { site } from '../data/site';
       </div>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/team-front-door.webp"
+    alt="Dr. John Benkovich and the Benkovich Orthodontics team outside their office in Annapolis & Chester, MD"
+    eyebrow="Real people, real care"
+    heading="The team you'll get to know by name"
+    body="From the front desk to the chair, you'll see the same familiar faces visit after visit — a small, consistent team that knows your name and treats your family like neighbors."
+    ratio="3/4"
+    tone="cream" />
 
   <!-- ============ FINAL CTA ============ -->
   <section class="finalcta">

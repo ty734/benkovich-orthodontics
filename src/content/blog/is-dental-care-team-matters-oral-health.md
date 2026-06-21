@@ -2,6 +2,8 @@
 title: "Why a Strong Dental Care Team Matters for Your Oral Health"
 description: "Discover how a skilled dental care team at Benkovich Orthodontics delivers trusted, complete care that puts your comfort and smile first."
 pubDate: 2025-06-12
+image: "/images/family-care.webp"
+imageAlt: "A dedicated dental care team supporting patients' oral health at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 When considering good oral health, most individuals consider a single individual: the dentist. However, there is much more to that healthy smile than meets the eye, and that is an entire [**dental care team**](/about/meet-the-team-dental/) working in unison to ensure that you receive the best of care. Everybody is important: a receptionist who greets you, a hygienist who cleans your teeth, and a dentist who fixes any problems.

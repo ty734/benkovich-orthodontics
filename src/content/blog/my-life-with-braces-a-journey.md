@@ -2,6 +2,8 @@
 title: "My Life with Braces: A Journey to a Confident Smile"
 description: "Discover my life with braces journey as an adult — challenges, lessons, and how braces transformed my smile, confidence, and self-love. Read More!"
 pubDate: 2025-04-09
+image: "/images/teen-celebrate.webp"
+imageAlt: "Celebrating a confident new smile after a personal journey with braces at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 Getting braces was one of the biggest decisions I ever made, and one of the best. When most people think about braces, they think of a teenager working her way through high school with a mouth full of metal. But for me, it all began as an adult. I was in my late 20s, well into my career, tired of feeling self-conscious about crooked teeth. This is the story of [**my life with braces**](/braces-info/life-with-braces/), what I learned, and how it changed my smile and my self-confidence.
@@ -10,7 +12,7 @@ Getting braces was one of the biggest decisions I ever made, and one of the best
 
 Like many others, I had mild crowding and misalignment that I had learned how to conceal in pictures and conversations. But, I began to realize more and more how much it would affect me — especially in meetings, interviews, or social get-togethers. I would smile with closed lips, or tip my head so as not to show my teeth. It was exhausting.
 
-My dentist suggested an orthodontic consultation after the cleaning, and I was shocked to learn that life with braces had become quite common for adults. I wasn't limited to the metal braces of my childhood memories; I had options for clear brackets, ceramic braces, or even Invisalign. I eventually settled on clear braces due to their unobtrusive look, commencing my life with braces.
+My dentist suggested an orthodontic consultation after the cleaning, and I was shocked to learn that life with braces had become quite common for adults. I wasn't limited to the metal braces of my childhood memories; I had options for clear brackets, ceramic [braces](/braces/), or even Invisalign. I eventually settled on clear braces due to their unobtrusive look, commencing my life with braces.
 
 ## The First Few Weeks: Adjusting to a New Normal
 

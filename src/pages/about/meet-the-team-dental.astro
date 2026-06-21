@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import Cta from '../../components/Cta.astro';
+import PhotoFeature from '../../components/PhotoFeature.astro';
 import { site } from '../../data/site';
 
 const team = [
@@ -63,6 +64,15 @@ const team = [
       </div>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/team-front-door.webp"
+    alt="Dr. John Benkovich and the Benkovich Orthodontics team outside their Annapolis & Chester, MD office"
+    eyebrow="Meet the team"
+    heading="The same friendly faces, every visit"
+    body="You'll get to know our team by name — the people who greet you at the door, remember the little details, and make every appointment feel easy. They're a big part of why patients keep coming back."
+    tone="mint"
+    ratio="3/4" />
 
   <Cta heading="Come say hello" />
 </BaseLayout>

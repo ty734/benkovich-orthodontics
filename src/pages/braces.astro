@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FaqBlock from '../components/FaqBlock.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 
 const faqs = [
@@ -29,7 +30,7 @@ const faqs = [
     <div class="container measure">
       <p class="eyebrow">A trusted classic, modernized</p>
       <h2>Reliable, effective, and surprisingly comfortable</h2>
-      <p>Braces are the most proven way to straighten teeth and correct bites — and today’s braces are lighter, smaller, and more comfortable than the ones you remember. At Benkovich Orthodontics, Dr. Benkovich uses braces to gently guide teeth into place for kids, teens, and adults alike, with results designed to last a lifetime.</p>
+      <p>Braces are the most proven way to straighten teeth and correct bites — and today’s are lighter, smaller, and more comfortable than the ones you remember. The difference here is who’s behind them: a specialty-trained orthodontist who has placed braces on thousands of kids, teens, and adults since 1993, and who plans every case from a 3D iTero scan, not guesswork.</p>
       <p>Best of all, a beautiful smile shouldn’t strain your budget. We keep things honest and affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, transparent pricing, and most insurance accepted.</p>
     </div>
   </section>
@@ -51,7 +52,7 @@ const faqs = [
         </div>
         <div class="card feature">
           <h3>Self-Ligating Braces</h3>
-          <p>Modern brackets that can mean fewer adjustments and easier cleaning, for a smooth, efficient treatment experience.</p>
+          <p>Modern brackets that can mean fewer adjustments and easier cleaning, for a smooth, efficient treatment experience. Prefer something hidden? Ask about <a href="/lingual-braces/">lingual (behind-the-teeth) braces</a>.</p>
         </div>
       </div>
     </div>
@@ -82,9 +83,18 @@ const faqs = [
         <li><strong>Quick check-ups.</strong> Easy, on-time visits every few weeks to keep your smile on track.</li>
         <li><strong>Your new smile — protected.</strong> When your braces come off, a custom <a href="/retainers/">retainer</a> keeps your results looking great.</li>
       </ol>
-      <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a> or our <a href="/dental-braces-cost/">guide to braces cost</a>.</p>
+      <p style="margin-top:22px;">Curious about cost? See our <a href="/patient-info/financial-information/">financial &amp; insurance options</a> or our <a href="/dental-braces-cost/">guide to braces cost</a>. Want a little inspiration first? Browse our <a href="/patient-info/before-and-after/">before-and-after results</a>.</p>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/teen-celebrate.webp"
+    alt="A happy Benkovich Orthodontics patient celebrating with a team member in Annapolis, MD"
+    eyebrow="Real patients, real smiles"
+    heading="Smiles worth celebrating"
+    body="There’s nothing like the day the braces come off. We love sharing that moment with our patients — the confident new smiles are exactly why we do what we do."
+    ratio="3/4"
+    tone="cream" />
 
   <FaqBlock items={faqs} heading="Braces questions, answered" />
 

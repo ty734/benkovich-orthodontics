@@ -2,6 +2,8 @@
 title: "Clear Braces vs Metal: Which Is the Right Orthodontic Choice for You?"
 description: "Discover the pros and cons of clear braces vs metal braces with Benkovich Orthodontics to find the best choice for your orthodontic treatment needs."
 pubDate: 2024-11-15
+image: "/images/braces-for-teens.webp"
+imageAlt: "A close look at clear braces versus metal braces options for teens at Benkovich Orthodontics in Annapolis, MD."
 ---
 
 Starting orthodontic treatment is a big step, and one of your first decisions will be choosing between clear braces vs metal braces. Each serves the same goal—to give you a perfectly aligned smile—but they come with important differences. At Benkovich Orthodontics, we want to help you make an informed decision by breaking down the pros and cons of clear braces vs metal braces so you can choose the best option for your needs and lifestyle.

@@ -2,10 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
 import { site } from '../data/site';
 ---
 <BaseLayout
-  title="Contact Us | Orthodontist in Annapolis & Chester, MD | Benkovich Orthodontics"
+  title="Contact Benkovich Orthodontics | Annapolis & Chester, MD"
   description="Contact Benkovich Orthodontics in Annapolis and Chester, MD. Find our phone numbers, addresses, office hours, and directions — or request your free first exam today.">
 
   <PageHero
@@ -74,6 +75,13 @@ import { site } from '../data/site';
       </div>
     </div>
   </section>
+
+  <PhotoFeature
+    image="/images/welcome-desk.webp"
+    alt="A friendly Benkovich Orthodontics team member welcoming patients at the front desk in Annapolis, MD"
+    caption="Stop by — we'd love to meet you."
+    tone="cream"
+    ratio="3/4" />
 
   <Cta />
 </BaseLayout>
