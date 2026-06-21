@@ -6,27 +6,31 @@ import { site } from '../../data/site';
 ---
 <BaseLayout
   title="New Patient Forms | Benkovich Orthodontics, Annapolis MD"
-  description="Save time before your visit to Benkovich Orthodontics. Access new patient forms through our secure patient portal, then request your free first exam in Annapolis or Chester, MD.">
+  description="Getting started at Benkovich Orthodontics is simple. Here's what to bring to your first visit in Annapolis or Chester, MD — then request your free first exam, with plans from $184/month.">
 
   <PageHero
     eyebrow="Patient forms"
     title="New patient forms"
-    subtitle="A few minutes now means more time for your smile later. Complete your new patient forms securely online before your first visit."
+    subtitle="We keep new-patient paperwork quick and simple, so your first visit is all about your smile."
     crumbs={[{ label: 'Home', href: '/' }, { label: 'Patient Info', href: '/patient-info/financial-information/' }, { label: 'Patient Forms', href: '/patient-info/patient-forms/' }]} />
 
   <section class="section">
     <div class="container measure">
-      <p class="eyebrow">Save time before your visit</p>
-      <h2>Get a head start on your paperwork</h2>
-      <p>We want your first visit to be about you, not forms. Completing your new patient information ahead of time means a smoother, faster check-in and more time to talk smiles with Dr. Benkovich. It only takes a few minutes, and everything is handled securely through our patient portal.</p>
+      <p class="eyebrow">Before your first visit</p>
+      <h2>Getting started is simple</h2>
+      <p>We want your first visit to be about you, not paperwork. When you book your free first exam, our friendly team will walk you through everything you need — so check-in is smooth and fast, with more time to talk smiles with Dr. Benkovich.</p>
 
       <div class="forms-card card">
-        <h3>Secure patient portal</h3>
-        <p>Access and complete your new patient forms through our trusted online portal. Your information stays private and protected every step of the way.</p>
-        <a href={site.patientPortal} target="_blank" rel="noopener" class="btn btn--primary btn--lg">Open the Patient Portal</a>
+        <h3>What to bring to your first visit</h3>
+        <ul class="forms-list">
+          <li>A photo ID</li>
+          <li>Your dental insurance card, if you have coverage</li>
+          <li>Any recent X-rays or a referral, if you have them</li>
+        </ul>
+        <a href={site.booking} class="btn btn--primary btn--lg">Request Your Free Exam</a>
       </div>
 
-      <p style="margin-top:32px;">Haven't booked yet? <a href={site.booking}>Request your free first exam</a> and we'll guide you through the rest. Curious what to expect when you arrive? See our quick walkthrough of <a href="/patient-info/office-visits/">your first office visit</a>.</p>
+      <p style="margin-top:32px;">Have questions before you come in? Just <a href="/contact-us/">give us a call</a> — we're happy to help. Curious what to expect when you arrive? See our quick walkthrough of <a href="/patient-info/office-visits/">your first office visit</a>.</p>
     </div>
   </section>
 
@@ -37,4 +41,8 @@ import { site } from '../../data/site';
   .forms-card { padding: 34px 30px; margin-top: 30px; text-align: center; background: var(--mint); border-color: transparent; }
   .forms-card h3 { color: var(--teal-700); margin-bottom: 10px; }
   .forms-card p { color: var(--slate); max-width: 520px; margin: 0 auto 22px; }
+  .forms-list { list-style: none; padding: 0; margin: 0 auto 24px; max-width: 420px; text-align: left; }
+  .forms-list li { padding: 9px 0 9px 28px; position: relative; color: var(--slate); border-bottom: 1px solid rgba(12,51,84,.08); }
+  .forms-list li:last-child { border-bottom: 0; }
+  .forms-list li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
 </style>
