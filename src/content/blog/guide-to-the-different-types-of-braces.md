@@ -61,29 +61,7 @@ Ceramic braces are similar in design to metal braces but use tooth-colored or cl
 
 Teens or adults who want a balance between effectiveness and aesthetics without going fully invisible.
 
-#### 3. Lingual Braces
-
-**What They Are:**
-
-Lingual braces are one of the more discreet options among the different types of braces, as they are placed behind the teeth (on the tongue side), making them completely hidden from view.
-
-**Pros:**
-
-- Invisible when you smile
-- Custom-fit to your teeth
-
-**Cons:**
-
-- Can affect speech at first
-- May cause tongue discomfort
-- Harder to clean
-- Usually more expensive
-
-**Who They're Best For:**
-
-Adults and professionals who want a truly hidden option and are willing to adjust to some initial discomfort.
-
-#### 4. Clear Aligners (e.g., Invisalign)
+#### 3. Clear Aligners (e.g., Invisalign)
 
 **What They Are:**
 
@@ -114,7 +92,7 @@ If your teeth require major adjustments or you have bite alignment issues, metal
 
 #### 2. Appearance Preferences
 
-Are you comfortable with visible braces, or do you prefer a more subtle look? Ceramic, lingual braces, and clear aligners offer more discretion. If you're weighing the look of tooth-colored brackets against traditional ones, our breakdown of [clear braces vs. metal braces](/clear-braces-vs-metal/) can help you decide.
+Are you comfortable with visible braces, or do you prefer a more subtle look? Ceramic braces and clear aligners offer more discretion. If you're weighing the look of tooth-colored brackets against traditional ones, our breakdown of [clear braces vs. metal braces](/clear-braces-vs-metal/) can help you decide.
 
 #### 3. Lifestyle and Habits
 
@@ -122,7 +100,7 @@ Clear aligners are removable, which means you'll need to be disciplined about we
 
 #### 4. Budget and Insurance
 
-Metal braces are typically the most affordable. Clear aligners and lingual braces are usually at the higher end. Always check what your dental insurance will cover.
+Metal braces are typically the most affordable. Clear aligners are usually at the higher end. Always check what your dental insurance will cover.
 
 #### 5. Age and Maturity
 

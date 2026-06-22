@@ -82,7 +82,8 @@ export const nav = [
     { label: 'Braces for Kids', href: '/braces-for-kids/' },
     { label: 'Braces for Teens', href: '/braces-for-teens/' },
     { label: 'Braces for Adults', href: '/braces-for-adults/' },
-    { label: 'Clear Braces', href: '/clear-braces-vs-metal/' },
+    { label: 'Clear Braces – Annapolis', href: '/clear-braces-annapolis-md/' },
+    { label: 'Clear Braces – Chester', href: '/clear-braces-chester-md/' },
   ]},
   { label: 'Invisalign', href: '/invisalign/', children: [
     { label: 'Invisalign for Kids', href: '/invisalign-for-kids/' },

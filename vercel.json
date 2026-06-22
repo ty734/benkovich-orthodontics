@@ -31,6 +31,7 @@
     { "source": "/about/blog/dr-shock-mouthguard-guide", "destination": "/about/blog/", "permanent": true },
     { "source": "/about/blog/shock-doctor-orthodontic-mouthguard-best-choice-for-braces", "destination": "/about/blog/", "permanent": true },
     { "source": "/treatment-options", "destination": "/braces/", "permanent": true },
+    { "source": "/lingual-braces", "destination": "/braces/", "permanent": true },
     { "source": "/braces-info/orthodontic-faqs", "destination": "/braces-info/orthodontic-faqs/", "permanent": true }
   ]
 }

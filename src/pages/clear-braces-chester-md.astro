@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import Cta from '../components/Cta.astro';
+import PhotoFeature from '../components/PhotoFeature.astro';
+import { site } from '../data/site';
+
+const loc = site.locations[1];
+
+const faqs = [
+  { q: 'Do you offer clear braces on Kent Island?', a: 'Yes. Clear (ceramic) braces are one of our most popular options for adults and older teens at our Chester / Kent Island office — no need to cross the Bay Bridge for specialist care. Dr. Benkovich will confirm they’re a good fit at your free first exam.' },
+  { q: 'Are clear braces noticeable?', a: 'Far less than metal. The brackets are tooth-colored and blend into your smile, so they stay subtle in conversation and photos — a favorite for professionals and image-conscious teens who still want the reliability of braces.' },
+  { q: 'Do clear braces cost more than metal?', a: 'Clear braces typically run a little more than metal because of the ceramic materials, but the difference is modest. Both start at $184/month with transparent, upfront pricing and most insurance accepted — your exact figure comes from a free exam.' },
+  { q: 'Clear braces or Invisalign — which is better for me?', a: 'Both are discreet. Clear braces stay on and handle a wide range of corrections; Invisalign is removable for meals. As a specialty-trained orthodontist, Dr. Benkovich will give you an honest recommendation after reviewing your 3D iTero scan.' },
+  { q: 'How do I get started?', a: 'Book a free first exam at our Chester office. It includes an exam and digital X-ray, Dr. Benkovich reviews your smile in plain language, and many patients can start the same day — no pressure, no obligation.' },
+];
+---
+<BaseLayout
+  title="Clear Braces in Chester, MD (Kent Island) | Benkovich Ortho"
+  description="Discreet clear (ceramic) braces in Chester, MD on Kent Island — no Bay Bridge needed. Specialty-trained care from $184/month and a free first exam. Book today.">
+
+  <PageHero
+    eyebrow="Clear Braces · Chester / Kent Island, MD"
+    title="Clear Braces in Chester, MD (Kent Island)"
+    subtitle="Tooth-colored, low-profile braces that straighten your smile without the spotlight — specialty-trained care right on Kent Island, starting at $184/month with a free first exam."
+    image="/images/first-day-braces.webp"
+    imageAlt="A happy Benkovich Orthodontics braces patient on their first day at the Chester / Kent Island office"
+    crumbs={[{ label: 'Home', href: '/' }, { label: 'Braces', href: '/braces/' }, { label: 'Clear Braces — Chester', href: '/clear-braces-chester-md/' }]} />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Discreet by design</p>
+      <h2>Straighten your smile, quietly</h2>
+      <p>Clear (ceramic) braces work exactly like traditional <a href="/braces/">braces</a> — brackets and wires gently guiding your teeth into place — but the brackets are tooth-colored, so they blend in instead of standing out. For Kent Island adults and older teens who want a subtle look without going fully removable, they’re an ideal middle ground.</p>
+      <p>And you don’t have to cross the Bay Bridge for it. Dr. Benkovich — a specialty-trained orthodontist, not a general dentist offering braces on the side — personally treats every patient right here in Chester, planning each case from a 3D iTero scan rather than guesswork.</p>
+    </div>
+  </section>
+
+  <PhotoFeature
+    image="/images/itero-scan.webp"
+    alt="A 3D iTero digital scan used to plan clear braces treatment at Benkovich Orthodontics in Chester, MD"
+    eyebrow="See what we see"
+    heading="Your plan, mapped in 3D"
+    body="No messy impressions — a quick digital scan lets Dr. Benkovich plan your clear-braces treatment precisely and explain it in plain language, so you know exactly what to expect before day one."
+    ratio="3/4"
+    tone="mint"
+    reverse />
+
+  <section class="section">
+    <div class="container measure">
+      <p class="eyebrow">Clear vs. metal</p>
+      <h2>Not sure clear is the right call?</h2>
+      <p>Clear braces look great, but metal braces are tougher and more economical — and the right answer depends on your smile, your budget, and your day-to-day life. We lay it all out honestly in our <a href="/clear-braces-vs-metal/">clear braces vs. metal braces comparison</a>, or prefer something fully removable? <a href="/invisalign/">Explore Invisalign →</a></p>
+      <p style="margin-top:14px;">Either way, we keep it affordable with flexible plans <strong>starting at {site.offer.price}/month</strong>, clear upfront costs, and most insurance accepted.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container measure">
+      <p class="eyebrow">Right around the corner</p>
+      <h2>Clear braces close to home on Kent Island</h2>
+      <p>Our Chester office is an easy drive off Route 50, serving Kent Island, Stevensville, Queenstown, Grasonville, and Centreville — no Bay Bridge required. See office details, directions, and hours on our <a href="/locations/orthodontist-chester-md/">Chester / Kent Island office page</a>, or call us at <a href={loc.phoneHref}>{loc.phone}</a>.</p>
+      <p style="margin-top:14px;">Closer to the city? We also offer <a href="/clear-braces-annapolis-md/">clear braces in Annapolis</a>.</p>
+    </div>
+  </section>
+
+  <FaqBlock items={faqs} heading="Clear braces on Kent Island — common questions" />
+
+  <Cta heading="Ready for a subtler way to straighten?" />
+</BaseLayout>

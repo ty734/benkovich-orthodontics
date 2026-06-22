@@ -49,17 +49,11 @@ Ceramic braces blend functionality with aesthetics. These braces use clear or to
 
 This option is ideal for adults seeking an effective and relatively subtle way to address moderate to severe orthodontic issues. It's worth noting that ceramic braces require diligent cleaning to prevent staining and remain an excellent option among orthodontic options for adults.
 
-### Lingual Braces: Hidden Braces, Visible Results
-
-Lingual braces are entirely hidden from view, as they are placed on the backside of your teeth. This makes them a popular choice for adults who prioritize discretion.
-
-While lingual braces can be customized for each patient, they may take some adjustment time since their placement is closer to the tongue. They are highly effective for complex cases and worth considering for those exploring orthodontic options for adults that emphasize subtlety.
-
 ## How to Choose Your Ideal Treatment
 
 When deciding on the best orthodontic option for you, there are several factors to keep in mind:
 
-- **Appearance and Subtlety:** If discretion is important, clear aligners or lingual braces are fantastic choices.
+- **Appearance and Subtlety:** If discretion is important, clear (ceramic) braces or clear aligners are fantastic choices.
 - **Complexity of Needs:** More advanced issues might benefit from the reliability of traditional or ceramic braces.
 - **Convenience:** Clear aligners provide the flexibility of removal, but they require a commitment to wearing them consistently.
 - **Budget:** For those seeking cost-effective care, traditional metal braces are often the most affordable option, though payment plans may make other solutions accessible as well.
